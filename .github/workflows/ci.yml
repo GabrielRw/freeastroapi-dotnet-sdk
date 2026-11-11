@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  # Lets maintainers run CI on the bot-opened spec-sync/auto branch (pull requests opened
+  # with GITHUB_TOKEN do not trigger workflows): Actions -> CI -> Run workflow.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  DOTNET_NOLOGO: "1"
+  DOTNET_CLI_TELEMETRY_OPTOUT: "1"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73 # v6.1.0
+        with:
+          global-json-file: global.json
+      # Generated code is current, build (warnings as errors, net8.0 + netstandard2.0), unit tests,
+      # the synthetic-spec fixture build, and the NuGet package. Contract and live tests skip here.
+      - run: scripts/check.sh
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: packages
+          path: artifacts/packages
+          if-no-files-found: error
+
+  contract:
+    # Every SDK method against a Stoplight Prism mock of spec/freeastro.json.
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73 # v6.1.0
+        with:
+          global-json-file: global.json
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+      - name: Spec tool tests
+        run: python -m unittest discover -s scripts -p "test_*.py"
+      - run: dotnet build tests/FreeAstroApi.Tests -c Release
+      - name: Contract tests
+        run: python scripts/with_prism.py -- dotnet test tests/FreeAstroApi.Tests -c Release --no-build --filter Category=Contract
+      - name: Prism log
+        if: failure()
+        run: tail -n 300 prism.log || true

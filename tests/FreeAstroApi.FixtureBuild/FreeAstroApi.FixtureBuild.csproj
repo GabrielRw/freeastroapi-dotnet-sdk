@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Compiles the SDK runtime against code generated from tests/fixtures/synthetic-spec.json, which
+    exercises spec features production does not use yet (ErrorResponse schemas, 201/default responses,
+    vendor +json, SVG/PNG/PDF/Markdown bodies, sanitised schema names). Run scripts/check-fixture.sh.
+  -->
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;netstandard2.0</TargetFrameworks>
+    <AssemblyName>FreeAstroApi.Fixture</AssemblyName>
+    <RootNamespace>FreeAstroApi</RootNamespace>
+    <IsPackable>false</IsPackable>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <FixtureGeneratedDir>$(MSBuildThisFileDirectory)../../artifacts/fixture-generated</FixtureGeneratedDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="../../src/FreeAstroApi/**/*.cs" Exclude="../../src/FreeAstroApi/Generated/**;../../src/FreeAstroApi/obj/**;../../src/FreeAstroApi/bin/**" />
+    <Compile Include="$(FixtureGeneratedDir)/*.g.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Http" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="System.Text.Json" />
+  </ItemGroup>
+
+</Project>

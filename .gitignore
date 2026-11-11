@@ -1,0 +1,13 @@
+bin/
+obj/
+artifacts/
+TestResults/
+*.user
+*.suo
+.vs/
+.idea/
+.vscode/
+.env
+.env.*
+.DS_Store
+prism.log

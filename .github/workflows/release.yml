@@ -1,0 +1,69 @@
+name: Release
+
+# Publishes FreeAstroApi.Sdk to nuget.org when a v* tag is pushed (for example v0.1.0).
+#
+# Uses NuGet trusted publishing: NuGet/login exchanges this job's GitHub OIDC token for a
+# short-lived (1 hour) API key. Configure it once on nuget.org -> your profile -> Trusted Publishing:
+#   Repository Owner: GabrielRw   Repository: freeastroapi-dotnet-sdk
+#   Workflow File: release.yml     Environment: nuget
+# and add the repository secret NUGET_USER (your nuget.org profile name, not your email).
+# If a NUGET_API_KEY secret is set it is used instead of trusted publishing.
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  DOTNET_NOLOGO: "1"
+  DOTNET_CLI_TELEMETRY_OPTOUT: "1"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment: nuget
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73 # v6.1.0
+        with:
+          global-json-file: global.json
+      - name: Check the tag matches the project version
+        run: |
+          version="v$(dotnet msbuild src/FreeAstroApi/FreeAstroApi.csproj -getProperty:Version)"
+          if [ "$version" != "$GITHUB_REF_NAME" ]; then
+            echo "Tag $GITHUB_REF_NAME does not match <Version> $version in src/FreeAstroApi/FreeAstroApi.csproj" >&2
+            exit 1
+          fi
+      - run: scripts/check.sh
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: packages
+          path: artifacts/packages
+          if-no-files-found: error
+      - name: NuGet login (OIDC -> temporary API key)
+        id: login
+        if: env.NUGET_API_KEY == ''
+        uses: NuGet/login@8d196754b4036150537f80ac539e15c2f1028841 # v1.2.0
+        with:
+          user: ${{ secrets.NUGET_USER }}
+      # Pushing the .nupkg also pushes the .snupkg symbol package next to it.
+      - name: Push to nuget.org
+        env:
+          OIDC_API_KEY: ${{ steps.login.outputs.NUGET_API_KEY }}
+        run: |
+          dotnet nuget push "artifacts/packages/*.nupkg" \
+            --api-key "${NUGET_API_KEY:-$OIDC_API_KEY}" \
+            --source https://api.nuget.org/v3/index.json \
+            --skip-duplicate

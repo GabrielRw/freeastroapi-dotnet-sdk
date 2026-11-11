@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;netstandard2.0</TargetFrameworks>
+    <AssemblyName>FreeAstroApi</AssemblyName>
+    <RootNamespace>FreeAstroApi</RootNamespace>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <!-- Package metadata. -->
+    <PackageId>FreeAstroApi.Sdk</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>FreeAstroAPI</Authors>
+    <Company>FreeAstroAPI</Company>
+    <Product>FreeAstroAPI .NET SDK</Product>
+    <Copyright>Copyright (c) FreeAstroAPI</Copyright>
+    <Description>Official .NET client for FreeAstroAPI: Western natal charts, transits, progressions, synastry and astrocartography; Vedic charts, dashas and panchang; Chinese BaZi; numerology; horoscopes; Moon phases and ephemerides.</Description>
+    <PackageTags>astrology;horoscope;natal-chart;vedic;panchang;bazi;numerology;ephemeris;freeastroapi;sdk</PackageTags>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/GabrielRw/freeastroapi-dotnet-sdk</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/GabrielRw/freeastroapi-dotnet-sdk</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>https://github.com/GabrielRw/freeastroapi-dotnet-sdk/blob/main/CHANGELOG.md</PackageReleaseNotes>
+
+    <!-- Reproducible builds, SourceLink (built into the .NET 8+ SDK) and a symbol package. -->
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <DebugType>portable</DebugType>
+    <EnablePackageValidation>true</EnablePackageValidation>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
+    <InternalsVisibleTo Include="FreeAstroApi.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Http" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="System.Text.Json" />
+  </ItemGroup>
+
+</Project>
