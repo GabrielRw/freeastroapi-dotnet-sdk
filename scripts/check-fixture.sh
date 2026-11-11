@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Generates the SDK from tests/fixtures/synthetic-spec.json and compiles it (net8.0 and netstandard2.0,
+# Generates the SDK from tests/fixtures/synthetic-spec.json and compiles it (net10.0, net8.0 and netstandard2.0,
 # warnings as errors), proving the pipeline handles spec features production does not use yet.
 set -euo pipefail
 cd "$(dirname "${BASH_SOURCE[0]}")/.."

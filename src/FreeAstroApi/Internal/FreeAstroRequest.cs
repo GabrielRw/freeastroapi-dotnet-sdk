@@ -11,14 +11,18 @@ namespace FreeAstroApi.Internal;
 /// <summary>A request built by a generated resource method, replayable across retries.</summary>
 internal sealed class FreeAstroRequest
 {
-    public FreeAstroRequest(string method, string path, string accept)
+    public FreeAstroRequest(string method, string path, string accept, string? operationId = null)
     {
         Method = method;
         Path = path;
         Accept = accept;
+        OperationId = operationId;
     }
 
     public string Method { get; }
+
+    /// <summary>The OpenAPI operationId, or <see langword="null"/> for <c>SendAsync</c>/<c>SendRawAsync</c> calls.</summary>
+    public string? OperationId { get; }
 
     public string Path { get; }
 

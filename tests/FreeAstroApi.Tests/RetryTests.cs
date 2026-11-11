@@ -52,13 +52,132 @@ public class RetryTests
     }
 
     [Fact]
-    public async Task PostIsNotRetriedOnServerErrorsWithoutAnIdempotencyKey()
+    public async Task CalculationPostIsRetriedOnServerErrors()
+    {
+        var (client, handler, delays) = TestClients.Create();
+        handler.Respond(HttpStatusCode.ServiceUnavailable).Respond(HttpStatusCode.OK, """{"point": "Sun", "sign": "Gemini"}""");
+
+        var sun = await client.Western.Signs.SunAsync(Birth());
+
+        Assert.Equal("Gemini", sun.Sign);
+        Assert.Equal(2, handler.Requests.Count);
+        Assert.Equal(handler.Requests[0].Body, handler.Requests[1].Body);
+        Assert.False(handler.Requests[0].Headers.ContainsKey("Idempotency-Key"));
+        Assert.Single(delays);
+    }
+
+    [Fact]
+    public async Task SideEffectingPostIsNotRetriedOnServerErrorsWithoutAnIdempotencyKey()
     {
         var (client, handler, _) = TestClients.Create();
         handler.Respond(HttpStatusCode.InternalServerError, """{"detail": "boom"}""");
 
         await Assert.ThrowsAsync<FreeAstroServerException>(() => client.Natal.CalculateAsync(Birth()));
 
+        Assert.Single(handler.Requests);
+    }
+
+    [Fact]
+    public async Task VedicChatIsNotRetriedOn503WithoutAnIdempotencyKey()
+    {
+        var (client, handler, delays) = TestClients.Create();
+        handler.Respond(HttpStatusCode.ServiceUnavailable, """{"detail": "busy"}""");
+
+        var error = await Assert.ThrowsAsync<FreeAstroServerException>(() => client.Vedic.ChatAsync(new VedicChatRequest { Message = "Hi" }));
+
+        Assert.Equal(503, error.StatusCode);
+        Assert.Single(handler.Requests);
+        Assert.Empty(delays);
+    }
+
+    [Fact]
+    public async Task VedicChatIsRetriedOn503WithAnIdempotencyKey()
+    {
+        var (client, handler, _) = TestClients.Create();
+        handler.Respond(HttpStatusCode.ServiceUnavailable).Respond(HttpStatusCode.OK, "{}");
+
+        await client.Vedic.ChatAsync(new VedicChatRequest { Message = "Hi" }, new RequestOptions { IdempotencyKey = "chat-1" });
+
+        Assert.Equal(2, handler.Requests.Count);
+        Assert.All(handler.Requests, r => Assert.Equal("chat-1", r.Headers["Idempotency-Key"]));
+    }
+
+    [Fact]
+    public async Task SideEffectingOperationsAreTheDocumentedSet()
+    {
+        Assert.Equal(
+            ["v1_ai_generate", "v1_natal_calculate", "v1_western_transits_insights", "v1_western_transits_timeline", "v2_vedic_chat", "v2_vedic_qa", "v2_western_chat"],
+            FreeAstroOperations.SideEffectingOperationIds.OrderBy(id => id, StringComparer.Ordinal));
+        Assert.All(FreeAstroOperations.SideEffectingOperationIds, id => Assert.Contains(FreeAstroOperations.All, o => o.OperationId == id));
+
+        // SendAsync to a known operation follows its policy; an unknown POST is treated as side-effecting.
+        var (client, handler, _) = TestClients.Create();
+        handler.Respond(HttpStatusCode.BadGateway).Respond(HttpStatusCode.OK, "{}");
+        await client.SendAsync<System.Text.Json.JsonElement>(HttpMethod.Post, "/api/v1/western/signs/sun", Birth());
+        Assert.Equal(2, handler.Requests.Count);
+
+        handler.Respond(HttpStatusCode.BadGateway);
+        await Assert.ThrowsAsync<FreeAstroServerException>(() => client.SendAsync<System.Text.Json.JsonElement>(HttpMethod.Post, "/api/v9/new/thing", Birth()));
+        Assert.Equal(3, handler.Requests.Count);
+    }
+
+    [Theory]
+    [InlineData(HttpStatusCode.BadRequest)]
+    [InlineData(HttpStatusCode.Unauthorized)]
+    [InlineData(HttpStatusCode.NotFound)]
+    [InlineData(HttpStatusCode.Conflict)]
+    [InlineData((HttpStatusCode)422)]
+    public async Task OtherClientErrorsAreNeverRetried(HttpStatusCode status)
+    {
+        var (client, handler, _) = TestClients.Create();
+        handler.Respond(status, """{"detail": "no"}""");
+
+        await Assert.ThrowsAnyAsync<FreeAstroApiException>(() => client.Geo.SearchAsync(Paris, new RequestOptions { Retry = true }));
+
+        Assert.Single(handler.Requests);
+    }
+
+    [Fact]
+    public async Task BackoffIsCappedAndFullyJittered()
+    {
+        var (client, handler, delays) = TestClients.Create(o => o.MaxRetries = 6);
+        for (var i = 0; i < 6; i++) handler.Respond(HttpStatusCode.ServiceUnavailable);
+        handler.Respond(HttpStatusCode.OK, Cities);
+
+        await client.Geo.SearchAsync(Paris);
+
+        Assert.Equal(new[] { 0.5, 1, 2, 4, 8, 8 }.Select(s => TimeSpan.FromSeconds(s)), delays);
+
+        client.Transport.Jitter = () => 0.25;
+        Assert.Equal(TimeSpan.FromMilliseconds(125), client.Transport.Backoff(0));
+        Assert.Equal(TimeSpan.FromSeconds(2), client.Transport.Backoff(10));
+        client.Transport.Jitter = () => 0;
+        Assert.Equal(TimeSpan.Zero, client.Transport.Backoff(3));
+    }
+
+    [Fact]
+    public async Task RetryAfterMsInTheErrorBodyIsHonoured()
+    {
+        var (client, handler, delays) = TestClients.Create();
+        handler.Respond(HttpStatusCode.TooManyRequests, """{"error": "rate_limited", "detail": "slow down", "retry_after_ms": 1500}""")
+            .Respond(HttpStatusCode.OK, Cities);
+
+        await client.Geo.SearchAsync(Paris);
+
+        Assert.Equal([TimeSpan.FromMilliseconds(1500)], delays);
+    }
+
+    [Fact]
+    public async Task RateLimitAskingForMoreThan30SecondsIsThrownWithRetryAfter()
+    {
+        var (client, handler, delays) = TestClients.Create();
+        handler.Respond(HttpStatusCode.TooManyRequests, """{"error": "rate_limited", "detail": "quota", "retry_after_ms": 45000}""");
+
+        var error = await Assert.ThrowsAsync<FreeAstroRateLimitException>(() => client.Natal.CalculateAsync(Birth()));
+
+        Assert.Equal(TimeSpan.FromSeconds(45), error.RetryAfter);
+        Assert.Equal("rate_limited", error.ErrorCode);
+        Assert.Empty(delays);
         Assert.Single(handler.Requests);
     }
 

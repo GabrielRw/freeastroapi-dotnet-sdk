@@ -23,17 +23,25 @@ public sealed class FreeAstroClientOptions
 
     /// <summary>
     /// How many times a failed request is retried. Defaults to 2. HTTP 429 responses are retried for every
-    /// method; 408/5xx responses, timeouts and network failures are retried for GET requests and for requests
-    /// that carry an idempotency key or opt in with <see cref="RequestOptions.Retry"/>.
+    /// operation; 408/500/502/503/504 responses, timeouts and network failures are retried for every operation
+    /// except the side-effecting ones in <see cref="FreeAstroOperations.SideEffectingOperationIds"/>, which are
+    /// retried only with an idempotency key or <see cref="RequestOptions.Retry"/>. Other 4xx are never retried.
     /// </summary>
     public int MaxRetries { get; set; } = 2;
 
-    /// <summary>Delay before the first retry; it doubles on each attempt. Defaults to 500 ms.</summary>
+    /// <summary>
+    /// Base of the exponential backoff: retry <c>n</c> waits a random time between 0 and
+    /// <c>InitialRetryDelay * 2^n</c> (full jitter), capped at <see cref="MaxBackoff"/>. Defaults to 500 ms.
+    /// </summary>
     public TimeSpan InitialRetryDelay { get; set; } = TimeSpan.FromMilliseconds(500);
 
+    /// <summary>Upper bound of the computed backoff before jitter. Defaults to 8 seconds.</summary>
+    public TimeSpan MaxBackoff { get; set; } = TimeSpan.FromSeconds(8);
+
     /// <summary>
-    /// Longest delay the client waits before a retry. A <c>Retry-After</c> header asking for longer is not
-    /// waited out: the error is thrown so the caller can decide. Defaults to 30 seconds.
+    /// Longest server-requested wait the client honours. When <c>Retry-After</c> or <c>retry_after_ms</c> asks
+    /// for longer, the client does not wait: it throws the error (with
+    /// <see cref="FreeAstroApiException.RetryAfter"/>) so the caller can decide. Defaults to 30 seconds.
     /// </summary>
     public TimeSpan MaxRetryDelay { get; set; } = TimeSpan.FromSeconds(30);
 
@@ -49,6 +57,7 @@ public sealed class FreeAstroClientOptions
             Timeout = Timeout,
             MaxRetries = MaxRetries,
             InitialRetryDelay = InitialRetryDelay,
+            MaxBackoff = MaxBackoff,
             MaxRetryDelay = MaxRetryDelay,
         };
         foreach (var header in DefaultHeaders) copy.DefaultHeaders[header.Key] = header.Value;

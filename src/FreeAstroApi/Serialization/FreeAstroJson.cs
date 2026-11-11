@@ -12,7 +12,10 @@ namespace FreeAstroApi.Serialization;
 /// </remarks>
 public static class FreeAstroJson
 {
-    /// <summary>Read-only serializer options: null properties are omitted, names come from the API.</summary>
+    /// <summary>
+    /// Read-only serializer options: null properties are omitted, names come from the API, and responses are
+    /// read leniently (missing, null and unknown fields never throw).
+    /// </summary>
     public static JsonSerializerOptions Options { get; } = CreateOptions();
 
     private static JsonSerializerOptions CreateOptions()
@@ -22,6 +25,12 @@ public static class FreeAstroJson
             DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
             TypeInfoResolver = JsonTypeInfoResolver.Combine(FreeAstroJsonContext.Default, new DefaultJsonTypeInfoResolver()),
         };
+        // Lenient response decoding: null (or a numeric string) in a non-nullable number/boolean field reads as
+        // the default value instead of throwing. Missing and unknown fields are tolerated by default.
+        options.Converters.Add(new LenientInt32Converter());
+        options.Converters.Add(new LenientInt64Converter());
+        options.Converters.Add(new LenientDoubleConverter());
+        options.Converters.Add(new LenientBooleanConverter());
         options.MakeReadOnly();
         return options;
     }

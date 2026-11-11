@@ -43,7 +43,7 @@ internal static class ErrorMapper
             Error = json,
             ErrorCode = ErrorCode(json),
             RequestId = Header(response, "x-request-id") ?? StringProperty(json, "trace_id") ?? StringProperty(json, "request_id"),
-            RetryAfter = FreeAstroTransport.RetryAfter(response),
+            RetryAfter = FreeAstroTransport.RetryAfter(response) ?? RetryAfterMs(json),
         };
         var message = $"FreeAstroAPI returned {status}: {Message(json, response)}";
         if (details.RequestId is not null) message += $" (request id {details.RequestId})";
@@ -68,6 +68,8 @@ internal static class ErrorMapper
             if (error.TryGetProperty("detail", out var detail))
             {
                 if (detail.ValueKind == JsonValueKind.String && !string.IsNullOrWhiteSpace(detail.GetString())) return detail.GetString()!;
+                // Route errors: {"detail": {"error": "invalid_date", "message": "...", ...}}
+                if (StringProperty(detail, "message") is { Length: > 0 } detailMessage) return detailMessage;
                 if (detail.ValueKind == JsonValueKind.Array)
                 {
                     var issues = detail.EnumerateArray().Select(ValidationIssue).Where(s => s.Length > 0).ToList();
@@ -98,8 +100,24 @@ internal static class ErrorMapper
     private static string? ErrorCode(JsonElement? json)
     {
         if (StringProperty(json, "code") is { Length: > 0 } code) return code;
+        if (json is { ValueKind: JsonValueKind.Object } body && body.TryGetProperty("detail", out var detail)
+            && StringProperty(detail, "error") is { Length: > 0 } routeCode)
+        {
+            return routeCode;
+        }
         // {"error": "invalid_idempotency_key", "detail": "..."}: `error` is the code when `detail` explains it.
         if (json is { ValueKind: JsonValueKind.Object } error && error.TryGetProperty("detail", out _)) return StringProperty(json, "error");
+        return null;
+    }
+
+    // Gateway rate-limit errors: {"error": "rate_limited", "retry_after_ms": 1500}
+    private static TimeSpan? RetryAfterMs(JsonElement? json)
+    {
+        if (json is { ValueKind: JsonValueKind.Object } obj && obj.TryGetProperty("retry_after_ms", out var value)
+            && value.ValueKind == JsonValueKind.Number && value.TryGetDouble(out var ms) && ms >= 0 && ms < TimeSpan.MaxValue.TotalMilliseconds)
+        {
+            return TimeSpan.FromMilliseconds(ms);
+        }
         return null;
     }
 

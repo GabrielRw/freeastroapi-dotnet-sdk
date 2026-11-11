@@ -72,4 +72,17 @@ public class ErrorTests
         Assert.Null(error.Error);
         Assert.Null(error.ErrorCode);
     }
+
+    [Fact]
+    public async Task RouteErrorsWithAnObjectDetailReportItsCodeAndMessage()
+    {
+        var (client, handler, _) = TestClients.Create();
+        handler.Respond(HttpStatusCode.NotFound, """{"detail": {"error": "city_not_found", "message": "No city named Atlantis", "query": "Atlantis"}}""");
+
+        var error = await Assert.ThrowsAsync<FreeAstroNotFoundException>(() => client.Geo.SearchAsync(new GeoSearchParams { Q = "Atlantis" }));
+
+        Assert.Equal("city_not_found", error.ErrorCode);
+        Assert.Contains("No city named Atlantis", error.Message, StringComparison.Ordinal);
+        Assert.Single(handler.Requests);
+    }
 }

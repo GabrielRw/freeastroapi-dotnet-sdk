@@ -506,7 +506,7 @@ internal sealed class GeneratorRun
         || contentType.EndsWith("+xml", StringComparison.OrdinalIgnoreCase)
         || contentType.Equals("application/xml", StringComparison.OrdinalIgnoreCase);
 
-    private sealed record Signature(ResponseKind Kind, TypeRef? Response, string Accept, TypeRef? Body, bool BodyNullable, List<string> ContentTypes);
+    private sealed record Signature(ResponseKind Kind, TypeRef? Response, string Accept, TypeRef? Body, bool BodyNullable, List<string> ContentTypes, List<string>? Union = null);
 
     private Signature BuildSignature(OperationDef o)
     {
@@ -535,12 +535,26 @@ internal sealed class GeneratorRun
             var freeForm = mapped.Type == TypeRef.Object || mapped.Type.Decl == TypeRef.MapOf(TypeRef.Object, true).Decl;
             var response = freeForm ? TypeRef.JsonElement : mapped.Type;
             _rootTypes.Add(response.Runtime);
-            return new(ResponseKind.Json, response, "application/json", body, bodyNullable, types);
+            // A union of models (the shape depends on the request) is returned as a JsonElement; name the options.
+            var union = freeForm ? UnionModels(schema) : null;
+            return new(ResponseKind.Json, response, "application/json", body, bodyNullable, types, union);
         }
 
         var accept = string.Join(", ", types) + (types.Any(IsJson) ? "" : ", application/json;q=0.5");
         var kind = types.All(IsText) ? ResponseKind.Text : ResponseKind.Content;
         return new(kind, null, accept, body, bodyNullable, types);
+    }
+
+    private List<string>? UnionModels(JsonNode? schema)
+    {
+        if (schema is not JsonObject s || (s["anyOf"] ?? s["oneOf"]) is not JsonArray members) return null;
+        var names = new List<string>();
+        foreach (var m in members)
+        {
+            if (m is JsonObject mo && mo["$ref"]?.GetValue<string>() is { } r && _componentClass.TryGetValue(RefName(r), out var cls)) names.Add(cls);
+            else return null;
+        }
+        return names.Count > 1 ? names : null;
     }
 
     // ------------------------------------------------------------------ rendering
@@ -770,6 +784,10 @@ internal sealed class GeneratorRun
         };
         var returnsDoc = sig.Kind switch
         {
+            ResponseKind.Json when sig.Response == TypeRef.JsonElement && sig.Union is { } union =>
+                "The JSON response, which is one of "
+                + string.Join(" or ", union.Select(n => $"<see cref=\"global::FreeAstroApi.Models.{n}\"/>"))
+                + " depending on the request. Convert it with <c>response.Deserialize&lt;T&gt;(FreeAstroJson.Options)</c>.",
             ResponseKind.Json when sig.Response == TypeRef.JsonElement => "The JSON response. The API does not publish a schema for it yet.",
             ResponseKind.Json => $"The deserialized <c>{Docs.Escape(sig.Response!.ModelName ?? ShortName(sig.Response!.Decl))}</c> response.",
             ResponseKind.Text => $"The response body as text ({Docs.Escape(string.Join(", ", sig.ContentTypes))}).",
@@ -820,7 +838,7 @@ internal sealed class GeneratorRun
         if (pos < o.Path.Length) parts.Add(Literal(o.Path[pos..]));
         pathExpr.Append(string.Join(" + ", parts));
 
-        w.Line($"var request = new global::FreeAstroApi.Internal.FreeAstroRequest({Literal(o.Method)}, {pathExpr}, {Literal(sig.Accept)});");
+        w.Line($"var request = new global::FreeAstroApi.Internal.FreeAstroRequest({Literal(o.Method)}, {pathExpr}, {Literal(sig.Accept)}, {Literal(o.Id)});");
         if (sig.Body is not null) w.Line(o.BodyRequired ? "request.SetJsonBody(body);" : "if (body is not null) request.SetJsonBody(body);");
         if (paramsClass is not null)
         {

@@ -62,7 +62,7 @@ public sealed class LiveSmokeTests : IDisposable
     {
         var chart = await _client.Natal.CalculateAsync(new NatalChartRequest { Year = 1990, Month = 6, Day = 15, Hour = 14, Minute = 30, City = "Paris" });
 
-        Assert.Equal(System.Text.Json.JsonValueKind.Object, chart.ValueKind);
+        Assert.NotEmpty(chart.Planets!);
     }
 
     [LiveFact]

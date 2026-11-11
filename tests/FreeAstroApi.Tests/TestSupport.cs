@@ -56,6 +56,8 @@ public static class TestClients
         configure?.Invoke(options);
         var client = new FreeAstroClient(new HttpClient(handler), options);
         var delays = new List<TimeSpan>();
+        // Full jitter picks a random delay in [0, backoff]; tests pin it to the upper bound.
+        client.Transport.Jitter = () => 1.0;
         client.Transport.Delay = (delay, _) =>
         {
             delays.Add(delay);

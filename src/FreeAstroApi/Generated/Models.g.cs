@@ -1244,6 +1244,786 @@ namespace FreeAstroApi.Models
     }
 
     /// <summary>
+    /// The <c>AstrocartographyCityCheckCity</c> schema.
+    /// </summary>
+    public partial class AstrocartographyCityCheckCity
+    {
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>country</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("country")]
+        public string Country { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>state</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("state")]
+        public string State { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>lat</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lat")]
+        public double Lat { get; set; }
+
+        /// <summary>
+        /// The <c>lng</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lng")]
+        public double Lng { get; set; }
+
+        /// <summary>
+        /// The <c>timezone</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timezone")]
+        public string Timezone { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>population</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("population")]
+        public int Population { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyCityCheckCityVisualExplanation</c> schema.
+    /// </summary>
+    public partial class AstrocartographyCityCheckCityVisualExplanation
+    {
+        /// <summary>
+        /// The <c>primary_lines</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("primary_lines")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AstrocartographyCityCheckCityVisualExplanationPrimaryLine> PrimaryLines { get; set; } = new();
+
+        /// <summary>
+        /// The <c>nearest_lines</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("nearest_lines")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AstrocartographyCityCheckCityVisualExplanationPrimaryLine> NearestLines { get; set; } = new();
+
+        /// <summary>
+        /// The <c>primary_parans</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("primary_parans")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AstrocartographyCityCheckCityVisualExplanationPrimaryParan> PrimaryParans { get; set; } = new();
+
+        /// <summary>
+        /// The <c>relevant_crossings</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("relevant_crossings")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AstrocartographyCityCheckCityVisualExplanationRelevantCrossing> RelevantCrossings { get; set; } = new();
+
+        /// <summary>
+        /// The <c>map_line_ids</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("map_line_ids")]
+        public global::System.Collections.Generic.List<string> MapLineIds { get; set; } = new();
+
+        /// <summary>
+        /// The <c>explanation_mode</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("explanation_mode")]
+        public string ExplanationMode { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyCityCheckCityVisualExplanationPrimaryLine</c> schema.
+    /// </summary>
+    public partial class AstrocartographyCityCheckCityVisualExplanationPrimaryLine
+    {
+        /// <summary>
+        /// The <c>body</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("body")]
+        public string Body { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>angle</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angle")]
+        public string Angle { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>distance_km</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("distance_km")]
+        public double DistanceKm { get; set; }
+
+        /// <summary>
+        /// The <c>line_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("line_id")]
+        public string LineId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>is_close</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_close")]
+        public bool IsClose { get; set; }
+
+        /// <summary>
+        /// The <c>visual_strength</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("visual_strength")]
+        public string VisualStrength { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>source_focuses</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("source_focuses")]
+        public global::System.Collections.Generic.List<string> SourceFocuses { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyCityCheckCityVisualExplanationPrimaryParan</c> schema.
+    /// </summary>
+    public partial class AstrocartographyCityCheckCityVisualExplanationPrimaryParan
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>body_a</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("body_a")]
+        public string BodyA { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>event_a</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("event_a")]
+        public string EventA { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>body_b</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("body_b")]
+        public string BodyB { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>event_b</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("event_b")]
+        public string EventB { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>distance_km</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("distance_km")]
+        public double DistanceKm { get; set; }
+
+        /// <summary>
+        /// The <c>is_close</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_close")]
+        public bool IsClose { get; set; }
+
+        /// <summary>
+        /// The <c>visual_strength</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("visual_strength")]
+        public string VisualStrength { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>source_focuses</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("source_focuses")]
+        public global::System.Collections.Generic.List<string> SourceFocuses { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyCityCheckCityVisualExplanationRelevantCrossing</c> schema.
+    /// </summary>
+    public partial class AstrocartographyCityCheckCityVisualExplanationRelevantCrossing
+    {
+        /// <summary>
+        /// The <c>lat</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lat")]
+        public double? Lat { get; set; }
+
+        /// <summary>
+        /// The <c>lng</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lng")]
+        public double? Lng { get; set; }
+
+        /// <summary>
+        /// The <c>distance_km</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("distance_km")]
+        public double? DistanceKm { get; set; }
+
+        /// <summary>
+        /// The <c>lines</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lines")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AstrocartographyLinesCrossingLine>? Lines { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyCityCheckFocusScores</c> schema.
+    /// </summary>
+    public partial class AstrocartographyCityCheckFocusScores
+    {
+        /// <summary>
+        /// The <c>career</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("career")]
+        public global::FreeAstroApi.Models.AstrocartographyCityCheckFocusScoresCareer Career { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>romance</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("romance")]
+        public global::FreeAstroApi.Models.AstrocartographyCityCheckFocusScoresCareer Romance { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>home</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("home")]
+        public global::FreeAstroApi.Models.AstrocartographyCityCheckFocusScoresCareer Home { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>health</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("health")]
+        public global::FreeAstroApi.Models.AstrocartographyCityCheckFocusScoresCareer Health { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>spiritual</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("spiritual")]
+        public global::FreeAstroApi.Models.AstrocartographyCityCheckFocusScoresCareer Spiritual { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyCityCheckFocusScoresCareer</c> schema.
+    /// </summary>
+    public partial class AstrocartographyCityCheckFocusScoresCareer
+    {
+        /// <summary>
+        /// The <c>score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("score")]
+        public double Score { get; set; }
+
+        /// <summary>
+        /// The <c>summary</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("summary")]
+        public string Summary { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>top_factors</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("top_factors")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AstrocartographyCityCheckFocusScoresCareerTopFactor> TopFactors { get; set; } = new();
+
+        /// <summary>
+        /// The <c>nearest_favorable_distance_km</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("nearest_favorable_distance_km")]
+        public double NearestFavorableDistanceKm { get; set; }
+
+        /// <summary>
+        /// The <c>nearest_challenging_distance_km</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("nearest_challenging_distance_km")]
+        public double NearestChallengingDistanceKm { get; set; }
+
+        /// <summary>
+        /// The <c>nearest_favorable_line</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("nearest_favorable_line")]
+        public global::FreeAstroApi.Models.AstrocartographyCityCheckFocusScoresCareerNearestFavorableLine NearestFavorableLine { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>nearest_challenging_line</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("nearest_challenging_line")]
+        public global::FreeAstroApi.Models.AstrocartographyCityCheckFocusScoresCareerNearestFavorableLine NearestChallengingLine { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>line_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("line_score")]
+        public double LineScore { get; set; }
+
+        /// <summary>
+        /// The <c>paran_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("paran_score")]
+        public double ParanScore { get; set; }
+
+        /// <summary>
+        /// The <c>relocation_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("relocation_score")]
+        public double RelocationScore { get; set; }
+
+        /// <summary>
+        /// The <c>top_parans</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("top_parans")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AstrocartographyCityCheckFocusScoresCareerTopParan> TopParans { get; set; } = new();
+
+        /// <summary>
+        /// The <c>nearest_favorable_paran</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("nearest_favorable_paran")]
+        public global::FreeAstroApi.Models.AstrocartographyCityCheckFocusScoresCareerNearestFavorableParan? NearestFavorableParan { get; set; }
+
+        /// <summary>
+        /// The <c>nearest_challenging_paran</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("nearest_challenging_paran")]
+        public global::FreeAstroApi.Models.AstrocartographyCityCheckFocusScoresCareerNearestFavorableParan? NearestChallengingParan { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyCityCheckFocusScoresCareerNearestFavorableLine</c> schema.
+    /// </summary>
+    public partial class AstrocartographyCityCheckFocusScoresCareerNearestFavorableLine
+    {
+        /// <summary>
+        /// The <c>body</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("body")]
+        public string Body { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>angle</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angle")]
+        public string Angle { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>distance_km</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("distance_km")]
+        public double DistanceKm { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyCityCheckFocusScoresCareerNearestFavorableParan</c> schema.
+    /// </summary>
+    public partial class AstrocartographyCityCheckFocusScoresCareerNearestFavorableParan
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>body_a</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("body_a")]
+        public string BodyA { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>event_a</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("event_a")]
+        public string EventA { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>body_b</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("body_b")]
+        public string BodyB { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>event_b</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("event_b")]
+        public string EventB { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>latitude</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("latitude")]
+        public double Latitude { get; set; }
+
+        /// <summary>
+        /// The <c>distance_km</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("distance_km")]
+        public double DistanceKm { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyCityCheckFocusScoresCareerTopFactor</c> schema.
+    /// </summary>
+    public partial class AstrocartographyCityCheckFocusScoresCareerTopFactor
+    {
+        /// <summary>
+        /// The <c>body</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("body")]
+        public string Body { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>angle</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angle")]
+        public string Angle { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>distance_km</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("distance_km")]
+        public double DistanceKm { get; set; }
+
+        /// <summary>
+        /// The <c>weight</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("weight")]
+        public double Weight { get; set; }
+
+        /// <summary>
+        /// The <c>score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("score")]
+        public double Score { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyCityCheckFocusScoresCareerTopParan</c> schema.
+    /// </summary>
+    public partial class AstrocartographyCityCheckFocusScoresCareerTopParan
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>body_a</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("body_a")]
+        public string BodyA { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>event_a</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("event_a")]
+        public string EventA { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>body_b</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("body_b")]
+        public string BodyB { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>event_b</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("event_b")]
+        public string EventB { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>latitude</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("latitude")]
+        public double Latitude { get; set; }
+
+        /// <summary>
+        /// The <c>distance_km</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("distance_km")]
+        public double DistanceKm { get; set; }
+
+        /// <summary>
+        /// The <c>score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("score")]
+        public double Score { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyCityCheckMeta</c> schema.
+    /// </summary>
+    public partial class AstrocartographyCityCheckMeta
+    {
+        /// <summary>
+        /// The <c>mode</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mode")]
+        public string Mode { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>bodies</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("bodies")]
+        public global::System.Collections.Generic.List<string> Bodies { get; set; } = new();
+
+        /// <summary>
+        /// The <c>angles</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angles")]
+        public global::System.Collections.Generic.List<string> Angles { get; set; } = new();
+
+        /// <summary>
+        /// The <c>timezone</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timezone")]
+        public string Timezone { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyCityCheckRelocationSummary</c> schema.
+    /// </summary>
+    public partial class AstrocartographyCityCheckRelocationSummary
+    {
+        /// <summary>
+        /// The <c>resolved_timezone</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resolved_timezone")]
+        public string ResolvedTimezone { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>angles</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angles")]
+        public global::FreeAstroApi.Models.AstrocartographyCityCheckRelocationSummaryAngles Angles { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>angles_details</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angles_details")]
+        public global::System.Collections.Generic.Dictionary<string, global::FreeAstroApi.Models.AstrocartographyCityCheckRelocationSummaryAnglesDetailsEntry> AnglesDetails { get; set; } = new();
+
+        /// <summary>
+        /// The <c>angular_planets</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angular_planets")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AstrocartographyCityCheckRelocationSummaryAngularPlanet> AngularPlanets { get; set; } = new();
+
+        /// <summary>
+        /// The <c>dominant_themes</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dominant_themes")]
+        public global::System.Collections.Generic.List<string> DominantThemes { get; set; } = new();
+
+        /// <summary>
+        /// The <c>summary_short</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("summary_short")]
+        public string SummaryShort { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>summary_caution</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("summary_caution")]
+        public string SummaryCaution { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyCityCheckRelocationSummaryAngles</c> schema.
+    /// </summary>
+    public partial class AstrocartographyCityCheckRelocationSummaryAngles
+    {
+        /// <summary>
+        /// The <c>asc</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("asc")]
+        public double Asc { get; set; }
+
+        /// <summary>
+        /// The <c>mc</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mc")]
+        public double Mc { get; set; }
+
+        /// <summary>
+        /// The <c>ic</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ic")]
+        public double Ic { get; set; }
+
+        /// <summary>
+        /// The <c>dc</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dc")]
+        public double Dc { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyCityCheckRelocationSummaryAnglesDetailsEntry</c> schema.
+    /// </summary>
+    public partial class AstrocartographyCityCheckRelocationSummaryAnglesDetailsEntry
+    {
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public string SignId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pos")]
+        public double Pos { get; set; }
+
+        /// <summary>
+        /// The <c>abs_pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("abs_pos")]
+        public double AbsPos { get; set; }
+
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int House { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyCityCheckRelocationSummaryAngularPlanet</c> schema.
+    /// </summary>
+    public partial class AstrocartographyCityCheckRelocationSummaryAngularPlanet
+    {
+        /// <summary>
+        /// The <c>body</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("body")]
+        public string Body { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>angle</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angle")]
+        public string Angle { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>orb_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("orb_deg")]
+        public double OrbDeg { get; set; }
+
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int House { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
     /// The <c>AstrocartographyCityCheckRequest</c> schema.
     /// </summary>
     public partial class AstrocartographyCityCheckRequest
@@ -1346,6 +2126,732 @@ namespace FreeAstroApi.Models
     }
 
     /// <summary>
+    /// The <c>AstrocartographyCityCheckResponse</c> schema.
+    /// </summary>
+    public partial class AstrocartographyCityCheckResponse
+    {
+        /// <summary>
+        /// The <c>meta</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("meta")]
+        public global::FreeAstroApi.Models.AstrocartographyCityCheckMeta Meta { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>warnings</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("warnings")]
+        public global::System.Collections.Generic.List<string> Warnings { get; set; } = new();
+
+        /// <summary>
+        /// The <c>city</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("city")]
+        public global::FreeAstroApi.Models.AstrocartographyCityCheckCity City { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>overall_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("overall_score")]
+        public double OverallScore { get; set; }
+
+        /// <summary>
+        /// The <c>focus_scores</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("focus_scores")]
+        public global::FreeAstroApi.Models.AstrocartographyCityCheckFocusScores FocusScores { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>city_visual_explanation</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("city_visual_explanation")]
+        public global::FreeAstroApi.Models.AstrocartographyCityCheckCityVisualExplanation CityVisualExplanation { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>relocation_summary</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("relocation_summary")]
+        public global::FreeAstroApi.Models.AstrocartographyCityCheckRelocationSummary? RelocationSummary { get; set; }
+
+        /// <summary>
+        /// The <c>map</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("map")]
+        public global::FreeAstroApi.Models.AstrocartographyLinesResponse? Map { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyLinesChartFamily</c> schema.
+    /// </summary>
+    public partial class AstrocartographyLinesChartFamily
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>body</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("body")]
+        public string Body { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>kind</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("kind")]
+        public string Kind { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>angles</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angles")]
+        public global::System.Collections.Generic.List<string> Angles { get; set; } = new();
+
+        /// <summary>
+        /// The <c>member_line_ids</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("member_line_ids")]
+        public global::System.Collections.Generic.List<string> MemberLineIds { get; set; } = new();
+
+        /// <summary>
+        /// The <c>geometry</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("geometry")]
+        public global::FreeAstroApi.Models.AstrocartographyLinesLineGeometry Geometry { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>line_family</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("line_family")]
+        public string LineFamily { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>geometry_scope</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("geometry_scope")]
+        public string GeometryScope { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>endpoint_behavior</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("endpoint_behavior")]
+        public string EndpointBehavior { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>complete_geometry</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("complete_geometry")]
+        public bool CompleteGeometry { get; set; }
+
+        /// <summary>
+        /// The <c>world_wrapped</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("world_wrapped")]
+        public bool WorldWrapped { get; set; }
+
+        /// <summary>
+        /// The <c>segment_count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("segment_count")]
+        public int SegmentCount { get; set; }
+
+        /// <summary>
+        /// The <c>lat_range</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lat_range")]
+        public global::FreeAstroApi.Models.AstrocartographyLinesLineLatRange LatRange { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>lng_range</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lng_range")]
+        public global::FreeAstroApi.Models.AstrocartographyLinesLineLatRange LngRange { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyLinesCrossing</c> schema.
+    /// </summary>
+    public partial class AstrocartographyLinesCrossing
+    {
+        /// <summary>
+        /// The <c>lat</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lat")]
+        public double Lat { get; set; }
+
+        /// <summary>
+        /// The <c>lng</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lng")]
+        public double Lng { get; set; }
+
+        /// <summary>
+        /// The <c>lines</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lines")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AstrocartographyLinesCrossingLine> Lines { get; set; } = new();
+
+        /// <summary>
+        /// The <c>geometry</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("geometry")]
+        public global::FreeAstroApi.Models.AstrocartographyLinesCrossingGeometry Geometry { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>nearest_city</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("nearest_city")]
+        public global::FreeAstroApi.Models.AstrocartographyLinesCrossingNearestCity NearestCity { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>quality</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("quality")]
+        public global::FreeAstroApi.Models.AstrocartographyLinesCrossingQuality Quality { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>strongest_focus</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("strongest_focus")]
+        public string StrongestFocus { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>secondary_focus</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("secondary_focus")]
+        public string SecondaryFocus { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>polarity</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("polarity")]
+        public string Polarity { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>interpretation_short</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("interpretation_short")]
+        public string InterpretationShort { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>interpretation_caution</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("interpretation_caution")]
+        public string InterpretationCaution { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>benefit_keywords</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("benefit_keywords")]
+        public global::System.Collections.Generic.List<string> BenefitKeywords { get; set; } = new();
+
+        /// <summary>
+        /// The <c>risk_keywords</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("risk_keywords")]
+        public global::System.Collections.Generic.List<string> RiskKeywords { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyLinesCrossingGeometry</c> schema.
+    /// </summary>
+    public partial class AstrocartographyLinesCrossingGeometry
+    {
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>coordinates</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("coordinates")]
+        public global::System.Collections.Generic.List<double> Coordinates { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyLinesCrossingLine</c> schema.
+    /// </summary>
+    public partial class AstrocartographyLinesCrossingLine
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>body</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("body")]
+        public string Body { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>angle</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angle")]
+        public string Angle { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyLinesCrossingNearestCity</c> schema.
+    /// </summary>
+    public partial class AstrocartographyLinesCrossingNearestCity
+    {
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>country</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("country")]
+        public string Country { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>state</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("state")]
+        public string State { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>lat</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lat")]
+        public double Lat { get; set; }
+
+        /// <summary>
+        /// The <c>lng</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lng")]
+        public double Lng { get; set; }
+
+        /// <summary>
+        /// The <c>timezone</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timezone")]
+        public string Timezone { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>population</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("population")]
+        public int Population { get; set; }
+
+        /// <summary>
+        /// The <c>distance_km</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("distance_km")]
+        public double DistanceKm { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyLinesCrossingQuality</c> schema.
+    /// </summary>
+    public partial class AstrocartographyLinesCrossingQuality
+    {
+        /// <summary>
+        /// The <c>overall_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("overall_score")]
+        public double OverallScore { get; set; }
+
+        /// <summary>
+        /// The <c>strongest_focus</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("strongest_focus")]
+        public string StrongestFocus { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>strongest_focus_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("strongest_focus_score")]
+        public double StrongestFocusScore { get; set; }
+
+        /// <summary>
+        /// The <c>secondary_focus</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("secondary_focus")]
+        public string SecondaryFocus { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>secondary_focus_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("secondary_focus_score")]
+        public double SecondaryFocusScore { get; set; }
+
+        /// <summary>
+        /// The <c>polarity</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("polarity")]
+        public string Polarity { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>match_tier</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("match_tier")]
+        public string MatchTier { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>focus_scores</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("focus_scores")]
+        public global::FreeAstroApi.Models.AstrocartographyLinesCrossingQualityFocusScores FocusScores { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyLinesCrossingQualityFocusScores</c> schema.
+    /// </summary>
+    public partial class AstrocartographyLinesCrossingQualityFocusScores
+    {
+        /// <summary>
+        /// The <c>career</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("career")]
+        public double Career { get; set; }
+
+        /// <summary>
+        /// The <c>health</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("health")]
+        public double Health { get; set; }
+
+        /// <summary>
+        /// The <c>home</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("home")]
+        public double Home { get; set; }
+
+        /// <summary>
+        /// The <c>romance</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("romance")]
+        public double Romance { get; set; }
+
+        /// <summary>
+        /// The <c>spiritual</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("spiritual")]
+        public double Spiritual { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyLinesLine</c> schema.
+    /// </summary>
+    public partial class AstrocartographyLinesLine
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>body</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("body")]
+        public string Body { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>angle</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angle")]
+        public string Angle { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>_kind</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("_kind")]
+        public string Kind { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>_segments</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("_segments")]
+        public global::System.Collections.Generic.List<global::System.Collections.Generic.List<global::FreeAstroApi.Models.AstrocartographyLinesLineSegmentItem>>? Segments { get; set; }
+
+        /// <summary>
+        /// The <c>geometry</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("geometry")]
+        public global::FreeAstroApi.Models.AstrocartographyLinesLineGeometry Geometry { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>chart_family_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("chart_family_id")]
+        public string? ChartFamilyId { get; set; }
+
+        /// <summary>
+        /// The <c>paired_line_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("paired_line_id")]
+        public string? PairedLineId { get; set; }
+
+        /// <summary>
+        /// The <c>line_family</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("line_family")]
+        public string LineFamily { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>geometry_scope</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("geometry_scope")]
+        public string GeometryScope { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>endpoint_behavior</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("endpoint_behavior")]
+        public string EndpointBehavior { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>complete_geometry</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("complete_geometry")]
+        public bool CompleteGeometry { get; set; }
+
+        /// <summary>
+        /// The <c>world_wrapped</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("world_wrapped")]
+        public bool WorldWrapped { get; set; }
+
+        /// <summary>
+        /// The <c>segment_count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("segment_count")]
+        public int SegmentCount { get; set; }
+
+        /// <summary>
+        /// The <c>lat_range</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lat_range")]
+        public global::FreeAstroApi.Models.AstrocartographyLinesLineLatRange LatRange { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>lng_range</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lng_range")]
+        public global::FreeAstroApi.Models.AstrocartographyLinesLineLatRange LngRange { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>_longitude</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("_longitude")]
+        public double? Longitude { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyLinesLineGeometry</c> schema.
+    /// </summary>
+    public partial class AstrocartographyLinesLineGeometry
+    {
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>coordinates</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("coordinates")]
+        public global::System.Collections.Generic.List<global::System.Collections.Generic.List<object?>> Coordinates { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyLinesLineLatRange</c> schema.
+    /// </summary>
+    public partial class AstrocartographyLinesLineLatRange
+    {
+        /// <summary>
+        /// The <c>min</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("min")]
+        public double Min { get; set; }
+
+        /// <summary>
+        /// The <c>max</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("max")]
+        public double Max { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyLinesLineSegmentItem</c> schema.
+    /// </summary>
+    public partial class AstrocartographyLinesLineSegmentItem
+    {
+        /// <summary>
+        /// The <c>lat</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lat")]
+        public double Lat { get; set; }
+
+        /// <summary>
+        /// The <c>lng</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lng")]
+        public double Lng { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyLinesMeta</c> schema.
+    /// </summary>
+    public partial class AstrocartographyLinesMeta
+    {
+        /// <summary>
+        /// The <c>mode</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mode")]
+        public string Mode { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>bodies</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("bodies")]
+        public global::System.Collections.Generic.List<string> Bodies { get; set; } = new();
+
+        /// <summary>
+        /// The <c>angles</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angles")]
+        public global::System.Collections.Generic.List<string> Angles { get; set; } = new();
+
+        /// <summary>
+        /// The <c>timezone</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timezone")]
+        public string Timezone { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>geometry_format</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("geometry_format")]
+        public string GeometryFormat { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>coordinate_reference_system</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("coordinate_reference_system")]
+        public string CoordinateReferenceSystem { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>coordinate_order</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("coordinate_order")]
+        public string CoordinateOrder { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sample_step_degrees</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sample_step_degrees")]
+        public double SampleStepDegrees { get; set; }
+
+        /// <summary>
+        /// The <c>line_sample_step_degrees</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("line_sample_step_degrees")]
+        public double LineSampleStepDegrees { get; set; }
+
+        /// <summary>
+        /// The <c>crossing_count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("crossing_count")]
+        public int CrossingCount { get; set; }
+
+        /// <summary>
+        /// The <c>chart_family_count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("chart_family_count")]
+        public int ChartFamilyCount { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
     /// The <c>AstrocartographyLinesRequest</c> schema.
     /// </summary>
     public partial class AstrocartographyLinesRequest
@@ -1385,6 +2891,258 @@ namespace FreeAstroApi.Models
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("include_crossings")]
         public bool? IncludeCrossings { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyLinesResponse</c> schema.
+    /// </summary>
+    public partial class AstrocartographyLinesResponse
+    {
+        /// <summary>
+        /// The <c>meta</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("meta")]
+        public global::FreeAstroApi.Models.AstrocartographyLinesMeta Meta { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>warnings</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("warnings")]
+        public global::System.Collections.Generic.List<string> Warnings { get; set; } = new();
+
+        /// <summary>
+        /// The <c>lines</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lines")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AstrocartographyLinesLine> Lines { get; set; } = new();
+
+        /// <summary>
+        /// The <c>chart_families</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("chart_families")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AstrocartographyLinesChartFamily> ChartFamilies { get; set; } = new();
+
+        /// <summary>
+        /// The <c>crossings</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("crossings")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AstrocartographyLinesCrossing> Crossings { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyParansMeta</c> schema.
+    /// </summary>
+    public partial class AstrocartographyParansMeta
+    {
+        /// <summary>
+        /// The <c>mode</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mode")]
+        public string Mode { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>bodies</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("bodies")]
+        public global::System.Collections.Generic.List<string> Bodies { get; set; } = new();
+
+        /// <summary>
+        /// The <c>events</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("events")]
+        public global::System.Collections.Generic.List<string> Events { get; set; } = new();
+
+        /// <summary>
+        /// The <c>timezone</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timezone")]
+        public string Timezone { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>paran_orb_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("paran_orb_deg")]
+        public double ParanOrbDeg { get; set; }
+
+        /// <summary>
+        /// The <c>paran_tail_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("paran_tail_deg")]
+        public double ParanTailDeg { get; set; }
+
+        /// <summary>
+        /// The <c>count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("count")]
+        public int Count { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyParansParan</c> schema.
+    /// </summary>
+    public partial class AstrocartographyParansParan
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>body_a</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("body_a")]
+        public string BodyA { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>event_a</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("event_a")]
+        public string EventA { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>body_b</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("body_b")]
+        public string BodyB { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>event_b</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("event_b")]
+        public string EventB { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>latitude</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("latitude")]
+        public double Latitude { get; set; }
+
+        /// <summary>
+        /// The <c>orb_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("orb_deg")]
+        public double OrbDeg { get; set; }
+
+        /// <summary>
+        /// The <c>kind</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("kind")]
+        public string Kind { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>geometry</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("geometry")]
+        public global::FreeAstroApi.Models.AstrocartographyParansParanGeometry Geometry { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>nearest_cities</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("nearest_cities")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AstrocartographyLinesCrossingNearestCity> NearestCities { get; set; } = new();
+
+        /// <summary>
+        /// The <c>strength</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("strength")]
+        public double Strength { get; set; }
+
+        /// <summary>
+        /// The <c>strongest_focus</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("strongest_focus")]
+        public string StrongestFocus { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>secondary_focus</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("secondary_focus")]
+        public string SecondaryFocus { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>polarity</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("polarity")]
+        public string Polarity { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>interpretation_short</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("interpretation_short")]
+        public string InterpretationShort { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>interpretation_caution</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("interpretation_caution")]
+        public string InterpretationCaution { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>benefit_keywords</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("benefit_keywords")]
+        public global::System.Collections.Generic.List<string> BenefitKeywords { get; set; } = new();
+
+        /// <summary>
+        /// The <c>risk_keywords</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("risk_keywords")]
+        public global::System.Collections.Generic.List<string> RiskKeywords { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyParansParanGeometry</c> schema.
+    /// </summary>
+    public partial class AstrocartographyParansParanGeometry
+    {
+        /// <summary>
+        /// The <c>center_lat</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("center_lat")]
+        public double CenterLat { get; set; }
+
+        /// <summary>
+        /// The <c>north_lat</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("north_lat")]
+        public double NorthLat { get; set; }
+
+        /// <summary>
+        /// The <c>south_lat</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("south_lat")]
+        public double SouthLat { get; set; }
+
+        /// <summary>
+        /// The <c>segments</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("segments")]
+        public global::System.Collections.Generic.List<global::System.Collections.Generic.List<global::FreeAstroApi.Models.AstrocartographyLinesLineSegmentItem>> Segments { get; set; } = new();
 
         /// <summary>
         /// Fields returned by the API that this SDK version does not model yet.
@@ -1451,6 +3209,138 @@ namespace FreeAstroApi.Models
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("include_nearby_cities")]
         public bool? IncludeNearbyCities { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyParansResponse</c> schema.
+    /// </summary>
+    public partial class AstrocartographyParansResponse
+    {
+        /// <summary>
+        /// The <c>meta</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("meta")]
+        public global::FreeAstroApi.Models.AstrocartographyParansMeta Meta { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>warnings</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("warnings")]
+        public global::System.Collections.Generic.List<string> Warnings { get; set; } = new();
+
+        /// <summary>
+        /// The <c>parans</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("parans")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AstrocartographyParansParan> Parans { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyRecommendationsMeta</c> schema.
+    /// </summary>
+    public partial class AstrocartographyRecommendationsMeta
+    {
+        /// <summary>
+        /// The <c>focus</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("focus")]
+        public string Focus { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>mode</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mode")]
+        public string Mode { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>country_scope</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("country_scope")]
+        public string CountryScope { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>city_size</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("city_size")]
+        public string? CitySize { get; set; }
+
+        /// <summary>
+        /// The <c>population_min</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("population_min")]
+        public int? PopulationMin { get; set; }
+
+        /// <summary>
+        /// The <c>population_max</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("population_max")]
+        public int? PopulationMax { get; set; }
+
+        /// <summary>
+        /// The <c>bodies</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("bodies")]
+        public global::System.Collections.Generic.List<string> Bodies { get; set; } = new();
+
+        /// <summary>
+        /// The <c>angles</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angles")]
+        public global::System.Collections.Generic.List<string> Angles { get; set; } = new();
+
+        /// <summary>
+        /// The <c>timezone</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timezone")]
+        public string Timezone { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>candidate_count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("candidate_count")]
+        public int CandidateCount { get; set; }
+
+        /// <summary>
+        /// The <c>scored_count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scored_count")]
+        public int ScoredCount { get; set; }
+
+        /// <summary>
+        /// The <c>signal_strength</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("signal_strength")]
+        public string SignalStrength { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>confidence</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("confidence")]
+        public string Confidence { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>match_tier</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("match_tier")]
+        public string MatchTier { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>no_strong_matches</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("no_strong_matches")]
+        public bool NoStrongMatches { get; set; }
 
         /// <summary>
         /// Fields returned by the API that this SDK version does not model yet.
@@ -1592,6 +3482,816 @@ namespace FreeAstroApi.Models
     }
 
     /// <summary>
+    /// The <c>AstrocartographyRecommendationsResponse</c> schema.
+    /// </summary>
+    public partial class AstrocartographyRecommendationsResponse
+    {
+        /// <summary>
+        /// The <c>meta</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("meta")]
+        public global::FreeAstroApi.Models.AstrocartographyRecommendationsMeta Meta { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>warnings</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("warnings")]
+        public global::System.Collections.Generic.List<string> Warnings { get; set; } = new();
+
+        /// <summary>
+        /// The <c>results</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("results")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AstrocartographyRecommendationsResult> Results { get; set; } = new();
+
+        /// <summary>
+        /// The <c>map</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("map")]
+        public global::FreeAstroApi.Models.AstrocartographyLinesResponse? Map { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyRecommendationsResult</c> schema.
+    /// </summary>
+    public partial class AstrocartographyRecommendationsResult
+    {
+        /// <summary>
+        /// The <c>city</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("city")]
+        public global::FreeAstroApi.Models.AstrocartographyRecommendationsResultCity City { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>distance_from_natal_km</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("distance_from_natal_km")]
+        public double? DistanceFromNatalKm { get; set; }
+
+        /// <summary>
+        /// The <c>score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("score")]
+        public double Score { get; set; }
+
+        /// <summary>
+        /// The <c>summary</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("summary")]
+        public string Summary { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>top_factors</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("top_factors")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AstrocartographyCityCheckFocusScoresCareerTopFactor> TopFactors { get; set; } = new();
+
+        /// <summary>
+        /// The <c>nearest_favorable_distance_km</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("nearest_favorable_distance_km")]
+        public double NearestFavorableDistanceKm { get; set; }
+
+        /// <summary>
+        /// The <c>nearest_challenging_distance_km</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("nearest_challenging_distance_km")]
+        public double NearestChallengingDistanceKm { get; set; }
+
+        /// <summary>
+        /// The <c>nearest_favorable_line</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("nearest_favorable_line")]
+        public global::FreeAstroApi.Models.AstrocartographyCityCheckFocusScoresCareerNearestFavorableLine NearestFavorableLine { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>nearest_challenging_line</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("nearest_challenging_line")]
+        public global::FreeAstroApi.Models.AstrocartographyCityCheckFocusScoresCareerNearestFavorableLine NearestChallengingLine { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>line_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("line_score")]
+        public double LineScore { get; set; }
+
+        /// <summary>
+        /// The <c>paran_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("paran_score")]
+        public double ParanScore { get; set; }
+
+        /// <summary>
+        /// The <c>relocation_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("relocation_score")]
+        public double RelocationScore { get; set; }
+
+        /// <summary>
+        /// The <c>top_parans</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("top_parans")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AstrocartographyCityCheckFocusScoresCareerTopParan> TopParans { get; set; } = new();
+
+        /// <summary>
+        /// The <c>nearest_favorable_paran</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("nearest_favorable_paran")]
+        public global::FreeAstroApi.Models.AstrocartographyCityCheckFocusScoresCareerNearestFavorableParan? NearestFavorableParan { get; set; }
+
+        /// <summary>
+        /// The <c>nearest_challenging_paran</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("nearest_challenging_paran")]
+        public global::FreeAstroApi.Models.AstrocartographyCityCheckFocusScoresCareerNearestFavorableParan? NearestChallengingParan { get; set; }
+
+        /// <summary>
+        /// The <c>rank</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("rank")]
+        public int Rank { get; set; }
+
+        /// <summary>
+        /// The <c>relocation_summary</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("relocation_summary")]
+        public global::FreeAstroApi.Models.AstrocartographyCityCheckRelocationSummary? RelocationSummary { get; set; }
+
+        /// <summary>
+        /// The <c>city_visual_explanation</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("city_visual_explanation")]
+        public global::FreeAstroApi.Models.AstrocartographyCityCheckCityVisualExplanation CityVisualExplanation { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>signal_strength</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("signal_strength")]
+        public string SignalStrength { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>match_tier</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("match_tier")]
+        public string MatchTier { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyRecommendationsResultCity</c> schema.
+    /// </summary>
+    public partial class AstrocartographyRecommendationsResultCity
+    {
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>country</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("country")]
+        public string Country { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>state</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("state")]
+        public string? State { get; set; }
+
+        /// <summary>
+        /// The <c>lat</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lat")]
+        public double Lat { get; set; }
+
+        /// <summary>
+        /// The <c>lng</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lng")]
+        public double Lng { get; set; }
+
+        /// <summary>
+        /// The <c>timezone</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timezone")]
+        public string Timezone { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>population</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("population")]
+        public int Population { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyRelocationChart</c> schema.
+    /// </summary>
+    public partial class AstrocartographyRelocationChart
+    {
+        /// <summary>
+        /// The <c>subject</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("subject")]
+        public global::FreeAstroApi.Models.AstrocartographyRelocationChartSubject Subject { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>planets</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("planets")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AstrocartographyRelocationChartPlanet> Planets { get; set; } = new();
+
+        /// <summary>
+        /// The <c>aspects</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("aspects")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AstrocartographyRelocationChartAspect> Aspects { get; set; } = new();
+
+        /// <summary>
+        /// The <c>aspects_summary</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("aspects_summary")]
+        public global::FreeAstroApi.Models.AstrocartographyRelocationChartAspectsSummary AspectsSummary { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>confidence</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("confidence")]
+        public global::FreeAstroApi.Models.AstrocartographyRelocationChartConfidence Confidence { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>houses</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("houses")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AstrocartographyRelocationChartHouse> Houses { get; set; } = new();
+
+        /// <summary>
+        /// The <c>angles</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angles")]
+        public global::FreeAstroApi.Models.AstrocartographyRelocationChartAngles Angles { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>angles_details</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angles_details")]
+        public global::System.Collections.Generic.Dictionary<string, global::FreeAstroApi.Models.AstrocartographyCityCheckRelocationSummaryAnglesDetailsEntry> AnglesDetails { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyRelocationChartAngles</c> schema.
+    /// </summary>
+    public partial class AstrocartographyRelocationChartAngles
+    {
+        /// <summary>
+        /// The <c>asc</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("asc")]
+        public double Asc { get; set; }
+
+        /// <summary>
+        /// The <c>mc</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mc")]
+        public double Mc { get; set; }
+
+        /// <summary>
+        /// The <c>ic</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ic")]
+        public double Ic { get; set; }
+
+        /// <summary>
+        /// The <c>dc</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dc")]
+        public double Dc { get; set; }
+
+        /// <summary>
+        /// The <c>vertex</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("vertex")]
+        public double Vertex { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyRelocationChartAspect</c> schema.
+    /// </summary>
+    public partial class AstrocartographyRelocationChartAspect
+    {
+        /// <summary>
+        /// The <c>p1</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("p1")]
+        public string P1 { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>p2</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("p2")]
+        public string P2 { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>orb</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("orb")]
+        public double Orb { get; set; }
+
+        /// <summary>
+        /// The <c>deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("deg")]
+        public double Deg { get; set; }
+
+        /// <summary>
+        /// The <c>is_major</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_major")]
+        public bool IsMajor { get; set; }
+
+        /// <summary>
+        /// The <c>is_applying</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_applying")]
+        public bool IsApplying { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyRelocationChartAspectsSummary</c> schema.
+    /// </summary>
+    public partial class AstrocartographyRelocationChartAspectsSummary
+    {
+        /// <summary>
+        /// The <c>total</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total")]
+        public int Total { get; set; }
+
+        /// <summary>
+        /// The <c>major</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("major")]
+        public int Major { get; set; }
+
+        /// <summary>
+        /// The <c>minor</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("minor")]
+        public int Minor { get; set; }
+
+        /// <summary>
+        /// The <c>by_type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("by_type")]
+        public global::FreeAstroApi.Models.AstrocartographyRelocationChartAspectsSummaryByType ByType { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyRelocationChartAspectsSummaryByType</c> schema.
+    /// </summary>
+    public partial class AstrocartographyRelocationChartAspectsSummaryByType
+    {
+        /// <summary>
+        /// The <c>square</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("square")]
+        public int Square { get; set; }
+
+        /// <summary>
+        /// The <c>trine</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("trine")]
+        public int Trine { get; set; }
+
+        /// <summary>
+        /// The <c>opposition</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("opposition")]
+        public int? Opposition { get; set; }
+
+        /// <summary>
+        /// The <c>sextile</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sextile")]
+        public int Sextile { get; set; }
+
+        /// <summary>
+        /// The <c>conjunction</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("conjunction")]
+        public int Conjunction { get; set; }
+
+        /// <summary>
+        /// The <c>semi_square</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("semi_square")]
+        public int? SemiSquare { get; set; }
+
+        /// <summary>
+        /// The <c>quintile</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("quintile")]
+        public int? Quintile { get; set; }
+
+        /// <summary>
+        /// The <c>quincunx</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("quincunx")]
+        public int? Quincunx { get; set; }
+
+        /// <summary>
+        /// The <c>semi_sextile</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("semi_sextile")]
+        public int? SemiSextile { get; set; }
+
+        /// <summary>
+        /// The <c>sesquiquadrate</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sesquiquadrate")]
+        public int? Sesquiquadrate { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyRelocationChartConfidence</c> schema.
+    /// </summary>
+    public partial class AstrocartographyRelocationChartConfidence
+    {
+        /// <summary>
+        /// The <c>houses</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("houses")]
+        public string Houses { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>angles</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angles")]
+        public string Angles { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>overall</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("overall")]
+        public string Overall { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyRelocationChartHouse</c> schema.
+    /// </summary>
+    public partial class AstrocartographyRelocationChartHouse
+    {
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int House { get; set; }
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public string SignId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pos")]
+        public double Pos { get; set; }
+
+        /// <summary>
+        /// The <c>abs_pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("abs_pos")]
+        public double AbsPos { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyRelocationChartPlanet</c> schema.
+    /// </summary>
+    public partial class AstrocartographyRelocationChartPlanet
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public string SignId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pos")]
+        public double Pos { get; set; }
+
+        /// <summary>
+        /// The <c>abs_pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("abs_pos")]
+        public double AbsPos { get; set; }
+
+        /// <summary>
+        /// The <c>retrograde</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("retrograde")]
+        public bool Retrograde { get; set; }
+
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int House { get; set; }
+
+        /// <summary>
+        /// The <c>declination_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("declination_deg")]
+        public double? DeclinationDeg { get; set; }
+
+        /// <summary>
+        /// The <c>variant</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("variant")]
+        public string? Variant { get; set; }
+
+        /// <summary>
+        /// The <c>dignity</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dignity")]
+        public string? Dignity { get; set; }
+
+        /// <summary>
+        /// The <c>speed</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("speed")]
+        public double? Speed { get; set; }
+
+        /// <summary>
+        /// The <c>is_stationary</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_stationary")]
+        public bool? IsStationary { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyRelocationChartSubject</c> schema.
+    /// </summary>
+    public partial class AstrocartographyRelocationChartSubject
+    {
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>datetime</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("datetime")]
+        public string Datetime { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>location</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("location")]
+        public global::FreeAstroApi.Models.AstrocartographyRelocationChartSubjectLocation Location { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>settings</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("settings")]
+        public global::FreeAstroApi.Models.AstrocartographyRelocationChartSubjectSettings Settings { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyRelocationChartSubjectLocation</c> schema.
+    /// </summary>
+    public partial class AstrocartographyRelocationChartSubjectLocation
+    {
+        /// <summary>
+        /// The <c>city</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("city")]
+        public string City { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>lat</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lat")]
+        public double Lat { get; set; }
+
+        /// <summary>
+        /// The <c>lng</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lng")]
+        public double Lng { get; set; }
+
+        /// <summary>
+        /// The <c>timezone</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timezone")]
+        public string Timezone { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyRelocationChartSubjectSettings</c> schema.
+    /// </summary>
+    public partial class AstrocartographyRelocationChartSubjectSettings
+    {
+        /// <summary>
+        /// The <c>house_system</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house_system")]
+        public string HouseSystem { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>julian_day</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("julian_day")]
+        public double JulianDay { get; set; }
+
+        /// <summary>
+        /// The <c>julian_day_tt</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("julian_day_tt")]
+        public double JulianDayTt { get; set; }
+
+        /// <summary>
+        /// The <c>delta_t_days</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("delta_t_days")]
+        public double DeltaTDays { get; set; }
+
+        /// <summary>
+        /// The <c>delta_t_seconds</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("delta_t_seconds")]
+        public double DeltaTSeconds { get; set; }
+
+        /// <summary>
+        /// The <c>zodiac_type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zodiac_type")]
+        public string ZodiacType { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>time_known</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("time_known")]
+        public bool TimeKnown { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyRelocationMeta</c> schema.
+    /// </summary>
+    public partial class AstrocartographyRelocationMeta
+    {
+        /// <summary>
+        /// The <c>mode</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mode")]
+        public string Mode { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>timezone</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timezone")]
+        public string Timezone { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>house_system</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house_system")]
+        public string HouseSystem { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
     /// The <c>AstrocartographyRelocationRequest</c> schema.
     /// </summary>
     public partial class AstrocartographyRelocationRequest
@@ -1625,6 +4325,318 @@ namespace FreeAstroApi.Models
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("lng")]
         public double? Lng { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AstrocartographyRelocationResponse</c> schema.
+    /// </summary>
+    public partial class AstrocartographyRelocationResponse
+    {
+        /// <summary>
+        /// The <c>meta</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("meta")]
+        public global::FreeAstroApi.Models.AstrocartographyRelocationMeta Meta { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>warnings</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("warnings")]
+        public global::System.Collections.Generic.List<string> Warnings { get; set; } = new();
+
+        /// <summary>
+        /// The <c>city</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("city")]
+        public global::FreeAstroApi.Models.AstrocartographyCityCheckCity City { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>relocation_summary</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("relocation_summary")]
+        public global::FreeAstroApi.Models.AstrocartographyCityCheckRelocationSummary RelocationSummary { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>chart</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("chart")]
+        public global::FreeAstroApi.Models.AstrocartographyRelocationChart Chart { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// Interpretation blocks for the chart's placements and aspects, grouped by theme.
+    /// </summary>
+    public partial class AtomicInterpretation
+    {
+        /// <summary>
+        /// The <c>metadata</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
+        public global::FreeAstroApi.Models.AtomicInterpretationMetadata Metadata { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sections</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sections")]
+        public global::FreeAstroApi.Models.AtomicInterpretationSections Sections { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>index</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("index")]
+        public global::FreeAstroApi.Models.AtomicInterpretationIndex Index { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AtomicInterpretationAspect</c> schema.
+    /// </summary>
+    public partial class AtomicInterpretationAspect
+    {
+        /// <summary>
+        /// The <c>p1</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("p1")]
+        public string P1 { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>p2</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("p2")]
+        public string P2 { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>key</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("key")]
+        public string Key { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>title</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("title")]
+        public string? Title { get; set; }
+
+        /// <summary>
+        /// The <c>content</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("content")]
+        public object? Content { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// An interpretation text block (a row of the interpretation library).
+    /// </summary>
+    public partial class AtomicInterpretationBlock
+    {
+        /// <summary>
+        /// The <c>key</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("key")]
+        public string? Key { get; set; }
+
+        /// <summary>
+        /// The <c>category</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("category")]
+        public string? Category { get; set; }
+
+        /// <summary>
+        /// The <c>title</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("title")]
+        public string? Title { get; set; }
+
+        /// <summary>
+        /// The <c>body</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("body")]
+        public object? Body { get; set; }
+
+        /// <summary>
+        /// The <c>tone</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tone")]
+        public string? Tone { get; set; }
+
+        /// <summary>
+        /// The <c>tags</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
+        public global::System.Collections.Generic.List<string>? Tags { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AtomicInterpretationIndex</c> schema.
+    /// </summary>
+    public partial class AtomicInterpretationIndex
+    {
+        /// <summary>
+        /// The <c>placements</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("placements")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AtomicInterpretationPlacement> Placements { get; set; } = new();
+
+        /// <summary>
+        /// The <c>aspects</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("aspects")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AtomicInterpretationAspect> Aspects { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AtomicInterpretationMetadata</c> schema.
+    /// </summary>
+    public partial class AtomicInterpretationMetadata
+    {
+        /// <summary>
+        /// The <c>key_count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("key_count")]
+        public int KeyCount { get; set; }
+
+        /// <summary>
+        /// The <c>found_count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("found_count")]
+        public int FoundCount { get; set; }
+
+        /// <summary>
+        /// The <c>missing_keys</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("missing_keys")]
+        public global::System.Collections.Generic.List<string> MissingKeys { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AtomicInterpretationPlacement</c> schema.
+    /// </summary>
+    public partial class AtomicInterpretationPlacement
+    {
+        /// <summary>
+        /// The <c>planet</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("planet")]
+        public string Planet { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>key</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("key")]
+        public string Key { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>title</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("title")]
+        public string? Title { get; set; }
+
+        /// <summary>
+        /// The <c>content</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("content")]
+        public object? Content { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>AtomicInterpretationSections</c> schema.
+    /// </summary>
+    public partial class AtomicInterpretationSections
+    {
+        /// <summary>
+        /// The <c>core_self</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("core_self")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AtomicInterpretationBlock> CoreSelf { get; set; } = new();
+
+        /// <summary>
+        /// The <c>mind</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mind")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AtomicInterpretationBlock> Mind { get; set; } = new();
+
+        /// <summary>
+        /// The <c>love_relating</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("love_relating")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AtomicInterpretationBlock> LoveRelating { get; set; } = new();
+
+        /// <summary>
+        /// The <c>work_path</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("work_path")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AtomicInterpretationBlock> WorkPath { get; set; } = new();
+
+        /// <summary>
+        /// The <c>social_collective</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("social_collective")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AtomicInterpretationBlock> SocialCollective { get; set; } = new();
+
+        /// <summary>
+        /// The <c>karmic_healing</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("karmic_healing")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.AtomicInterpretationBlock> KarmicHealing { get; set; } = new();
 
         /// <summary>
         /// Fields returned by the API that this SDK version does not model yet.
@@ -1709,6 +4721,42 @@ namespace FreeAstroApi.Models
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("template")]
         public string? Template { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// Interpretation report for a natal chart.
+    /// </summary>
+    public partial class AtomicReportResponse
+    {
+        /// <summary>
+        /// The <c>metadata</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
+        public global::FreeAstroApi.Models.AtomicInterpretationMetadata Metadata { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sections</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sections")]
+        public global::FreeAstroApi.Models.AtomicInterpretationSections Sections { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>index</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("index")]
+        public global::FreeAstroApi.Models.AtomicInterpretationIndex Index { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>resolved_time</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resolved_time")]
+        public global::FreeAstroApi.Models.ResolvedTime? ResolvedTime { get; set; }
 
         /// <summary>
         /// Fields returned by the API that this SDK version does not model yet.
@@ -1920,6 +4968,1392 @@ namespace FreeAstroApi.Models
     }
 
     /// <summary>
+    /// The <c>BaziChartAstroDebug</c> schema.
+    /// </summary>
+    public partial class BaziChartAstroDebug
+    {
+        /// <summary>
+        /// The <c>input_local_time</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("input_local_time")]
+        public string InputLocalTime { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>input_calendar</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("input_calendar")]
+        public string InputCalendar { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>input_gregorian_equivalent</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("input_gregorian_equivalent")]
+        public string InputGregorianEquivalent { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>effective_solar_time_local</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("effective_solar_time_local")]
+        public string EffectiveSolarTimeLocal { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>effective_solar_time_absolute</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("effective_solar_time_absolute")]
+        public string EffectiveSolarTimeAbsolute { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>effective_solar_time_absolute_reference</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("effective_solar_time_absolute_reference")]
+        public string EffectiveSolarTimeAbsoluteReference { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>resolved_timezone</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resolved_timezone")]
+        public string ResolvedTimezone { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>time_standard</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("time_standard")]
+        public string TimeStandard { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>equation_of_time_minutes</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("equation_of_time_minutes")]
+        public double EquationOfTimeMinutes { get; set; }
+
+        /// <summary>
+        /// The <c>solar_terms</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("solar_terms")]
+        public global::System.Collections.Generic.Dictionary<string, string> SolarTerms { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartCurrentYearTriggers</c> schema.
+    /// </summary>
+    public partial class BaziChartCurrentYearTriggers
+    {
+        /// <summary>
+        /// The <c>year</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("year")]
+        public int Year { get; set; }
+
+        /// <summary>
+        /// The <c>gan_zhi</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gan_zhi")]
+        public string GanZhi { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>interactions</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("interactions")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.BaziChartCurrentYearTriggersInteraction> Interactions { get; set; } = new();
+
+        /// <summary>
+        /// The <c>stars</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("stars")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.BaziChartCurrentYearTriggersStar> Stars { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartCurrentYearTriggersInteraction</c> schema.
+    /// </summary>
+    public partial class BaziChartCurrentYearTriggersInteraction
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>scope</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scope")]
+        public string Scope { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pillars</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pillars")]
+        public global::System.Collections.Generic.List<string> Pillars { get; set; } = new();
+
+        /// <summary>
+        /// The <c>stems</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("stems")]
+        public global::System.Collections.Generic.List<string>? Stems { get; set; }
+
+        /// <summary>
+        /// The <c>can_transform</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("can_transform")]
+        public bool? CanTransform { get; set; }
+
+        /// <summary>
+        /// The <c>transform_level</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transform_level")]
+        public string? TransformLevel { get; set; }
+
+        /// <summary>
+        /// The <c>transform_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transform_score")]
+        public double? TransformScore { get; set; }
+
+        /// <summary>
+        /// The <c>transform_to</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transform_to")]
+        public string? TransformTo { get; set; }
+
+        /// <summary>
+        /// The <c>branches</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("branches")]
+        public global::System.Collections.Generic.List<string>? Branches { get; set; }
+
+        /// <summary>
+        /// The <c>missing_branch</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("missing_branch")]
+        public string? MissingBranch { get; set; }
+
+        /// <summary>
+        /// The <c>is_formed</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_formed")]
+        public bool? IsFormed { get; set; }
+
+        /// <summary>
+        /// The <c>note</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("note")]
+        public string? Note { get; set; }
+
+        /// <summary>
+        /// The <c>interpretation</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("interpretation")]
+        public string? Interpretation { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartCurrentYearTriggersStar</c> schema.
+    /// </summary>
+    public partial class BaziChartCurrentYearTriggersStar
+    {
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pillar</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pillar")]
+        public string Pillar { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>zhi</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zhi")]
+        public string Zhi { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>xun_audit</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("xun_audit")]
+        public global::FreeAstroApi.Models.BaziChartStarXunAudit? XunAudit { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartDayMaster</c> schema.
+    /// </summary>
+    public partial class BaziChartDayMaster
+    {
+        /// <summary>
+        /// The <c>stem</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("stem")]
+        public string Stem { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>info</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("info")]
+        public global::FreeAstroApi.Models.BaziChartDayMasterInfo Info { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pinyin</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pinyin")]
+        public string? Pinyin { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartDayMasterInfo</c> schema.
+    /// </summary>
+    public partial class BaziChartDayMasterInfo
+    {
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pinyin</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pinyin")]
+        public string? Pinyin { get; set; }
+
+        /// <summary>
+        /// The <c>element</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("element")]
+        public string Element { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>polarity</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("polarity")]
+        public string Polarity { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartElements</c> schema.
+    /// </summary>
+    public partial class BaziChartElements
+    {
+        /// <summary>
+        /// The <c>scoring_model</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scoring_model")]
+        public string ScoringModel { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>weights</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("weights")]
+        public global::FreeAstroApi.Models.BaziChartElementsWeights Weights { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>points</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("points")]
+        public global::FreeAstroApi.Models.BaziChartElementsPoints Points { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>percentages</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("percentages")]
+        public global::FreeAstroApi.Models.BaziChartElementsPercentages Percentages { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>dominant</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dominant")]
+        public string Dominant { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartElementsPercentages</c> schema.
+    /// </summary>
+    public partial class BaziChartElementsPercentages
+    {
+        /// <summary>
+        /// The <c>Wood</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Wood")]
+        public double Wood { get; set; }
+
+        /// <summary>
+        /// The <c>Fire</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Fire")]
+        public double Fire { get; set; }
+
+        /// <summary>
+        /// The <c>Earth</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Earth")]
+        public double Earth { get; set; }
+
+        /// <summary>
+        /// The <c>Metal</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Metal")]
+        public double Metal { get; set; }
+
+        /// <summary>
+        /// The <c>Water</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Water")]
+        public double Water { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartElementsPoints</c> schema.
+    /// </summary>
+    public partial class BaziChartElementsPoints
+    {
+        /// <summary>
+        /// The <c>Wood</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Wood")]
+        public int Wood { get; set; }
+
+        /// <summary>
+        /// The <c>Fire</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Fire")]
+        public int Fire { get; set; }
+
+        /// <summary>
+        /// The <c>Earth</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Earth")]
+        public int Earth { get; set; }
+
+        /// <summary>
+        /// The <c>Metal</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Metal")]
+        public int Metal { get; set; }
+
+        /// <summary>
+        /// The <c>Water</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Water")]
+        public int Water { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartElementsWeights</c> schema.
+    /// </summary>
+    public partial class BaziChartElementsWeights
+    {
+        /// <summary>
+        /// The <c>stem</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("stem")]
+        public int Stem { get; set; }
+
+        /// <summary>
+        /// The <c>branch</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("branch")]
+        public int Branch { get; set; }
+
+        /// <summary>
+        /// The <c>hidden_stem</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("hidden_stem")]
+        public int HiddenStem { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartInteraction</c> schema.
+    /// </summary>
+    public partial class BaziChartInteraction
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>scope</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scope")]
+        public string Scope { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pillars</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pillars")]
+        public global::System.Collections.Generic.List<string> Pillars { get; set; } = new();
+
+        /// <summary>
+        /// The <c>stems</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("stems")]
+        public global::System.Collections.Generic.List<string>? Stems { get; set; }
+
+        /// <summary>
+        /// The <c>can_transform</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("can_transform")]
+        public bool? CanTransform { get; set; }
+
+        /// <summary>
+        /// The <c>transform_level</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transform_level")]
+        public string? TransformLevel { get; set; }
+
+        /// <summary>
+        /// The <c>transform_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transform_score")]
+        public double? TransformScore { get; set; }
+
+        /// <summary>
+        /// The <c>transform_to</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transform_to")]
+        public string? TransformTo { get; set; }
+
+        /// <summary>
+        /// The <c>transform_evidence</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transform_evidence")]
+        public global::FreeAstroApi.Models.BaziChartInteractionTransformEvidence? TransformEvidence { get; set; }
+
+        /// <summary>
+        /// The <c>conditions</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("conditions")]
+        public string? Conditions { get; set; }
+
+        /// <summary>
+        /// The <c>interpretation</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("interpretation")]
+        public string Interpretation { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>branches</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("branches")]
+        public global::System.Collections.Generic.List<string>? Branches { get; set; }
+
+        /// <summary>
+        /// The <c>is_formed</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_formed")]
+        public bool? IsFormed { get; set; }
+
+        /// <summary>
+        /// The <c>note</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("note")]
+        public string? Note { get; set; }
+
+        /// <summary>
+        /// The <c>missing_branch</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("missing_branch")]
+        public string? MissingBranch { get; set; }
+
+        /// <summary>
+        /// The <c>mitigated_by_branches</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mitigated_by_branches")]
+        public global::System.Collections.Generic.List<string>? MitigatedByBranches { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartInteractionTransformEvidence</c> schema.
+    /// </summary>
+    public partial class BaziChartInteractionTransformEvidence
+    {
+        /// <summary>
+        /// The <c>month_branch</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("month_branch")]
+        public string MonthBranch { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>supporting_elements</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("supporting_elements")]
+        public global::System.Collections.Generic.List<string>? SupportingElements { get; set; }
+
+        /// <summary>
+        /// The <c>opposing_elements</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("opposing_elements")]
+        public global::System.Collections.Generic.List<string>? OpposingElements { get; set; }
+
+        /// <summary>
+        /// The <c>season_support_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("season_support_score")]
+        public double? SeasonSupportScore { get; set; }
+
+        /// <summary>
+        /// The <c>final_decision</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("final_decision")]
+        public string FinalDecision { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>season_support</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("season_support")]
+        public bool? SeasonSupport { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartLuckCycle</c> schema.
+    /// </summary>
+    public partial class BaziChartLuckCycle
+    {
+        /// <summary>
+        /// The <c>start_age_years</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("start_age_years")]
+        public int StartAgeYears { get; set; }
+
+        /// <summary>
+        /// The <c>is_forward</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_forward")]
+        public bool IsForward { get; set; }
+
+        /// <summary>
+        /// The <c>pillars</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pillars")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.BaziChartLuckCyclePillar> Pillars { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartLuckCyclePillar</c> schema.
+    /// </summary>
+    public partial class BaziChartLuckCyclePillar
+    {
+        /// <summary>
+        /// The <c>start_age</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("start_age")]
+        public int StartAge { get; set; }
+
+        /// <summary>
+        /// The <c>start_year</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("start_year")]
+        public int StartYear { get; set; }
+
+        /// <summary>
+        /// The <c>end_year</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("end_year")]
+        public int EndYear { get; set; }
+
+        /// <summary>
+        /// The <c>gan_zhi</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gan_zhi")]
+        public string GanZhi { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>gan</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gan")]
+        public string Gan { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>zhi</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zhi")]
+        public string Zhi { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>gan_pinyin</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gan_pinyin")]
+        public string? GanPinyin { get; set; }
+
+        /// <summary>
+        /// The <c>zhi_pinyin</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zhi_pinyin")]
+        public string? ZhiPinyin { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartMetadata</c> schema.
+    /// </summary>
+    public partial class BaziChartMetadata
+    {
+        /// <summary>
+        /// The <c>engine_version</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("engine_version")]
+        public string EngineVersion { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>ruleset</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ruleset")]
+        public string Ruleset { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>solar_term_source</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("solar_term_source")]
+        public string SolarTermSource { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>life_stage_method</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("life_stage_method")]
+        public string LifeStageMethod { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartPillar</c> schema.
+    /// </summary>
+    public partial class BaziChartPillar
+    {
+        /// <summary>
+        /// The <c>label</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("label")]
+        public string Label { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>gan</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gan")]
+        public string Gan { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>zhi</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zhi")]
+        public string Zhi { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>gan_info</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gan_info")]
+        public global::FreeAstroApi.Models.BaziChartDayMasterInfo GanInfo { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>zhi_info</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zhi_info")]
+        public global::FreeAstroApi.Models.BaziChartPillarZhiInfo ZhiInfo { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>nayin</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("nayin")]
+        public string Nayin { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>life_stage</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("life_stage")]
+        public global::FreeAstroApi.Models.BaziChartPillarLifeStage LifeStage { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>gan_pinyin</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gan_pinyin")]
+        public string? GanPinyin { get; set; }
+
+        /// <summary>
+        /// The <c>zhi_pinyin</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zhi_pinyin")]
+        public string? ZhiPinyin { get; set; }
+
+        /// <summary>
+        /// The <c>ten_gods</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ten_gods")]
+        public global::FreeAstroApi.Models.BaziChartPillarTenGods? TenGods { get; set; }
+
+        /// <summary>
+        /// The <c>interpretation</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("interpretation")]
+        public string? Interpretation { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartPillarLifeStage</c> schema.
+    /// </summary>
+    public partial class BaziChartPillarLifeStage
+    {
+        /// <summary>
+        /// The <c>chinese</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("chinese")]
+        public string Chinese { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartPillarTenGods</c> schema.
+    /// </summary>
+    public partial class BaziChartPillarTenGods
+    {
+        /// <summary>
+        /// The <c>stem</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("stem")]
+        public string Stem { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>hidden</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("hidden")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.BaziChartPillarTenGodsHiddenItem> Hidden { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartPillarTenGodsHiddenItem</c> schema.
+    /// </summary>
+    public partial class BaziChartPillarTenGodsHiddenItem
+    {
+        /// <summary>
+        /// The <c>gan</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gan")]
+        public string Gan { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>info</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("info")]
+        public global::FreeAstroApi.Models.BaziChartDayMasterInfo Info { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>ten_god</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ten_god")]
+        public string TenGod { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pinyin</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pinyin")]
+        public string? Pinyin { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartPillarZhiInfo</c> schema.
+    /// </summary>
+    public partial class BaziChartPillarZhiInfo
+    {
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pinyin</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pinyin")]
+        public string? Pinyin { get; set; }
+
+        /// <summary>
+        /// The <c>element</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("element")]
+        public string Element { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>polarity</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("polarity")]
+        public string Polarity { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>zodiac</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zodiac")]
+        public string Zodiac { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>hidden</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("hidden")]
+        public global::System.Collections.Generic.List<string> Hidden { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartProfessional</c> schema.
+    /// </summary>
+    public partial class BaziChartProfessional
+    {
+        /// <summary>
+        /// The <c>dm_strength</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dm_strength")]
+        public string DmStrength { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>structure</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("structure")]
+        public string Structure { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>yong_shen_candidates</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("yong_shen_candidates")]
+        public global::System.Collections.Generic.List<string> YongShenCandidates { get; set; } = new();
+
+        /// <summary>
+        /// The <c>favorable_elements</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("favorable_elements")]
+        public global::System.Collections.Generic.List<string> FavorableElements { get; set; } = new();
+
+        /// <summary>
+        /// The <c>unfavorable_elements</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("unfavorable_elements")]
+        public global::System.Collections.Generic.List<string> UnfavorableElements { get; set; } = new();
+
+        /// <summary>
+        /// The <c>professional_debug</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("professional_debug")]
+        public global::FreeAstroApi.Models.BaziChartProfessionalProfessionalDebug? ProfessionalDebug { get; set; }
+
+        /// <summary>
+        /// The <c>interpretation</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("interpretation")]
+        public string Interpretation { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartProfessionalProfessionalDebug</c> schema.
+    /// </summary>
+    public partial class BaziChartProfessionalProfessionalDebug
+    {
+        /// <summary>
+        /// The <c>dm_strength_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dm_strength_score")]
+        public double DmStrengthScore { get; set; }
+
+        /// <summary>
+        /// The <c>seasonal_factor</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("seasonal_factor")]
+        public double SeasonalFactor { get; set; }
+
+        /// <summary>
+        /// The <c>season_reason</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("season_reason")]
+        public string SeasonReason { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>balance_ratio</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("balance_ratio")]
+        public double BalanceRatio { get; set; }
+
+        /// <summary>
+        /// The <c>yong_shen_rationale</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("yong_shen_rationale")]
+        public global::System.Collections.Generic.List<string> YongShenRationale { get; set; } = new();
+
+        /// <summary>
+        /// The <c>structure_rationale</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("structure_rationale")]
+        public string StructureRationale { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>xi_ji_method</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("xi_ji_method")]
+        public string XiJiMethod { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartResponse</c> schema.
+    /// </summary>
+    public partial class BaziChartResponse
+    {
+        /// <summary>
+        /// The <c>day_master</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("day_master")]
+        public global::FreeAstroApi.Models.BaziChartDayMaster DayMaster { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pillars</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pillars")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.BaziChartPillar> Pillars { get; set; } = new();
+
+        /// <summary>
+        /// The <c>luck_cycle</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("luck_cycle")]
+        public global::FreeAstroApi.Models.BaziChartLuckCycle LuckCycle { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>elements</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("elements")]
+        public global::FreeAstroApi.Models.BaziChartElements Elements { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>summary</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("summary")]
+        public global::FreeAstroApi.Models.BaziChartSummary Summary { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>stars</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("stars")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.BaziChartStar>? Stars { get; set; }
+
+        /// <summary>
+        /// The <c>interactions</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("interactions")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.BaziChartInteraction>? Interactions { get; set; }
+
+        /// <summary>
+        /// The <c>professional</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("professional")]
+        public global::FreeAstroApi.Models.BaziChartProfessional? Professional { get; set; }
+
+        /// <summary>
+        /// The <c>xun_kong</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("xun_kong")]
+        public global::FreeAstroApi.Models.BaziChartStarXunAudit? XunKong { get; set; }
+
+        /// <summary>
+        /// The <c>stars_ruleset</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("stars_ruleset")]
+        public string? StarsRuleset { get; set; }
+
+        /// <summary>
+        /// The <c>interpretation_ruleset</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("interpretation_ruleset")]
+        public string InterpretationRuleset { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>metadata</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
+        public global::FreeAstroApi.Models.BaziChartMetadata Metadata { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>astro_debug</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("astro_debug")]
+        public global::FreeAstroApi.Models.BaziChartAstroDebug? AstroDebug { get; set; }
+
+        /// <summary>
+        /// The <c>current_year_triggers</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("current_year_triggers")]
+        public global::FreeAstroApi.Models.BaziChartCurrentYearTriggers? CurrentYearTriggers { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartStar</c> schema.
+    /// </summary>
+    public partial class BaziChartStar
+    {
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pillar</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pillar")]
+        public string Pillar { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>zhi</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zhi")]
+        public string Zhi { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>desc</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("desc")]
+        public string Desc { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>trigger_rule</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("trigger_rule")]
+        public object? TriggerRule { get; set; }
+
+        /// <summary>
+        /// The <c>trigger_text</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("trigger_text")]
+        public string TriggerText { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>xun_audit</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("xun_audit")]
+        public global::FreeAstroApi.Models.BaziChartStarXunAudit? XunAudit { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartStarTriggerRule</c> schema.
+    /// </summary>
+    public partial class BaziChartStarTriggerRule
+    {
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>dm</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dm")]
+        public string? Dm { get; set; }
+
+        /// <summary>
+        /// The <c>target</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("target")]
+        public string? Target { get; set; }
+
+        /// <summary>
+        /// The <c>star</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("star")]
+        public string? Star { get; set; }
+
+        /// <summary>
+        /// The <c>ref_branch</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ref_branch")]
+        public string? RefBranch { get; set; }
+
+        /// <summary>
+        /// The <c>day_pillar</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("day_pillar")]
+        public string? DayPillar { get; set; }
+
+        /// <summary>
+        /// The <c>xun</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("xun")]
+        public string? Xun { get; set; }
+
+        /// <summary>
+        /// The <c>void_branches</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("void_branches")]
+        public global::System.Collections.Generic.List<string>? VoidBranches { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartStarXunAudit</c> schema.
+    /// </summary>
+    public partial class BaziChartStarXunAudit
+    {
+        /// <summary>
+        /// The <c>void_branches</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("void_branches")]
+        public global::System.Collections.Generic.List<string> VoidBranches { get; set; } = new();
+
+        /// <summary>
+        /// The <c>xun_name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("xun_name")]
+        public string XunName { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>xun_index</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("xun_index")]
+        public int XunIndex { get; set; }
+
+        /// <summary>
+        /// The <c>day_pillar</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("day_pillar")]
+        public string DayPillar { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziChartSummary</c> schema.
+    /// </summary>
+    public partial class BaziChartSummary
+    {
+        /// <summary>
+        /// The <c>lunar_date</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lunar_date")]
+        public string LunarDate { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>zodiac</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zodiac")]
+        public string Zodiac { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>solar_term</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("solar_term")]
+        public string? SolarTerm { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziDictionaryEntry</c> schema.
+    /// </summary>
+    public partial class BaziDictionaryEntry
+    {
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>stems</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("stems")]
+        public global::System.Collections.Generic.List<string>? Stems { get; set; }
+
+        /// <summary>
+        /// The <c>branches</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("branches")]
+        public global::System.Collections.Generic.List<string>? Branches { get; set; }
+
+        /// <summary>
+        /// The <c>element</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("element")]
+        public string? Element { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
     /// The <c>BaziFlowRequest</c> schema.
     /// </summary>
     public partial class BaziFlowRequest
@@ -2046,6 +6480,1002 @@ namespace FreeAstroApi.Models
     }
 
     /// <summary>
+    /// The <c>BaziFlowResponse</c> schema.
+    /// </summary>
+    public partial class BaziFlowResponse
+    {
+        /// <summary>
+        /// The <c>years</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("years")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.BaziFlowYear> Years { get; set; } = new();
+
+        /// <summary>
+        /// The <c>x_dict</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("x_dict")]
+        public global::System.Collections.Generic.Dictionary<string, global::FreeAstroApi.Models.BaziDictionaryEntry>? XDict { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziFlowYear</c> schema.
+    /// </summary>
+    public partial class BaziFlowYear
+    {
+        /// <summary>
+        /// The <c>year</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("year")]
+        public int Year { get; set; }
+
+        /// <summary>
+        /// The <c>gan_zhi</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gan_zhi")]
+        public string GanZhi { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>gan</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gan")]
+        public string Gan { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>zhi</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zhi")]
+        public string Zhi { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>age</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("age")]
+        public int Age { get; set; }
+
+        /// <summary>
+        /// The <c>months</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("months")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.BaziFlowYearMonth> Months { get; set; } = new();
+
+        /// <summary>
+        /// The <c>gan_pinyin</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gan_pinyin")]
+        public string? GanPinyin { get; set; }
+
+        /// <summary>
+        /// The <c>zhi_pinyin</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zhi_pinyin")]
+        public string? ZhiPinyin { get; set; }
+
+        /// <summary>
+        /// The <c>active_luck</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("active_luck")]
+        public global::FreeAstroApi.Models.BaziFlowYearActiveLuck? ActiveLuck { get; set; }
+
+        /// <summary>
+        /// The <c>interactions</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("interactions")]
+        public global::System.Collections.Generic.List<object?> Interactions { get; set; } = new();
+
+        /// <summary>
+        /// The <c>stars</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("stars")]
+        public global::System.Collections.Generic.List<object?>? Stars { get; set; }
+
+        /// <summary>
+        /// The <c>baseline_interactions</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("baseline_interactions")]
+        public global::System.Collections.Generic.List<object?>? BaselineInteractions { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziFlowYearActiveLuck</c> schema.
+    /// </summary>
+    public partial class BaziFlowYearActiveLuck
+    {
+        /// <summary>
+        /// The <c>gan_zhi</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gan_zhi")]
+        public string GanZhi { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>start_year</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("start_year")]
+        public int StartYear { get; set; }
+
+        /// <summary>
+        /// The <c>end_year</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("end_year")]
+        public int EndYear { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziFlowYearBaselineInteraction</c> schema.
+    /// </summary>
+    public partial class BaziFlowYearBaselineInteraction
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>scope</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scope")]
+        public string Scope { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pillars</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pillars")]
+        public global::System.Collections.Generic.List<string> Pillars { get; set; } = new();
+
+        /// <summary>
+        /// The <c>stems</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("stems")]
+        public global::System.Collections.Generic.List<string>? Stems { get; set; }
+
+        /// <summary>
+        /// The <c>can_transform</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("can_transform")]
+        public bool? CanTransform { get; set; }
+
+        /// <summary>
+        /// The <c>transform_level</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transform_level")]
+        public string? TransformLevel { get; set; }
+
+        /// <summary>
+        /// The <c>transform_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transform_score")]
+        public double? TransformScore { get; set; }
+
+        /// <summary>
+        /// The <c>transform_to</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transform_to")]
+        public string? TransformTo { get; set; }
+
+        /// <summary>
+        /// The <c>transform_evidence</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transform_evidence")]
+        public global::FreeAstroApi.Models.BaziChartInteractionTransformEvidence? TransformEvidence { get; set; }
+
+        /// <summary>
+        /// The <c>conditions</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("conditions")]
+        public string? Conditions { get; set; }
+
+        /// <summary>
+        /// The <c>interpretation</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("interpretation")]
+        public string Interpretation { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>branches</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("branches")]
+        public global::System.Collections.Generic.List<string>? Branches { get; set; }
+
+        /// <summary>
+        /// The <c>is_formed</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_formed")]
+        public bool? IsFormed { get; set; }
+
+        /// <summary>
+        /// The <c>note</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("note")]
+        public string? Note { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziFlowYearMonth</c> schema.
+    /// </summary>
+    public partial class BaziFlowYearMonth
+    {
+        /// <summary>
+        /// The <c>index</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("index")]
+        public int Index { get; set; }
+
+        /// <summary>
+        /// The <c>gan_zhi</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gan_zhi")]
+        public string GanZhi { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>gan</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gan")]
+        public string Gan { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>zhi</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zhi")]
+        public string Zhi { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>gan_pinyin</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gan_pinyin")]
+        public string? GanPinyin { get; set; }
+
+        /// <summary>
+        /// The <c>zhi_pinyin</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zhi_pinyin")]
+        public string? ZhiPinyin { get; set; }
+
+        /// <summary>
+        /// The <c>interactions</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("interactions")]
+        public global::System.Collections.Generic.List<object?> Interactions { get; set; } = new();
+
+        /// <summary>
+        /// The <c>stars</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("stars")]
+        public global::System.Collections.Generic.List<object?>? Stars { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziFlowYearMonthInteraction</c> schema.
+    /// </summary>
+    public partial class BaziFlowYearMonthInteraction
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>scope</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scope")]
+        public string Scope { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pillars</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pillars")]
+        public global::System.Collections.Generic.List<string> Pillars { get; set; } = new();
+
+        /// <summary>
+        /// The <c>stems</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("stems")]
+        public global::System.Collections.Generic.List<string>? Stems { get; set; }
+
+        /// <summary>
+        /// The <c>can_transform</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("can_transform")]
+        public bool? CanTransform { get; set; }
+
+        /// <summary>
+        /// The <c>transform_level</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transform_level")]
+        public string? TransformLevel { get; set; }
+
+        /// <summary>
+        /// The <c>transform_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transform_score")]
+        public double? TransformScore { get; set; }
+
+        /// <summary>
+        /// The <c>transform_to</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transform_to")]
+        public string? TransformTo { get; set; }
+
+        /// <summary>
+        /// The <c>branches</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("branches")]
+        public global::System.Collections.Generic.List<string>? Branches { get; set; }
+
+        /// <summary>
+        /// The <c>missing_branch</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("missing_branch")]
+        public string? MissingBranch { get; set; }
+
+        /// <summary>
+        /// The <c>is_formed</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_formed")]
+        public bool? IsFormed { get; set; }
+
+        /// <summary>
+        /// The <c>mitigated_by_branches</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mitigated_by_branches")]
+        public global::System.Collections.Generic.List<string>? MitigatedByBranches { get; set; }
+
+        /// <summary>
+        /// The <c>note</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("note")]
+        public string? Note { get; set; }
+
+        /// <summary>
+        /// The <c>interpretation</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("interpretation")]
+        public string? Interpretation { get; set; }
+
+        /// <summary>
+        /// The <c>transform_evidence</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transform_evidence")]
+        public global::FreeAstroApi.Models.BaziChartInteractionTransformEvidence? TransformEvidence { get; set; }
+
+        /// <summary>
+        /// The <c>conditions</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("conditions")]
+        public string? Conditions { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziFlowYearMonthStar</c> schema.
+    /// </summary>
+    public partial class BaziFlowYearMonthStar
+    {
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pillar</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pillar")]
+        public string Pillar { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>zhi</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zhi")]
+        public string Zhi { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>xun_audit</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("xun_audit")]
+        public global::FreeAstroApi.Models.BaziChartStarXunAudit? XunAudit { get; set; }
+
+        /// <summary>
+        /// The <c>desc</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("desc")]
+        public string? Desc { get; set; }
+
+        /// <summary>
+        /// The <c>trigger_rule</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("trigger_rule")]
+        public object? TriggerRule { get; set; }
+
+        /// <summary>
+        /// The <c>trigger_text</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("trigger_text")]
+        public string? TriggerText { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziHealthBaziContext</c> schema.
+    /// </summary>
+    public partial class BaziHealthBaziContext
+    {
+        /// <summary>
+        /// The <c>day_master</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("day_master")]
+        public string DayMaster { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>day_master_element</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("day_master_element")]
+        public string DayMasterElement { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>day_master_strength</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("day_master_strength")]
+        public string DayMasterStrength { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>favorable_elements</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("favorable_elements")]
+        public global::System.Collections.Generic.List<string> FavorableElements { get; set; } = new();
+
+        /// <summary>
+        /// The <c>unfavorable_elements</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("unfavorable_elements")]
+        public global::System.Collections.Generic.List<string> UnfavorableElements { get; set; } = new();
+
+        /// <summary>
+        /// The <c>rationale</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("rationale")]
+        public global::System.Collections.Generic.List<string> Rationale { get; set; } = new();
+
+        /// <summary>
+        /// The <c>balance_strategy</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("balance_strategy")]
+        public global::FreeAstroApi.Models.BaziHealthBaziContextBalanceStrategy BalanceStrategy { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziHealthBaziContextBalanceStrategy</c> schema.
+    /// </summary>
+    public partial class BaziHealthBaziContextBalanceStrategy
+    {
+        /// <summary>
+        /// The <c>priority_elements</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("priority_elements")]
+        public global::System.Collections.Generic.List<string> PriorityElements { get; set; } = new();
+
+        /// <summary>
+        /// The <c>reason</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("reason")]
+        public global::System.Collections.Generic.List<string> Reason { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziHealthConstitution</c> schema.
+    /// </summary>
+    public partial class BaziHealthConstitution
+    {
+        /// <summary>
+        /// The <c>temperature</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("temperature")]
+        public string Temperature { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>temperature_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("temperature_score")]
+        public double TemperatureScore { get; set; }
+
+        /// <summary>
+        /// The <c>temperature_scale</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("temperature_scale")]
+        public string TemperatureScale { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>temperature_components</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("temperature_components")]
+        public global::FreeAstroApi.Models.BaziChartElementsPercentages TemperatureComponents { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>temperature_confidence</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("temperature_confidence")]
+        public double TemperatureConfidence { get; set; }
+
+        /// <summary>
+        /// The <c>moisture</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("moisture")]
+        public string Moisture { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>moisture_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("moisture_score")]
+        public double MoistureScore { get; set; }
+
+        /// <summary>
+        /// The <c>moisture_scale</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("moisture_scale")]
+        public string MoistureScale { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>moisture_components</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("moisture_components")]
+        public global::FreeAstroApi.Models.BaziChartElementsPercentages MoistureComponents { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>moisture_confidence</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("moisture_confidence")]
+        public double MoistureConfidence { get; set; }
+
+        /// <summary>
+        /// The <c>yin_yang_skew</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("yin_yang_skew")]
+        public string YinYangSkew { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>yang_ratio</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("yang_ratio")]
+        public double YangRatio { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziHealthDataQuality</c> schema.
+    /// </summary>
+    public partial class BaziHealthDataQuality
+    {
+        /// <summary>
+        /// The <c>rooting_model</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("rooting_model")]
+        public string RootingModel { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>hidden_stems_weighting</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("hidden_stems_weighting")]
+        public string HiddenStemsWeighting { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>transformations</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transformations")]
+        public string Transformations { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziHealthElementBalance</c> schema.
+    /// </summary>
+    public partial class BaziHealthElementBalance
+    {
+        /// <summary>
+        /// The <c>raw_absolute</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("raw_absolute")]
+        public global::FreeAstroApi.Models.BaziChartElementsPercentages RawAbsolute { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>raw_total</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("raw_total")]
+        public double RawTotal { get; set; }
+
+        /// <summary>
+        /// The <c>raw_distribution</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("raw_distribution")]
+        public global::FreeAstroApi.Models.BaziChartElementsPercentages RawDistribution { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>effective_pre_normalized</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("effective_pre_normalized")]
+        public global::FreeAstroApi.Models.BaziChartElementsPercentages EffectivePreNormalized { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>effective_distribution</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("effective_distribution")]
+        public global::FreeAstroApi.Models.BaziChartElementsPercentages EffectiveDistribution { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>effective_method</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("effective_method")]
+        public string EffectiveMethod { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>seasonal_adjustments</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("seasonal_adjustments")]
+        public global::FreeAstroApi.Models.BaziHealthElementBalanceSeasonalAdjustments SeasonalAdjustments { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>rooting_scores</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("rooting_scores")]
+        public global::FreeAstroApi.Models.BaziChartElementsPercentages RootingScores { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>rooting_raw</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("rooting_raw")]
+        public global::FreeAstroApi.Models.BaziChartElementsPercentages RootingRaw { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>dominant_elements</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dominant_elements")]
+        public global::System.Collections.Generic.List<string> DominantElements { get; set; } = new();
+
+        /// <summary>
+        /// The <c>weak_elements</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("weak_elements")]
+        public global::System.Collections.Generic.List<string> WeakElements { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziHealthElementBalanceSeasonalAdjustments</c> schema.
+    /// </summary>
+    public partial class BaziHealthElementBalanceSeasonalAdjustments
+    {
+        /// <summary>
+        /// The <c>month_branch</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("month_branch")]
+        public string MonthBranch { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>multipliers</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("multipliers")]
+        public global::FreeAstroApi.Models.BaziChartElementsPercentages Multipliers { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziHealthInstabilityMarkers</c> schema.
+    /// </summary>
+    public partial class BaziHealthInstabilityMarkers
+    {
+        /// <summary>
+        /// The <c>markers</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("markers")]
+        public global::FreeAstroApi.Models.BaziHealthInstabilityMarkersMarkers Markers { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>total_clashes</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_clashes")]
+        public int TotalClashes { get; set; }
+
+        /// <summary>
+        /// The <c>total_punishments</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_punishments")]
+        public int TotalPunishments { get; set; }
+
+        /// <summary>
+        /// The <c>total_harms</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_harms")]
+        public int TotalHarms { get; set; }
+
+        /// <summary>
+        /// The <c>instability_index</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("instability_index")]
+        public double InstabilityIndex { get; set; }
+
+        /// <summary>
+        /// The <c>level</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("level")]
+        public string Level { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziHealthInstabilityMarkersMarkers</c> schema.
+    /// </summary>
+    public partial class BaziHealthInstabilityMarkersMarkers
+    {
+        /// <summary>
+        /// The <c>clashes</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("clashes")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.BaziHealthInstabilityMarkersMarkersClash> Clashes { get; set; } = new();
+
+        /// <summary>
+        /// The <c>punishments</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("punishments")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.BaziHealthInstabilityMarkersMarkersPunishment> Punishments { get; set; } = new();
+
+        /// <summary>
+        /// The <c>harms</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("harms")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.BaziHealthInstabilityMarkersMarkersPunishment> Harms { get; set; } = new();
+
+        /// <summary>
+        /// The <c>self_punishments</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("self_punishments")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.BaziHealthInstabilityMarkersMarkersSelfPunishment> SelfPunishments { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziHealthInstabilityMarkersMarkersClash</c> schema.
+    /// </summary>
+    public partial class BaziHealthInstabilityMarkersMarkersClash
+    {
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pillars</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pillars")]
+        public global::System.Collections.Generic.List<string> Pillars { get; set; } = new();
+
+        /// <summary>
+        /// The <c>elements</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("elements")]
+        public global::System.Collections.Generic.List<string> Elements { get; set; } = new();
+
+        /// <summary>
+        /// The <c>impact</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("impact")]
+        public string Impact { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziHealthInstabilityMarkersMarkersPunishment</c> schema.
+    /// </summary>
+    public partial class BaziHealthInstabilityMarkersMarkersPunishment
+    {
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pillars</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pillars")]
+        public global::System.Collections.Generic.List<string> Pillars { get; set; } = new();
+
+        /// <summary>
+        /// The <c>branches</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("branches")]
+        public global::System.Collections.Generic.List<string> Branches { get; set; } = new();
+
+        /// <summary>
+        /// The <c>impact</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("impact")]
+        public string Impact { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziHealthInstabilityMarkersMarkersSelfPunishment</c> schema.
+    /// </summary>
+    public partial class BaziHealthInstabilityMarkersMarkersSelfPunishment
+    {
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pillars</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pillars")]
+        public global::System.Collections.Generic.List<string> Pillars { get; set; } = new();
+
+        /// <summary>
+        /// The <c>branch</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("branch")]
+        public string? Branch { get; set; }
+
+        /// <summary>
+        /// The <c>impact</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("impact")]
+        public string Impact { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziHealthMetadata</c> schema.
+    /// </summary>
+    public partial class BaziHealthMetadata
+    {
+        /// <summary>
+        /// The <c>version</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("version")]
+        public string Version { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>framework</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("framework")]
+        public string Framework { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>day_master</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("day_master")]
+        public string DayMaster { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>month_branch</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("month_branch")]
+        public string MonthBranch { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>birth_year</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("birth_year")]
+        public int BirthYear { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
     /// The <c>BaziHealthRequest</c> schema.
     /// </summary>
     public partial class BaziHealthRequest
@@ -2142,6 +7572,654 @@ namespace FreeAstroApi.Models
     }
 
     /// <summary>
+    /// The <c>BaziHealthResponse</c> schema.
+    /// </summary>
+    public partial class BaziHealthResponse
+    {
+        /// <summary>
+        /// The <c>bazi_context</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("bazi_context")]
+        public global::FreeAstroApi.Models.BaziHealthBaziContext BaziContext { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>constitution</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("constitution")]
+        public global::FreeAstroApi.Models.BaziHealthConstitution Constitution { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>element_balance</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("element_balance")]
+        public global::FreeAstroApi.Models.BaziHealthElementBalance ElementBalance { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>susceptibility_themes</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("susceptibility_themes")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.BaziHealthSusceptibilityTheme> SusceptibilityThemes { get; set; } = new();
+
+        /// <summary>
+        /// The <c>stress_patterns</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("stress_patterns")]
+        public global::FreeAstroApi.Models.BaziHealthStressPatterns StressPatterns { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>tcm_correspondences</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tcm_correspondences")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.BaziHealthTcmCorrespondence> TcmCorrespondences { get; set; } = new();
+
+        /// <summary>
+        /// The <c>instability_markers</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("instability_markers")]
+        public global::FreeAstroApi.Models.BaziHealthInstabilityMarkers InstabilityMarkers { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>timing</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timing")]
+        public global::FreeAstroApi.Models.BaziHealthTiming? Timing { get; set; }
+
+        /// <summary>
+        /// The <c>metadata</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
+        public global::FreeAstroApi.Models.BaziHealthMetadata Metadata { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>data_quality</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("data_quality")]
+        public global::FreeAstroApi.Models.BaziHealthDataQuality DataQuality { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>disclaimer</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("disclaimer")]
+        public string Disclaimer { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziHealthStressPatterns</c> schema.
+    /// </summary>
+    public partial class BaziHealthStressPatterns
+    {
+        /// <summary>
+        /// The <c>patterns</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("patterns")]
+        public global::FreeAstroApi.Models.BaziHealthStressPatternsPatterns Patterns { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>ten_god_distribution</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ten_god_distribution")]
+        public global::FreeAstroApi.Models.BaziHealthStressPatternsTenGodDistribution TenGodDistribution { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>dm_strength_context</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dm_strength_context")]
+        public string DmStrengthContext { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>overall_stress_index</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("overall_stress_index")]
+        public double OverallStressIndex { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziHealthStressPatternsPatterns</c> schema.
+    /// </summary>
+    public partial class BaziHealthStressPatternsPatterns
+    {
+        /// <summary>
+        /// The <c>depletion_risk</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("depletion_risk")]
+        public global::FreeAstroApi.Models.BaziHealthStressPatternsPatternsDepletionRisk DepletionRisk { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>overwork_risk</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("overwork_risk")]
+        public global::FreeAstroApi.Models.BaziHealthStressPatternsPatternsDepletionRisk OverworkRisk { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pressure_load</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pressure_load")]
+        public global::FreeAstroApi.Models.BaziHealthStressPatternsPatternsDepletionRisk PressureLoad { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>recovery_capacity</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("recovery_capacity")]
+        public global::FreeAstroApi.Models.BaziHealthStressPatternsPatternsDepletionRisk RecoveryCapacity { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziHealthStressPatternsPatternsDepletionRisk</c> schema.
+    /// </summary>
+    public partial class BaziHealthStressPatternsPatternsDepletionRisk
+    {
+        /// <summary>
+        /// The <c>level</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("level")]
+        public string Level { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("score")]
+        public double Score { get; set; }
+
+        /// <summary>
+        /// The <c>drivers</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("drivers")]
+        public global::System.Collections.Generic.List<string> Drivers { get; set; } = new();
+
+        /// <summary>
+        /// The <c>description</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("description")]
+        public string Description { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziHealthStressPatternsTenGodDistribution</c> schema.
+    /// </summary>
+    public partial class BaziHealthStressPatternsTenGodDistribution
+    {
+        /// <summary>
+        /// The <c>Friend</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Friend")]
+        public double Friend { get; set; }
+
+        /// <summary>
+        /// The <c>Rob Wealth</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Rob Wealth")]
+        public double RobWealth { get; set; }
+
+        /// <summary>
+        /// The <c>Eating God</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Eating God")]
+        public double EatingGod { get; set; }
+
+        /// <summary>
+        /// The <c>Hurting Officer</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Hurting Officer")]
+        public double HurtingOfficer { get; set; }
+
+        /// <summary>
+        /// The <c>Indirect Wealth</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Indirect Wealth")]
+        public double IndirectWealth { get; set; }
+
+        /// <summary>
+        /// The <c>Direct Wealth</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Direct Wealth")]
+        public double DirectWealth { get; set; }
+
+        /// <summary>
+        /// The <c>7 Killings</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("7 Killings")]
+        public double _7Killings { get; set; }
+
+        /// <summary>
+        /// The <c>Direct Officer</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Direct Officer")]
+        public double DirectOfficer { get; set; }
+
+        /// <summary>
+        /// The <c>Indirect Resource</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Indirect Resource")]
+        public double IndirectResource { get; set; }
+
+        /// <summary>
+        /// The <c>Direct Resource</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Direct Resource")]
+        public double DirectResource { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziHealthSusceptibilityTheme</c> schema.
+    /// </summary>
+    public partial class BaziHealthSusceptibilityTheme
+    {
+        /// <summary>
+        /// The <c>theme</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("theme")]
+        public string Theme { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>category</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("category")]
+        public string Category { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>drivers</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("drivers")]
+        public global::System.Collections.Generic.List<string> Drivers { get; set; } = new();
+
+        /// <summary>
+        /// The <c>confidence</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("confidence")]
+        public double Confidence { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziHealthTcmCorrespondence</c> schema.
+    /// </summary>
+    public partial class BaziHealthTcmCorrespondence
+    {
+        /// <summary>
+        /// The <c>element</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("element")]
+        public string Element { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>system</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("system")]
+        public string System { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>tendency</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tendency")]
+        public string Tendency { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>themes</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("themes")]
+        public global::System.Collections.Generic.List<string> Themes { get; set; } = new();
+
+        /// <summary>
+        /// The <c>drivers</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("drivers")]
+        public global::System.Collections.Generic.List<string> Drivers { get; set; } = new();
+
+        /// <summary>
+        /// The <c>confidence</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("confidence")]
+        public double Confidence { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziHealthTiming</c> schema.
+    /// </summary>
+    public partial class BaziHealthTiming
+    {
+        /// <summary>
+        /// The <c>decade_peaks</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("decade_peaks")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.BaziHealthTimingDecadePeak> DecadePeaks { get; set; } = new();
+
+        /// <summary>
+        /// The <c>year_peaks</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("year_peaks")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.BaziHealthTimingYearPeak> YearPeaks { get; set; } = new();
+
+        /// <summary>
+        /// The <c>analysis_range</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("analysis_range")]
+        public string AnalysisRange { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>note</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("note")]
+        public string Note { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziHealthTimingDecadePeak</c> schema.
+    /// </summary>
+    public partial class BaziHealthTimingDecadePeak
+    {
+        /// <summary>
+        /// The <c>period</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("period")]
+        public string Period { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>gan_zhi</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gan_zhi")]
+        public string GanZhi { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>strain_index</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("strain_index")]
+        public double StrainIndex { get; set; }
+
+        /// <summary>
+        /// The <c>strain_breakdown</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("strain_breakdown")]
+        public global::FreeAstroApi.Models.BaziHealthTimingDecadePeakStrainBreakdown StrainBreakdown { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>strain_type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("strain_type")]
+        public string StrainType { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>drivers</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("drivers")]
+        public global::System.Collections.Generic.List<string> Drivers { get; set; } = new();
+
+        /// <summary>
+        /// The <c>level</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("level")]
+        public string Level { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziHealthTimingDecadePeakStrainBreakdown</c> schema.
+    /// </summary>
+    public partial class BaziHealthTimingDecadePeakStrainBreakdown
+    {
+        /// <summary>
+        /// The <c>unfavorable_elements</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("unfavorable_elements")]
+        public double UnfavorableElements { get; set; }
+
+        /// <summary>
+        /// The <c>clash_activation</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("clash_activation")]
+        public double ClashActivation { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziHealthTimingYearPeak</c> schema.
+    /// </summary>
+    public partial class BaziHealthTimingYearPeak
+    {
+        /// <summary>
+        /// The <c>year</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("year")]
+        public int Year { get; set; }
+
+        /// <summary>
+        /// The <c>gan_zhi</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gan_zhi")]
+        public string GanZhi { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>strain_index</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("strain_index")]
+        public double StrainIndex { get; set; }
+
+        /// <summary>
+        /// The <c>strain_type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("strain_type")]
+        public string StrainType { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>drivers</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("drivers")]
+        public global::System.Collections.Generic.List<string> Drivers { get; set; } = new();
+
+        /// <summary>
+        /// The <c>level</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("level")]
+        public string Level { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziLifespanCurveItem</c> schema.
+    /// </summary>
+    public partial class BaziLifespanCurveItem
+    {
+        /// <summary>
+        /// The <c>age</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("age")]
+        public int Age { get; set; }
+
+        /// <summary>
+        /// The <c>year</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("year")]
+        public int Year { get; set; }
+
+        /// <summary>
+        /// The <c>j0</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("j0")]
+        public double J0 { get; set; }
+
+        /// <summary>
+        /// The <c>j_final</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("j_final")]
+        public double JFinal { get; set; }
+
+        /// <summary>
+        /// The <c>jing_prenatal</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("jing_prenatal")]
+        public double JingPrenatal { get; set; }
+
+        /// <summary>
+        /// The <c>jing_postnatal</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("jing_postnatal")]
+        public double JingPostnatal { get; set; }
+
+        /// <summary>
+        /// The <c>qi</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("qi")]
+        public double Qi { get; set; }
+
+        /// <summary>
+        /// The <c>qi_pre_heaven</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("qi_pre_heaven")]
+        public double QiPreHeaven { get; set; }
+
+        /// <summary>
+        /// The <c>qi_post_heaven</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("qi_post_heaven")]
+        public double QiPostHeaven { get; set; }
+
+        /// <summary>
+        /// The <c>prenatal_integrity</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("prenatal_integrity")]
+        public double PrenatalIntegrity { get; set; }
+
+        /// <summary>
+        /// The <c>shen</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("shen")]
+        public double Shen { get; set; }
+
+        /// <summary>
+        /// The <c>S</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("S")]
+        public double S { get; set; }
+
+        /// <summary>
+        /// The <c>D</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("D")]
+        public double D { get; set; }
+
+        /// <summary>
+        /// The <c>V</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("V")]
+        public double V { get; set; }
+
+        /// <summary>
+        /// The <c>H</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("H")]
+        public double H { get; set; }
+
+        /// <summary>
+        /// The <c>explain</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("explain")]
+        public string Explain { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziLifespanMetadata</c> schema.
+    /// </summary>
+    public partial class BaziLifespanMetadata
+    {
+        /// <summary>
+        /// The <c>max_age</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("max_age")]
+        public int MaxAge { get; set; }
+
+        /// <summary>
+        /// The <c>sex</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sex")]
+        public string Sex { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>cultivation_level</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cultivation_level")]
+        public double CultivationLevel { get; set; }
+
+        /// <summary>
+        /// The <c>algorithm</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("algorithm")]
+        public string Algorithm { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
     /// The <c>BaziLifespanRequest</c> schema.
     /// </summary>
     public partial class BaziLifespanRequest
@@ -2229,6 +8307,30 @@ namespace FreeAstroApi.Models
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("lang")]
         public string? Lang { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziLifespanResponse</c> schema.
+    /// </summary>
+    public partial class BaziLifespanResponse
+    {
+        /// <summary>
+        /// The <c>metadata</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
+        public global::FreeAstroApi.Models.BaziLifespanMetadata Metadata { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>curve</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("curve")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.BaziLifespanCurveItem> Curve { get; set; } = new();
 
         /// <summary>
         /// Fields returned by the API that this SDK version does not model yet.
@@ -2370,6 +8472,222 @@ namespace FreeAstroApi.Models
     }
 
     /// <summary>
+    /// The <c>BaziSynastryConflictScan</c> schema.
+    /// </summary>
+    public partial class BaziSynastryConflictScan
+    {
+        /// <summary>
+        /// The <c>clashes</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("clashes")]
+        public int Clashes { get; set; }
+
+        /// <summary>
+        /// The <c>harms</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("harms")]
+        public int Harms { get; set; }
+
+        /// <summary>
+        /// The <c>punishments</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("punishments")]
+        public int Punishments { get; set; }
+
+        /// <summary>
+        /// The <c>destructions</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("destructions")]
+        public int Destructions { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziSynastryDayMasterAnalysis</c> schema.
+    /// </summary>
+    public partial class BaziSynastryDayMasterAnalysis
+    {
+        /// <summary>
+        /// The <c>dm_a</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dm_a")]
+        public string DmA { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>dm_b</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dm_b")]
+        public string DmB { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>relation</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("relation")]
+        public string Relation { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("score")]
+        public double Score { get; set; }
+
+        /// <summary>
+        /// The <c>description</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("description")]
+        public string Description { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>dynamic</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dynamic")]
+        public string Dynamic { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziSynastryElementAnalysis</c> schema.
+    /// </summary>
+    public partial class BaziSynastryElementAnalysis
+    {
+        /// <summary>
+        /// The <c>score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("score")]
+        public double Score { get; set; }
+
+        /// <summary>
+        /// The <c>details</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("details")]
+        public global::System.Collections.Generic.List<string> Details { get; set; } = new();
+
+        /// <summary>
+        /// The <c>a_needs</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("a_needs")]
+        public string ANeeds { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>b_needs</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("b_needs")]
+        public string BNeeds { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziSynastryHiddenInteractions</c> schema.
+    /// </summary>
+    public partial class BaziSynastryHiddenInteractions
+    {
+        /// <summary>
+        /// The <c>connections</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("connections")]
+        public global::System.Collections.Generic.List<string> Connections { get; set; } = new();
+
+        /// <summary>
+        /// The <c>count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("count")]
+        public int Count { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziSynastryPillarInteraction</c> schema.
+    /// </summary>
+    public partial class BaziSynastryPillarInteraction
+    {
+        /// <summary>
+        /// The <c>pillar</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pillar")]
+        public string Pillar { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>weight</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("weight")]
+        public double Weight { get; set; }
+
+        /// <summary>
+        /// The <c>branch_interaction</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("branch_interaction")]
+        public global::FreeAstroApi.Models.BaziSynastryPillarInteractionBranchInteraction BranchInteraction { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>stem_interaction</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("stem_interaction")]
+        public string StemInteraction { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>net_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("net_score")]
+        public double NetScore { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziSynastryPillarInteractionBranchInteraction</c> schema.
+    /// </summary>
+    public partial class BaziSynastryPillarInteractionBranchInteraction
+    {
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>label</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("label")]
+        public string Label { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>score_modifier</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("score_modifier")]
+        public double ScoreModifier { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
     /// The <c>BaziSynastryRequest</c> schema.
     /// </summary>
     public partial class BaziSynastryRequest
@@ -2391,6 +8709,198 @@ namespace FreeAstroApi.Models
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("lang")]
         public string? Lang { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziSynastryResponse</c> schema.
+    /// </summary>
+    public partial class BaziSynastryResponse
+    {
+        /// <summary>
+        /// The <c>score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("score")]
+        public double Score { get; set; }
+
+        /// <summary>
+        /// The <c>score_breakdown</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("score_breakdown")]
+        public global::FreeAstroApi.Models.BaziSynastryScoreBreakdown ScoreBreakdown { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>overall_compatibility</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("overall_compatibility")]
+        public string OverallCompatibility { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>day_master_analysis</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("day_master_analysis")]
+        public global::FreeAstroApi.Models.BaziSynastryDayMasterAnalysis DayMasterAnalysis { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>spouse_palace_analysis</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("spouse_palace_analysis")]
+        public global::FreeAstroApi.Models.BaziSynastrySpousePalaceAnalysis SpousePalaceAnalysis { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>element_analysis</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("element_analysis")]
+        public global::FreeAstroApi.Models.BaziSynastryElementAnalysis ElementAnalysis { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pillar_interactions</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pillar_interactions")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.BaziSynastryPillarInteraction> PillarInteractions { get; set; } = new();
+
+        /// <summary>
+        /// The <c>hidden_interactions</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("hidden_interactions")]
+        public global::FreeAstroApi.Models.BaziSynastryHiddenInteractions HiddenInteractions { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>conflict_scan</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("conflict_scan")]
+        public global::FreeAstroApi.Models.BaziSynastryConflictScan ConflictScan { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>conflict_summary</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("conflict_summary")]
+        public string ConflictSummary { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziSynastryScoreBreakdown</c> schema.
+    /// </summary>
+    public partial class BaziSynastryScoreBreakdown
+    {
+        /// <summary>
+        /// The <c>day_master</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("day_master")]
+        public double DayMaster { get; set; }
+
+        /// <summary>
+        /// The <c>spouse_palace</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("spouse_palace")]
+        public double SpousePalace { get; set; }
+
+        /// <summary>
+        /// The <c>pillars</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pillars")]
+        public double Pillars { get; set; }
+
+        /// <summary>
+        /// The <c>elements</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("elements")]
+        public double Elements { get; set; }
+
+        /// <summary>
+        /// The <c>hidden_bonus</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("hidden_bonus")]
+        public double HiddenBonus { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziSynastrySpousePalaceAnalysis</c> schema.
+    /// </summary>
+    public partial class BaziSynastrySpousePalaceAnalysis
+    {
+        /// <summary>
+        /// The <c>branch_a</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("branch_a")]
+        public string BranchA { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>branch_b</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("branch_b")]
+        public string BranchB { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>interaction</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("interaction")]
+        public string Interaction { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("score")]
+        public double Score { get; set; }
+
+        /// <summary>
+        /// The <c>description</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("description")]
+        public string Description { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziTimeCorrectionModalities</c> schema.
+    /// </summary>
+    public partial class BaziTimeCorrectionModalities
+    {
+        /// <summary>
+        /// The <c>civil</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("civil")]
+        public string Civil { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>true_solar</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("true_solar")]
+        public string TrueSolar { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>true_solar_absolute</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("true_solar_absolute")]
+        public string TrueSolarAbsolute { get; set; } = default!;
 
         /// <summary>
         /// Fields returned by the API that this SDK version does not model yet.
@@ -2463,6 +8973,78 @@ namespace FreeAstroApi.Models
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("lang")]
         public string? Lang { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>BaziTimeCorrectionResponse</c> schema.
+    /// </summary>
+    public partial class BaziTimeCorrectionResponse
+    {
+        /// <summary>
+        /// The <c>civil_time</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("civil_time")]
+        public string CivilTime { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>lmt</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lmt")]
+        public string Lmt { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>true_solar_relative</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("true_solar_relative")]
+        public string TrueSolarRelative { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>true_solar_absolute</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("true_solar_absolute")]
+        public string TrueSolarAbsolute { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>equation_of_time_minutes</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("equation_of_time_minutes")]
+        public double EquationOfTimeMinutes { get; set; }
+
+        /// <summary>
+        /// The <c>longitude_correction_minutes</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("longitude_correction_minutes")]
+        public double LongitudeCorrectionMinutes { get; set; }
+
+        /// <summary>
+        /// The <c>standard_meridian</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("standard_meridian")]
+        public double StandardMeridian { get; set; }
+
+        /// <summary>
+        /// The <c>resolved_timezone</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resolved_timezone")]
+        public string ResolvedTimezone { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>dst_offset_hours</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dst_offset_hours")]
+        public double DstOffsetHours { get; set; }
+
+        /// <summary>
+        /// The <c>modalities</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("modalities")]
+        public global::FreeAstroApi.Models.BaziTimeCorrectionModalities Modalities { get; set; } = default!;
 
         /// <summary>
         /// Fields returned by the API that this SDK version does not model yet.
@@ -5233,6 +11815,186 @@ namespace FreeAstroApi.Models
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("li_chun")]
         public global::FreeAstroApi.Models.ChineseCalendarYearProfile LiChun { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>ChineseTodayPillar</c> schema.
+    /// </summary>
+    public partial class ChineseTodayPillar
+    {
+        /// <summary>
+        /// The <c>label</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("label")]
+        public string Label { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>gan</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gan")]
+        public string Gan { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>zhi</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zhi")]
+        public string Zhi { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>info</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("info")]
+        public global::FreeAstroApi.Models.ChineseTodayPillarInfo Info { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>gan_pinyin</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("gan_pinyin")]
+        public string GanPinyin { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>zhi_pinyin</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zhi_pinyin")]
+        public string ZhiPinyin { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>ChineseTodayPillarInfo</c> schema.
+    /// </summary>
+    public partial class ChineseTodayPillarInfo
+    {
+        /// <summary>
+        /// The <c>stem</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("stem")]
+        public global::FreeAstroApi.Models.ChineseTodayPillarInfoStem Stem { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>branch</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("branch")]
+        public global::FreeAstroApi.Models.ChineseTodayPillarInfoBranch Branch { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>ChineseTodayPillarInfoBranch</c> schema.
+    /// </summary>
+    public partial class ChineseTodayPillarInfoBranch
+    {
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pinyin</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pinyin")]
+        public string Pinyin { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>element</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("element")]
+        public string Element { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>polarity</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("polarity")]
+        public string Polarity { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>zodiac</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zodiac")]
+        public string Zodiac { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>hidden</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("hidden")]
+        public global::System.Collections.Generic.List<string> Hidden { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>ChineseTodayPillarInfoStem</c> schema.
+    /// </summary>
+    public partial class ChineseTodayPillarInfoStem
+    {
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pinyin</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pinyin")]
+        public string Pinyin { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>element</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("element")]
+        public string Element { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>polarity</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("polarity")]
+        public string Polarity { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>ChineseTodayResponse</c> schema.
+    /// </summary>
+    public partial class ChineseTodayResponse
+    {
+        /// <summary>
+        /// The <c>timestamp</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timestamp")]
+        public string Timestamp { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pillars</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pillars")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.ChineseTodayPillar> Pillars { get; set; } = new();
 
         /// <summary>
         /// Fields returned by the API that this SDK version does not model yet.
@@ -8215,13 +14977,13 @@ namespace FreeAstroApi.Models
         public bool? IsBloodMoon { get; set; }
 
         /// <summary>
-        /// The <c>kind</c> field.
+        /// Allowed values: <c>solar</c>, <c>lunar</c>.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("kind")]
         public string? Kind { get; set; }
 
         /// <summary>
-        /// The <c>type</c> field.
+        /// Allowed values: <c>total</c>, <c>annular</c>, <c>hybrid</c>, <c>partial</c>, <c>penumbral</c>.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         public string? Type { get; set; }
@@ -8269,7 +15031,7 @@ namespace FreeAstroApi.Models
         public bool? VisibleAtLocation { get; set; }
 
         /// <summary>
-        /// The <c>type_at_location</c> field.
+        /// Allowed values: <c>total</c>, <c>annular</c>, <c>hybrid</c>, <c>partial</c>.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type_at_location")]
         public string? TypeAtLocation { get; set; }
@@ -8375,6 +15137,1116 @@ namespace FreeAstroApi.Models
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("version")]
         public string? Version { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisDataAngles</c> schema.
+    /// </summary>
+    public partial class EphemerisDataAngles
+    {
+        /// <summary>
+        /// The <c>asc</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("asc")]
+        public double Asc { get; set; }
+
+        /// <summary>
+        /// The <c>mc</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mc")]
+        public double Mc { get; set; }
+
+        /// <summary>
+        /// The <c>ic</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ic")]
+        public double Ic { get; set; }
+
+        /// <summary>
+        /// The <c>dc</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dc")]
+        public double Dc { get; set; }
+
+        /// <summary>
+        /// The <c>vertex</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("vertex")]
+        public double Vertex { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisDataAnglesDetailsEntry</c> schema.
+    /// </summary>
+    public partial class EphemerisDataAnglesDetailsEntry
+    {
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_abbr</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_abbr")]
+        public string SignAbbr { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public string SignId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pos")]
+        public double Pos { get; set; }
+
+        /// <summary>
+        /// The <c>abs_pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("abs_pos")]
+        public double AbsPos { get; set; }
+
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int House { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisDataAspect</c> schema.
+    /// </summary>
+    public partial class EphemerisDataAspect
+    {
+        /// <summary>
+        /// The <c>p1</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("p1")]
+        public string P1 { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>p2</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("p2")]
+        public string P2 { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>orb</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("orb")]
+        public double Orb { get; set; }
+
+        /// <summary>
+        /// The <c>deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("deg")]
+        public double Deg { get; set; }
+
+        /// <summary>
+        /// The <c>is_major</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_major")]
+        public bool IsMajor { get; set; }
+
+        /// <summary>
+        /// The <c>is_applying</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_applying")]
+        public bool IsApplying { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisDataAstrology</c> schema.
+    /// </summary>
+    public partial class EphemerisDataAstrology
+    {
+        /// <summary>
+        /// The <c>retrograde_bodies</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("retrograde_bodies")]
+        public global::System.Collections.Generic.List<string> RetrogradeBodies { get; set; } = new();
+
+        /// <summary>
+        /// The <c>stations</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("stations")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.EphemerisDataAstrologyStation> Stations { get; set; } = new();
+
+        /// <summary>
+        /// The <c>ingresses</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ingresses")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.EphemerisDataAstrologyIngress> Ingresses { get; set; } = new();
+
+        /// <summary>
+        /// The <c>angular_bodies</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angular_bodies")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.EphemerisDataAstrologyAngularBody> AngularBodies { get; set; } = new();
+
+        /// <summary>
+        /// The <c>notable_conditions</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("notable_conditions")]
+        public global::System.Collections.Generic.List<string> NotableConditions { get; set; } = new();
+
+        /// <summary>
+        /// The <c>moon_phase</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("moon_phase")]
+        public global::FreeAstroApi.Models.EphemerisDataAstrologyMoonPhase MoonPhase { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>moon_void_of_course</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("moon_void_of_course")]
+        public global::FreeAstroApi.Models.EphemerisDataAstrologyMoonVoidOfCourse? MoonVoidOfCourse { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisDataAstrologyAngularBody</c> schema.
+    /// </summary>
+    public partial class EphemerisDataAstrologyAngularBody
+    {
+        /// <summary>
+        /// The <c>body</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("body")]
+        public string Body { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int House { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisDataAstrologyIngress</c> schema.
+    /// </summary>
+    public partial class EphemerisDataAstrologyIngress
+    {
+        /// <summary>
+        /// The <c>body</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("body")]
+        public string Body { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>degree_in_sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("degree_in_sign")]
+        public double DegreeInSign { get; set; }
+
+        /// <summary>
+        /// The <c>direction</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("direction")]
+        public string Direction { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisDataAstrologyMoonPhase</c> schema.
+    /// </summary>
+    public partial class EphemerisDataAstrologyMoonPhase
+    {
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>phase_angle_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("phase_angle_deg")]
+        public double PhaseAngleDeg { get; set; }
+
+        /// <summary>
+        /// The <c>is_waxing</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_waxing")]
+        public bool IsWaxing { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisDataAstrologyMoonVoidOfCourse</c> schema.
+    /// </summary>
+    public partial class EphemerisDataAstrologyMoonVoidOfCourse
+    {
+        /// <summary>
+        /// The <c>is_void</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_void")]
+        public bool IsVoid { get; set; }
+
+        /// <summary>
+        /// The <c>definition</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("definition")]
+        public string Definition { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>current_sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("current_sign")]
+        public string CurrentSign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>next_sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("next_sign")]
+        public string NextSign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_ingress_at</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_ingress_at")]
+        public string SignIngressAt { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>next_applying_aspect</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("next_applying_aspect")]
+        public global::FreeAstroApi.Models.EphemerisDataAstrologyMoonVoidOfCourseNextApplyingAspect? NextApplyingAspect { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisDataAstrologyMoonVoidOfCourseNextApplyingAspect</c> schema.
+    /// </summary>
+    public partial class EphemerisDataAstrologyMoonVoidOfCourseNextApplyingAspect
+    {
+        /// <summary>
+        /// The <c>body</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("body")]
+        public string Body { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>aspect</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("aspect")]
+        public string Aspect { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>exact_at</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("exact_at")]
+        public string ExactAt { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisDataAstrologyStation</c> schema.
+    /// </summary>
+    public partial class EphemerisDataAstrologyStation
+    {
+        /// <summary>
+        /// The <c>body</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("body")]
+        public string Body { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>motion_state</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("motion_state")]
+        public string MotionState { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>speed</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("speed")]
+        public double? Speed { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisDataBodiesEntry</c> schema.
+    /// </summary>
+    public partial class EphemerisDataBodiesEntry
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public string SignId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pos")]
+        public double Pos { get; set; }
+
+        /// <summary>
+        /// The <c>abs_pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("abs_pos")]
+        public double AbsPos { get; set; }
+
+        /// <summary>
+        /// The <c>retrograde</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("retrograde")]
+        public bool? Retrograde { get; set; }
+
+        /// <summary>
+        /// The <c>speed</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("speed")]
+        public double? Speed { get; set; }
+
+        /// <summary>
+        /// The <c>is_stationary</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_stationary")]
+        public bool? IsStationary { get; set; }
+
+        /// <summary>
+        /// The <c>latitude_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("latitude_deg")]
+        public double LatitudeDeg { get; set; }
+
+        /// <summary>
+        /// The <c>distance_au</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("distance_au")]
+        public double DistanceAu { get; set; }
+
+        /// <summary>
+        /// The <c>sign_abbr</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_abbr")]
+        public string SignAbbr { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>position_text</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("position_text")]
+        public string PositionText { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>degree_in_sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("degree_in_sign")]
+        public double DegreeInSign { get; set; }
+
+        /// <summary>
+        /// The <c>longitude_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("longitude_deg")]
+        public double LongitudeDeg { get; set; }
+
+        /// <summary>
+        /// The <c>declination_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("declination_deg")]
+        public double? DeclinationDeg { get; set; }
+
+        /// <summary>
+        /// The <c>motion_state</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("motion_state")]
+        public string? MotionState { get; set; }
+
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int? House { get; set; }
+
+        /// <summary>
+        /// The <c>dignity</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dignity")]
+        public string? Dignity { get; set; }
+
+        /// <summary>
+        /// The <c>variant</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("variant")]
+        public string? Variant { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisDataFixedStarError</c> schema.
+    /// </summary>
+    public partial class EphemerisDataFixedStarError
+    {
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string? Name { get; set; }
+
+        /// <summary>
+        /// The <c>error</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("error")]
+        public string? Error { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisDataFixedStarsEntry</c> schema.
+    /// </summary>
+    public partial class EphemerisDataFixedStarsEntry
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>requested_name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("requested_name")]
+        public string RequestedName { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>swiss_name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("swiss_name")]
+        public string SwissName { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_abbr</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_abbr")]
+        public string SignAbbr { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public string SignId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pos")]
+        public double Pos { get; set; }
+
+        /// <summary>
+        /// The <c>abs_pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("abs_pos")]
+        public double AbsPos { get; set; }
+
+        /// <summary>
+        /// The <c>longitude_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("longitude_deg")]
+        public double LongitudeDeg { get; set; }
+
+        /// <summary>
+        /// The <c>latitude_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("latitude_deg")]
+        public double LatitudeDeg { get; set; }
+
+        /// <summary>
+        /// The <c>distance_au</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("distance_au")]
+        public double? DistanceAu { get; set; }
+
+        /// <summary>
+        /// The <c>position_text</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("position_text")]
+        public string PositionText { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>degree_in_sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("degree_in_sign")]
+        public double DegreeInSign { get; set; }
+
+        /// <summary>
+        /// The <c>right_ascension_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("right_ascension_deg")]
+        public double? RightAscensionDeg { get; set; }
+
+        /// <summary>
+        /// The <c>declination_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("declination_deg")]
+        public double? DeclinationDeg { get; set; }
+
+        /// <summary>
+        /// The <c>speed</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("speed")]
+        public double? Speed { get; set; }
+
+        /// <summary>
+        /// The <c>motion_state</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("motion_state")]
+        public string? MotionState { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisDataHouse</c> schema.
+    /// </summary>
+    public partial class EphemerisDataHouse
+    {
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int House { get; set; }
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_abbr</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_abbr")]
+        public string SignAbbr { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public string SignId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pos")]
+        public double Pos { get; set; }
+
+        /// <summary>
+        /// The <c>abs_pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("abs_pos")]
+        public double AbsPos { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisDataSubject</c> schema.
+    /// </summary>
+    public partial class EphemerisDataSubject
+    {
+        /// <summary>
+        /// The <c>datetime</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("datetime")]
+        public string Datetime { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>location</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("location")]
+        public global::FreeAstroApi.Models.EphemerisDataSubjectLocation Location { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>settings</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("settings")]
+        public global::FreeAstroApi.Models.EphemerisDataSubjectSettings Settings { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisDataSubjectLocation</c> schema.
+    /// </summary>
+    public partial class EphemerisDataSubjectLocation
+    {
+        /// <summary>
+        /// The <c>city</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("city")]
+        public string? City { get; set; }
+
+        /// <summary>
+        /// The <c>lat</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lat")]
+        public double Lat { get; set; }
+
+        /// <summary>
+        /// The <c>lng</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lng")]
+        public double Lng { get; set; }
+
+        /// <summary>
+        /// The <c>timezone</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timezone")]
+        public string Timezone { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisDataSubjectSettings</c> schema.
+    /// </summary>
+    public partial class EphemerisDataSubjectSettings
+    {
+        /// <summary>
+        /// The <c>julian_day</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("julian_day")]
+        public double JulianDay { get; set; }
+
+        /// <summary>
+        /// The <c>julian_day_tt</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("julian_day_tt")]
+        public double JulianDayTt { get; set; }
+
+        /// <summary>
+        /// The <c>delta_t_days</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("delta_t_days")]
+        public double DeltaTDays { get; set; }
+
+        /// <summary>
+        /// The <c>delta_t_seconds</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("delta_t_seconds")]
+        public double DeltaTSeconds { get; set; }
+
+        /// <summary>
+        /// The <c>zodiac_type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zodiac_type")]
+        public string ZodiacType { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>house_system</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house_system")]
+        public string HouseSystem { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sidereal_ayanamsa</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sidereal_ayanamsa")]
+        public string? SiderealAyanamsa { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisDisplay</c> schema.
+    /// </summary>
+    public partial class EphemerisDisplay
+    {
+        /// <summary>
+        /// The <c>sign_style</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_style")]
+        public string SignStyle { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>position_text_suffixes</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("position_text_suffixes")]
+        public global::System.Collections.Generic.List<string>? PositionTextSuffixes { get; set; }
+
+        /// <summary>
+        /// The <c>body_order</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("body_order")]
+        public global::System.Collections.Generic.List<string>? BodyOrder { get; set; }
+
+        /// <summary>
+        /// The <c>cell_format</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cell_format")]
+        public string? CellFormat { get; set; }
+
+        /// <summary>
+        /// The <c>motion_markers</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("motion_markers")]
+        public global::FreeAstroApi.Models.EphemerisDisplayMotionMarkers? MotionMarkers { get; set; }
+
+        /// <summary>
+        /// The <c>columns</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("columns")]
+        public global::System.Collections.Generic.List<string>? Columns { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisDisplayMotionMarkers</c> schema.
+    /// </summary>
+    public partial class EphemerisDisplayMotionMarkers
+    {
+        /// <summary>
+        /// The <c>retrograde</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("retrograde")]
+        public string Retrograde { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>stationary</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("stationary")]
+        public string Stationary { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisGridCell</c> schema.
+    /// </summary>
+    public partial class EphemerisGridCell
+    {
+        /// <summary>
+        /// The <c>text</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("text")]
+        public string Text { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>degree_text</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("degree_text")]
+        public string DegreeText { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_abbr</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_abbr")]
+        public string SignAbbr { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>motion_marker</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("motion_marker")]
+        public string? MotionMarker { get; set; }
+
+        /// <summary>
+        /// The <c>entered_sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("entered_sign")]
+        public bool EnteredSign { get; set; }
+
+        /// <summary>
+        /// The <c>station</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("station")]
+        public bool Station { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisMeta</c> schema.
+    /// </summary>
+    public partial class EphemerisMeta
+    {
+        /// <summary>
+        /// The <c>start</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("start")]
+        public string Start { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>end</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("end")]
+        public string? End { get; set; }
+
+        /// <summary>
+        /// The <c>step</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("step")]
+        public string? Step { get; set; }
+
+        /// <summary>
+        /// The <c>rows</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("rows")]
+        public int Rows { get; set; }
+
+        /// <summary>
+        /// The <c>bodies</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("bodies")]
+        public global::System.Collections.Generic.List<string> Bodies { get; set; } = new();
+
+        /// <summary>
+        /// The <c>format</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("format")]
+        public string Format { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>zodiac_type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zodiac_type")]
+        public string ZodiacType { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sidereal_ayanamsa</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sidereal_ayanamsa")]
+        public string? SiderealAyanamsa { get; set; }
+
+        /// <summary>
+        /// The <c>timezone</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timezone")]
+        public string Timezone { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>fixed_stars</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("fixed_stars")]
+        public global::System.Collections.Generic.List<string>? FixedStars { get; set; }
+
+        /// <summary>
+        /// The <c>resolved_time</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resolved_time")]
+        public global::FreeAstroApi.Models.ResolvedTime? ResolvedTime { get; set; }
+
+        /// <summary>
+        /// The <c>table_style</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("table_style")]
+        public string? TableStyle { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisRawRow</c> schema.
+    /// </summary>
+    public partial class EphemerisRawRow
+    {
+        /// <summary>
+        /// The <c>timestamp</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timestamp")]
+        public string Timestamp { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>bodies</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("bodies")]
+        public global::System.Collections.Generic.Dictionary<string, global::FreeAstroApi.Models.EphemerisDataBodiesEntry> Bodies { get; set; } = new();
+
+        /// <summary>
+        /// The <c>astrology</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("astrology")]
+        public global::FreeAstroApi.Models.EphemerisDataAstrology Astrology { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>angles</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angles")]
+        public global::FreeAstroApi.Models.EphemerisDataAngles? Angles { get; set; }
+
+        /// <summary>
+        /// The <c>houses</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("houses")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.EphemerisDataHouse>? Houses { get; set; }
+
+        /// <summary>
+        /// The <c>fixed_stars</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("fixed_stars")]
+        public global::System.Collections.Generic.Dictionary<string, global::FreeAstroApi.Models.EphemerisDataFixedStarsEntry>? FixedStars { get; set; }
+
+        /// <summary>
+        /// The <c>fixed_star_errors</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("fixed_star_errors")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.EphemerisDataFixedStarError>? FixedStarErrors { get; set; }
 
         /// <summary>
         /// Fields returned by the API that this SDK version does not model yet.
@@ -8581,6 +16453,294 @@ namespace FreeAstroApi.Models
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("show_motion_markers")]
         public bool? ShowMotionMarkers { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// Ephemeris for one instant (``data`` is an object) or a range (``data`` is a list, or a table).
+    /// </summary>
+    public partial class EphemerisResponse
+    {
+        /// <summary>
+        /// The <c>meta</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("meta")]
+        public global::FreeAstroApi.Models.EphemerisMeta Meta { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>data</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("data")]
+        public object? Data { get; set; }
+
+        /// <summary>
+        /// The <c>display</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("display")]
+        public global::FreeAstroApi.Models.EphemerisDisplay? Display { get; set; }
+
+        /// <summary>
+        /// The <c>columns</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("columns")]
+        public object? Columns { get; set; }
+
+        /// <summary>
+        /// The <c>rows</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("rows")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.EphemerisRow>? Rows { get; set; }
+
+        /// <summary>
+        /// The <c>raw_rows</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("raw_rows")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.EphemerisRawRow>? RawRows { get; set; }
+
+        /// <summary>
+        /// The <c>index</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("index")]
+        public global::System.Collections.Generic.List<string>? Index { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// One table row. Besides the fields below, each requested body is a column keyed by its
+    /// display name (``Sun``, ``North Node``, ...): position text in ``rows``/``columns`` tables,
+    /// a cell object in ``grid`` tables.
+    /// </summary>
+    public partial class EphemerisRow
+    {
+        /// <summary>
+        /// The <c>timestamp</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timestamp")]
+        public string? Timestamp { get; set; }
+
+        /// <summary>
+        /// The <c>date</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("date")]
+        public global::FreeAstroApi.Models.EphemerisRowDate? Date { get; set; }
+
+        /// <summary>
+        /// The <c>weekday</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("weekday")]
+        public string? Weekday { get; set; }
+
+        /// <summary>
+        /// The <c>sidereal_time</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sidereal_time")]
+        public string? SiderealTime { get; set; }
+
+        /// <summary>
+        /// The <c>chart</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("chart")]
+        public global::FreeAstroApi.Models.EphemerisRowChart? Chart { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisRowChart</c> schema.
+    /// </summary>
+    public partial class EphemerisRowChart
+    {
+        /// <summary>
+        /// The <c>timestamp</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timestamp")]
+        public string Timestamp { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>date</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("date")]
+        public string Date { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisRowDate</c> schema.
+    /// </summary>
+    public partial class EphemerisRowDate
+    {
+        /// <summary>
+        /// The <c>iso</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("iso")]
+        public string Iso { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>day</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("day")]
+        public int Day { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>EphemerisSnapshot</c> schema.
+    /// </summary>
+    public partial class EphemerisSnapshot
+    {
+        /// <summary>
+        /// The <c>timestamp</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timestamp")]
+        public string Timestamp { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>local_timestamp</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("local_timestamp")]
+        public string LocalTimestamp { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>subject</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("subject")]
+        public global::FreeAstroApi.Models.EphemerisDataSubject Subject { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>bodies</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("bodies")]
+        public global::System.Collections.Generic.Dictionary<string, global::FreeAstroApi.Models.EphemerisDataBodiesEntry> Bodies { get; set; } = new();
+
+        /// <summary>
+        /// The <c>astrology</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("astrology")]
+        public global::FreeAstroApi.Models.EphemerisDataAstrology Astrology { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>angles</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angles")]
+        public global::FreeAstroApi.Models.EphemerisDataAngles? Angles { get; set; }
+
+        /// <summary>
+        /// The <c>angles_details</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angles_details")]
+        public global::System.Collections.Generic.Dictionary<string, global::FreeAstroApi.Models.EphemerisDataAnglesDetailsEntry>? AnglesDetails { get; set; }
+
+        /// <summary>
+        /// The <c>houses</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("houses")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.EphemerisDataHouse>? Houses { get; set; }
+
+        /// <summary>
+        /// The <c>aspects</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("aspects")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.EphemerisDataAspect>? Aspects { get; set; }
+
+        /// <summary>
+        /// The <c>fixed_stars</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("fixed_stars")]
+        public global::System.Collections.Generic.Dictionary<string, global::FreeAstroApi.Models.EphemerisDataFixedStarsEntry>? FixedStars { get; set; }
+
+        /// <summary>
+        /// The <c>resolved_time</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resolved_time")]
+        public global::FreeAstroApi.Models.ResolvedTime? ResolvedTime { get; set; }
+
+        /// <summary>
+        /// The <c>fixed_star_errors</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("fixed_star_errors")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.EphemerisDataFixedStarError>? FixedStarErrors { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// Error body.
+    ///
+    /// Route errors carry ``detail``: a message, or an object with a stable ``error`` code, a
+    /// ``message`` and context fields. Gateway errors (authentication, quota, rate limits,
+    /// idempotency, capacity) carry a top-level ``error`` code and usually a ``detail`` message;
+    /// rate-limit errors add ``retry_after_ms`` or ``limit_info``. Request validation errors (422)
+    /// can also use the ``HTTPValidationError`` shape.
+    /// </summary>
+    public partial class ErrorResponse
+    {
+        /// <summary>
+        /// Error message, or an object with an `error` code and a `message`.
+        ///
+        /// Default: <c>null</c>.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("detail")]
+        public object? Detail { get; set; }
+
+        /// <summary>
+        /// Stable error code, for gateway errors.
+        ///
+        /// Default: <c>null</c>.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("error")]
+        public string? Error { get; set; }
+
+        /// <summary>
+        /// Documentation link.
+        ///
+        /// Default: <c>null</c>.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("docs")]
+        public string? Docs { get; set; }
+
+        /// <summary>
+        /// Suggested wait before retrying, in milliseconds.
+        ///
+        /// Default: <c>null</c>.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("retry_after_ms")]
+        public int? RetryAfterMs { get; set; }
+
+        /// <summary>
+        /// Plan allowance details, for quota errors.
+        ///
+        /// Default: <c>null</c>.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("limit_info")]
+        public global::System.Collections.Generic.Dictionary<string, object?>? LimitInfo { get; set; }
 
         /// <summary>
         /// Fields returned by the API that this SDK version does not model yet.
@@ -12407,6 +20567,2838 @@ namespace FreeAstroApi.Models
     }
 
     /// <summary>
+    /// The <c>HoroscopeDailyBulkDataEntry</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyBulkDataEntry
+    {
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>date</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("date")]
+        public string Date { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>scores</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scores")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryScores Scores { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>score_factors</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("score_factors")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryScoreFactor> ScoreFactors { get; set; } = new();
+
+        /// <summary>
+        /// The <c>lucky</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lucky")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryLucky Lucky { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>content</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("content")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryContent Content { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>astro</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("astro")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryAstro Astro { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_label</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_label")]
+        public string SignLabel { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyBulkDataEntryAstro</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyBulkDataEntryAstro
+    {
+        /// <summary>
+        /// The <c>moon_sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("moon_sign")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryLuckyColor MoonSign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>moon_phase</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("moon_phase")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryLuckyColor MoonPhase { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>highlights</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("highlights")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryAstroHighlight> Highlights { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyBulkDataEntryAstroHighlight</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyBulkDataEntryAstroHighlight
+    {
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>key</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("key")]
+        public string Key { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>label</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("label")]
+        public string Label { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyBulkDataEntryContent</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyBulkDataEntryContent
+    {
+        /// <summary>
+        /// The <c>text</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("text")]
+        public string Text { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>theme</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("theme")]
+        public string Theme { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>keywords</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("keywords")]
+        public global::System.Collections.Generic.List<string> Keywords { get; set; } = new();
+
+        /// <summary>
+        /// The <c>supporting_insights</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("supporting_insights")]
+        public global::System.Collections.Generic.List<string> SupportingInsights { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyBulkDataEntryLucky</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyBulkDataEntryLucky
+    {
+        /// <summary>
+        /// The <c>color</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("color")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryLuckyColor Color { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>number</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("number")]
+        public int Number { get; set; }
+
+        /// <summary>
+        /// The <c>time_window</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("time_window")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryLuckyTimeWindow TimeWindow { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyBulkDataEntryLuckyColor</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyBulkDataEntryLuckyColor
+    {
+        /// <summary>
+        /// The <c>key</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("key")]
+        public string Key { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>label</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("label")]
+        public string Label { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyBulkDataEntryLuckyTimeWindow</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyBulkDataEntryLuckyTimeWindow
+    {
+        /// <summary>
+        /// The <c>display</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("display")]
+        public string Display { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>start</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("start")]
+        public string Start { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>end</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("end")]
+        public string End { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>tz</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tz")]
+        public string Tz { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyBulkDataEntryScoreFactor</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyBulkDataEntryScoreFactor
+    {
+        /// <summary>
+        /// The <c>dimension</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dimension")]
+        public string Dimension { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>reason</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("reason")]
+        public string Reason { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyBulkDataEntryScores</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyBulkDataEntryScores
+    {
+        /// <summary>
+        /// The <c>overall</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("overall")]
+        public int Overall { get; set; }
+
+        /// <summary>
+        /// The <c>love</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("love")]
+        public int Love { get; set; }
+
+        /// <summary>
+        /// The <c>career</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("career")]
+        public int Career { get; set; }
+
+        /// <summary>
+        /// The <c>money</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("money")]
+        public int Money { get; set; }
+
+        /// <summary>
+        /// The <c>health</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("health")]
+        public int Health { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyBulkMeta</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyBulkMeta
+    {
+        /// <summary>
+        /// The <c>request_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("request_id")]
+        public string RequestId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>generated_at</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("generated_at")]
+        public string GeneratedAt { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>settings</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("settings")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkMetaSettings Settings { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>cache</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cache")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkMetaCache Cache { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>engine</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("engine")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkMetaEngine Engine { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyBulkMetaCache</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyBulkMetaCache
+    {
+        /// <summary>
+        /// The <c>hit</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("hit")]
+        public bool Hit { get; set; }
+
+        /// <summary>
+        /// The <c>ttl_seconds</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ttl_seconds")]
+        public double TtlSeconds { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyBulkMetaEngine</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyBulkMetaEngine
+    {
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>version</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("version")]
+        public string Version { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyBulkMetaSettings</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyBulkMetaSettings
+    {
+        /// <summary>
+        /// The <c>timezone</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timezone")]
+        public string Timezone { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>locale</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("locale")]
+        public string Locale { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>date_resolved</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("date_resolved")]
+        public string DateResolved { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>orb_policy</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("orb_policy")]
+        public string OrbPolicy { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyBulkResponse</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyBulkResponse
+    {
+        /// <summary>
+        /// The <c>meta</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("meta")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkMeta Meta { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>data</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("data")]
+        public global::System.Collections.Generic.Dictionary<string, global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntry> Data { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalData</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalData
+    {
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>date</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("date")]
+        public string Date { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>scores</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scores")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryScores Scores { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>score_factors</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("score_factors")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryScoreFactor> ScoreFactors { get; set; } = new();
+
+        /// <summary>
+        /// The <c>lucky</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lucky")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryLucky Lucky { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>content</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("content")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryContent Content { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>astro</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("astro")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryAstro Astro { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_label</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_label")]
+        public string SignLabel { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>personal</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("personal")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalDataPersonal Personal { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalDataPersonal</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalDataPersonal
+    {
+        /// <summary>
+        /// The <c>transits_top</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transits_top")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeDailyPersonalDataPersonalTransitsTopItem> TransitsTop { get; set; } = new();
+
+        /// <summary>
+        /// The <c>focus_areas</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("focus_areas")]
+        public global::System.Collections.Generic.List<string> FocusAreas { get; set; } = new();
+
+        /// <summary>
+        /// The <c>confidence_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("confidence_score")]
+        public double ConfidenceScore { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalDataPersonalTransitsTopItem</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalDataPersonalTransitsTopItem
+    {
+        /// <summary>
+        /// The <c>transit_planet</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transit_planet")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryLuckyColor TransitPlanet { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>natal_planet</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("natal_planet")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryLuckyColor NatalPlanet { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>aspect</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("aspect")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryLuckyColor Aspect { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>orb_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("orb_deg")]
+        public double OrbDeg { get; set; }
+
+        /// <summary>
+        /// The <c>score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("score")]
+        public double Score { get; set; }
+
+        /// <summary>
+        /// The <c>is_applying</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_applying")]
+        public bool IsApplying { get; set; }
+
+        /// <summary>
+        /// The <c>exact_at</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("exact_at")]
+        public string? ExactAt { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalResponse</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalResponse
+    {
+        /// <summary>
+        /// The <c>meta</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("meta")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkMeta Meta { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>data</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("data")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalData Data { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalV2Data</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalV2Data
+    {
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>date</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("date")]
+        public string Date { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>scores</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scores")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryScores Scores { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>score_factors</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("score_factors")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeDailySignV2DataScoreFactor> ScoreFactors { get; set; } = new();
+
+        /// <summary>
+        /// The <c>lucky</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lucky")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryLucky Lucky { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>content</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("content")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryContent Content { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>astro</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("astro")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryAstro Astro { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_label</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_label")]
+        public string SignLabel { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>personal</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("personal")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalV2DataPersonal Personal { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>scores_meta</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scores_meta")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalV2DataScoresMeta ScoresMeta { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalV2DataPersonal</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalV2DataPersonal
+    {
+        /// <summary>
+        /// The <c>transits_top</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transits_top")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeDailyPersonalV2DataPersonalTransitsTopItem> TransitsTop { get; set; } = new();
+
+        /// <summary>
+        /// The <c>focus_areas</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("focus_areas")]
+        public global::System.Collections.Generic.List<string> FocusAreas { get; set; } = new();
+
+        /// <summary>
+        /// The <c>confidence_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("confidence_score")]
+        public double ConfidenceScore { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalV2DataPersonalTransitsTopItem</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalV2DataPersonalTransitsTopItem
+    {
+        /// <summary>
+        /// The <c>transit_planet</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transit_planet")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryLuckyColor TransitPlanet { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>natal_planet</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("natal_planet")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryLuckyColor NatalPlanet { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>aspect</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("aspect")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryLuckyColor Aspect { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>orb_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("orb_deg")]
+        public double OrbDeg { get; set; }
+
+        /// <summary>
+        /// The <c>score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("score")]
+        public double Score { get; set; }
+
+        /// <summary>
+        /// The <c>is_applying</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_applying")]
+        public bool IsApplying { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalV2DataScoresMeta</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalV2DataScoresMeta
+    {
+        /// <summary>
+        /// The <c>overall_method</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("overall_method")]
+        public string OverallMethod { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>weights</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("weights")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalV2DataScoresMetaWeights Weights { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>rounding</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("rounding")]
+        public string Rounding { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalV2DataScoresMetaWeights</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalV2DataScoresMetaWeights
+    {
+        /// <summary>
+        /// The <c>love</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("love")]
+        public double Love { get; set; }
+
+        /// <summary>
+        /// The <c>career</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("career")]
+        public double Career { get; set; }
+
+        /// <summary>
+        /// The <c>money</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("money")]
+        public double Money { get; set; }
+
+        /// <summary>
+        /// The <c>health</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("health")]
+        public double Health { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalV2Meta</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalV2Meta
+    {
+        /// <summary>
+        /// The <c>request_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("request_id")]
+        public string RequestId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>generated_at</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("generated_at")]
+        public string GeneratedAt { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>settings</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("settings")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalV2MetaSettings Settings { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>engine</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("engine")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkMetaEngine Engine { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalV2MetaSettings</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalV2MetaSettings
+    {
+        /// <summary>
+        /// The <c>date_resolved</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("date_resolved")]
+        public string DateResolved { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>version</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("version")]
+        public string Version { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalV2Response</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalV2Response
+    {
+        /// <summary>
+        /// The <c>meta</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("meta")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalV2Meta Meta { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>data</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("data")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalV2Data Data { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalV3Data</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalV3Data
+    {
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>date</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("date")]
+        public string Date { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>scores</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scores")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryScores Scores { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>score_factors</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("score_factors")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeDailySignV2DataScoreFactor> ScoreFactors { get; set; } = new();
+
+        /// <summary>
+        /// The <c>lucky</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lucky")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryLucky Lucky { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>content</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("content")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalV3DataContent Content { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>astro</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("astro")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryAstro Astro { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_label</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_label")]
+        public string SignLabel { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>personal</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("personal")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalV3DataPersonal Personal { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>scores_meta</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scores_meta")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalV2DataScoresMeta ScoresMeta { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalV3DataContent</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalV3DataContent
+    {
+        /// <summary>
+        /// The <c>theme</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("theme")]
+        public string Theme { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>keywords</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("keywords")]
+        public global::System.Collections.Generic.List<string> Keywords { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalV3DataPersonal</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalV3DataPersonal
+    {
+        /// <summary>
+        /// The <c>transits_top</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transits_top")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeDailyPersonalV3DataPersonalTransitsTopItem> TransitsTop { get; set; } = new();
+
+        /// <summary>
+        /// The <c>focus_areas</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("focus_areas")]
+        public global::System.Collections.Generic.List<string> FocusAreas { get; set; } = new();
+
+        /// <summary>
+        /// The <c>confidence_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("confidence_score")]
+        public double ConfidenceScore { get; set; }
+
+        /// <summary>
+        /// The <c>day_context</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("day_context")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalV3DataPersonalDayContext DayContext { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>active_windows</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("active_windows")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeDailyPersonalV3DataPersonalDayContextActiveWindow> ActiveWindows { get; set; } = new();
+
+        /// <summary>
+        /// The <c>exact_hits</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("exact_hits")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeDailyPersonalV3DataPersonalDayContextExactHit> ExactHits { get; set; } = new();
+
+        /// <summary>
+        /// The <c>next_shift</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("next_shift")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalV3DataPersonalDayContextNextShift NextShift { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>dominant_topics</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dominant_topics")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeDailyPersonalV3DataPersonalDayContextDominantTopic> DominantTopics { get; set; } = new();
+
+        /// <summary>
+        /// The <c>supportive_vs_challenging</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("supportive_vs_challenging")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalV3DataPersonalDayContextSupportiveVsChallenging SupportiveVsChallenging { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>insights_meta</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("insights_meta")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalV3DataPersonalInsightsMeta InsightsMeta { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalV3DataPersonalDayContext</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalV3DataPersonalDayContext
+    {
+        /// <summary>
+        /// The <c>active_windows</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("active_windows")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeDailyPersonalV3DataPersonalDayContextActiveWindow> ActiveWindows { get; set; } = new();
+
+        /// <summary>
+        /// The <c>exact_hits</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("exact_hits")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeDailyPersonalV3DataPersonalDayContextExactHit> ExactHits { get; set; } = new();
+
+        /// <summary>
+        /// The <c>next_shift</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("next_shift")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalV3DataPersonalDayContextNextShift NextShift { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>dominant_topics</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dominant_topics")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeDailyPersonalV3DataPersonalDayContextDominantTopic> DominantTopics { get; set; } = new();
+
+        /// <summary>
+        /// The <c>supportive_vs_challenging</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("supportive_vs_challenging")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalV3DataPersonalDayContextSupportiveVsChallenging SupportiveVsChallenging { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalV3DataPersonalDayContextActiveWindow</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalV3DataPersonalDayContextActiveWindow
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>label</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("label")]
+        public string Label { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>category</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("category")]
+        public string Category { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>transit_planet</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transit_planet")]
+        public string TransitPlanet { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>natal_point</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("natal_point")]
+        public string NatalPoint { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>aspect_type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("aspect_type")]
+        public string AspectType { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pass_type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pass_type")]
+        public string PassType { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>start</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("start")]
+        public string Start { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>end</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("end")]
+        public string End { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>exact_hits</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("exact_hits")]
+        public global::System.Collections.Generic.List<string> ExactHits { get; set; } = new();
+
+        /// <summary>
+        /// The <c>lookup_key</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lookup_key")]
+        public string LookupKey { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>has_interpretation_block</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("has_interpretation_block")]
+        public bool HasInterpretationBlock { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalV3DataPersonalDayContextDominantTopic</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalV3DataPersonalDayContextDominantTopic
+    {
+        /// <summary>
+        /// The <c>title</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("title")]
+        public string Title { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>category</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("category")]
+        public string Category { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>focus_type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("focus_type")]
+        public string FocusType { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("score")]
+        public double Score { get; set; }
+
+        /// <summary>
+        /// The <c>peak_datetime</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("peak_datetime")]
+        public string PeakDatetime { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalV3DataPersonalDayContextExactHit</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalV3DataPersonalDayContextExactHit
+    {
+        /// <summary>
+        /// The <c>timestamp</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timestamp")]
+        public string Timestamp { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>label</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("label")]
+        public string Label { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>category</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("category")]
+        public string Category { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>aspect_type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("aspect_type")]
+        public string AspectType { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>transit_planet</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transit_planet")]
+        public string TransitPlanet { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>natal_point</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("natal_point")]
+        public string NatalPoint { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>lookup_key</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lookup_key")]
+        public string LookupKey { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>has_interpretation_block</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("has_interpretation_block")]
+        public bool HasInterpretationBlock { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalV3DataPersonalDayContextNextShift</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalV3DataPersonalDayContextNextShift
+    {
+        /// <summary>
+        /// The <c>timestamp</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timestamp")]
+        public string Timestamp { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>label</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("label")]
+        public string Label { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalV3DataPersonalDayContextSupportiveVsChallenging</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalV3DataPersonalDayContextSupportiveVsChallenging
+    {
+        /// <summary>
+        /// The <c>supportive</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("supportive")]
+        public int Supportive { get; set; }
+
+        /// <summary>
+        /// The <c>challenging</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("challenging")]
+        public int Challenging { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalV3DataPersonalInsightsMeta</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalV3DataPersonalInsightsMeta
+    {
+        /// <summary>
+        /// The <c>source</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("source")]
+        public string Source { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>timeline_enabled</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timeline_enabled")]
+        public bool TimelineEnabled { get; set; }
+
+        /// <summary>
+        /// The <c>insights_enabled</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("insights_enabled")]
+        public bool InsightsEnabled { get; set; }
+
+        /// <summary>
+        /// The <c>interpretation_blocks_enabled</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("interpretation_blocks_enabled")]
+        public bool InterpretationBlocksEnabled { get; set; }
+
+        /// <summary>
+        /// The <c>timeline_pass_count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timeline_pass_count")]
+        public int TimelinePassCount { get; set; }
+
+        /// <summary>
+        /// The <c>generated_fact_count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("generated_fact_count")]
+        public int GeneratedFactCount { get; set; }
+
+        /// <summary>
+        /// The <c>range_start</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("range_start")]
+        public string RangeStart { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>range_end</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("range_end")]
+        public string RangeEnd { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalV3DataPersonalTransitsTopItem</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalV3DataPersonalTransitsTopItem
+    {
+        /// <summary>
+        /// The <c>transit_planet</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transit_planet")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryLuckyColor TransitPlanet { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>natal_planet</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("natal_planet")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryLuckyColor NatalPlanet { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>aspect</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("aspect")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryLuckyColor Aspect { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>label</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("label")]
+        public string Label { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("score")]
+        public double Score { get; set; }
+
+        /// <summary>
+        /// The <c>exact_at</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("exact_at")]
+        public string? ExactAt { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalV3Meta</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalV3Meta
+    {
+        /// <summary>
+        /// The <c>request_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("request_id")]
+        public string RequestId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>generated_at</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("generated_at")]
+        public string GeneratedAt { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>settings</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("settings")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalV3MetaSettings Settings { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>engine</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("engine")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkMetaEngine Engine { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalV3MetaSettings</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalV3MetaSettings
+    {
+        /// <summary>
+        /// The <c>date_resolved</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("date_resolved")]
+        public string DateResolved { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>version</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("version")]
+        public string Version { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>include_interpretation_blocks</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("include_interpretation_blocks")]
+        public bool IncludeInterpretationBlocks { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailyPersonalV3Response</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailyPersonalV3Response
+    {
+        /// <summary>
+        /// The <c>meta</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("meta")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalV3Meta Meta { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>data</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("data")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalV3Data Data { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailySignMeta</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailySignMeta
+    {
+        /// <summary>
+        /// The <c>request_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("request_id")]
+        public string RequestId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>generated_at</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("generated_at")]
+        public string GeneratedAt { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>settings</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("settings")]
+        public global::FreeAstroApi.Models.HoroscopeDailySignMetaSettings Settings { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>cache</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cache")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkMetaCache Cache { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>engine</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("engine")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkMetaEngine Engine { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailySignMetaSettings</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailySignMetaSettings
+    {
+        /// <summary>
+        /// The <c>timezone</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timezone")]
+        public string Timezone { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>lang</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lang")]
+        public string Lang { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>locale</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("locale")]
+        public string Locale { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>date_resolved</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("date_resolved")]
+        public string DateResolved { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>orb_policy</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("orb_policy")]
+        public string OrbPolicy { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailySignResponse</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailySignResponse
+    {
+        /// <summary>
+        /// The <c>meta</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("meta")]
+        public global::FreeAstroApi.Models.HoroscopeDailySignMeta Meta { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>data</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("data")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntry Data { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailySignV2Data</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailySignV2Data
+    {
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>date</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("date")]
+        public string Date { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>scores</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scores")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryScores Scores { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>score_factors</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("score_factors")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeDailySignV2DataScoreFactor> ScoreFactors { get; set; } = new();
+
+        /// <summary>
+        /// The <c>lucky</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lucky")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryLucky Lucky { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>content</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("content")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryContent Content { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>astro</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("astro")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryAstro Astro { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_label</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_label")]
+        public string SignLabel { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailySignV2DataScoreFactor</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailySignV2DataScoreFactor
+    {
+        /// <summary>
+        /// The <c>dimension</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dimension")]
+        public string Dimension { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>reason</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("reason")]
+        public global::FreeAstroApi.Models.HoroscopeDailySignV2DataScoreFactorReason Reason { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>drivers</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("drivers")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeDailySignV2DataScoreFactorDriver> Drivers { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailySignV2DataScoreFactorDriver</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailySignV2DataScoreFactorDriver
+    {
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>key</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("key")]
+        public string Key { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>value</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("value")]
+        public double? Value { get; set; }
+
+        /// <summary>
+        /// The <c>label</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("label")]
+        public string? Label { get; set; }
+
+        /// <summary>
+        /// The <c>weight</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("weight")]
+        public double? Weight { get; set; }
+
+        /// <summary>
+        /// The <c>intensity</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("intensity")]
+        public string? Intensity { get; set; }
+
+        /// <summary>
+        /// The <c>orb_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("orb_deg")]
+        public double? OrbDeg { get; set; }
+
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int? House { get; set; }
+
+        /// <summary>
+        /// The <c>condition_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("condition_score")]
+        public double? ConditionScore { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailySignV2DataScoreFactorReason</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailySignV2DataScoreFactorReason
+    {
+        /// <summary>
+        /// The <c>main</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("main")]
+        public string Main { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>secondary</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("secondary")]
+        public string? Secondary { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailySignV2Meta</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailySignV2Meta
+    {
+        /// <summary>
+        /// The <c>request_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("request_id")]
+        public string RequestId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>generated_at</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("generated_at")]
+        public string GeneratedAt { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>settings</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("settings")]
+        public global::FreeAstroApi.Models.HoroscopeDailySignV2MetaSettings Settings { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>engine</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("engine")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkMetaEngine Engine { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailySignV2MetaSettings</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailySignV2MetaSettings
+    {
+        /// <summary>
+        /// The <c>date_resolved</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("date_resolved")]
+        public string DateResolved { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>version</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("version")]
+        public string Version { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>lang</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lang")]
+        public string Lang { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>locale</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("locale")]
+        public string Locale { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailySignV2Response</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailySignV2Response
+    {
+        /// <summary>
+        /// The <c>meta</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("meta")]
+        public global::FreeAstroApi.Models.HoroscopeDailySignV2Meta Meta { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>data</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("data")]
+        public global::FreeAstroApi.Models.HoroscopeDailySignV2Data Data { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailySignV3Meta</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailySignV3Meta
+    {
+        /// <summary>
+        /// The <c>request_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("request_id")]
+        public string RequestId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>generated_at</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("generated_at")]
+        public string GeneratedAt { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>settings</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("settings")]
+        public global::FreeAstroApi.Models.HoroscopeDailySignV3MetaSettings Settings { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>engine</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("engine")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkMetaEngine Engine { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailySignV3MetaSettings</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailySignV3MetaSettings
+    {
+        /// <summary>
+        /// The <c>date_resolved</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("date_resolved")]
+        public string DateResolved { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>timezone</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timezone")]
+        public string Timezone { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>lang</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lang")]
+        public string Lang { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>locale</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("locale")]
+        public string Locale { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>style</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("style")]
+        public string Style { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>variant</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("variant")]
+        public string? Variant { get; set; }
+
+        /// <summary>
+        /// The <c>version</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("version")]
+        public string Version { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>compatibility_source</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("compatibility_source")]
+        public string CompatibilitySource { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeDailySignV3Response</c> schema.
+    /// </summary>
+    public partial class HoroscopeDailySignV3Response
+    {
+        /// <summary>
+        /// The <c>meta</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("meta")]
+        public global::FreeAstroApi.Models.HoroscopeDailySignV3Meta Meta { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>data</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("data")]
+        public global::FreeAstroApi.Models.HoroscopeDailySignV2Data Data { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeWeeklyPersonalV3Data</c> schema.
+    /// </summary>
+    public partial class HoroscopeWeeklyPersonalV3Data
+    {
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>scores</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scores")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryScores Scores { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>score_factors</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("score_factors")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeDailySignV2DataScoreFactor> ScoreFactors { get; set; } = new();
+
+        /// <summary>
+        /// The <c>lucky</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lucky")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryLucky Lucky { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>content</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("content")]
+        public global::FreeAstroApi.Models.HoroscopeWeeklyPersonalV3DataContent Content { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>astro</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("astro")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryAstro Astro { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_label</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_label")]
+        public string SignLabel { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>personal</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("personal")]
+        public global::FreeAstroApi.Models.HoroscopeWeeklyPersonalV3DataPersonal Personal { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>scores_meta</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scores_meta")]
+        public global::FreeAstroApi.Models.HoroscopeWeeklyPersonalV3DataScoresMeta ScoresMeta { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>period</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("period")]
+        public global::FreeAstroApi.Models.HoroscopeWeeklyPersonalV3DataPeriod Period { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeWeeklyPersonalV3DataContent</c> schema.
+    /// </summary>
+    public partial class HoroscopeWeeklyPersonalV3DataContent
+    {
+        /// <summary>
+        /// The <c>text</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("text")]
+        public string Text { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>theme</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("theme")]
+        public string Theme { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>keywords</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("keywords")]
+        public global::System.Collections.Generic.List<string> Keywords { get; set; } = new();
+
+        /// <summary>
+        /// The <c>supporting_insights</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("supporting_insights")]
+        public global::System.Collections.Generic.List<string> SupportingInsights { get; set; } = new();
+
+        /// <summary>
+        /// The <c>weekly_summary</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("weekly_summary")]
+        public string WeeklySummary { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeWeeklyPersonalV3DataPeriod</c> schema.
+    /// </summary>
+    public partial class HoroscopeWeeklyPersonalV3DataPeriod
+    {
+        /// <summary>
+        /// The <c>start</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("start")]
+        public string Start { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>end</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("end")]
+        public string End { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>days</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("days")]
+        public int Days { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeWeeklyPersonalV3DataPersonal</c> schema.
+    /// </summary>
+    public partial class HoroscopeWeeklyPersonalV3DataPersonal
+    {
+        /// <summary>
+        /// The <c>transits_top</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transits_top")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeWeeklyPersonalV3DataPersonalTransitsTopItem> TransitsTop { get; set; } = new();
+
+        /// <summary>
+        /// The <c>focus_areas</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("focus_areas")]
+        public global::System.Collections.Generic.List<string> FocusAreas { get; set; } = new();
+
+        /// <summary>
+        /// The <c>confidence_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("confidence_score")]
+        public double ConfidenceScore { get; set; }
+
+        /// <summary>
+        /// The <c>days</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("days")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeWeeklyPersonalV3DataPersonalDay> Days { get; set; } = new();
+
+        /// <summary>
+        /// The <c>week_context</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("week_context")]
+        public global::FreeAstroApi.Models.HoroscopeWeeklyPersonalV3DataPersonalDayDayContext WeekContext { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>active_windows</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("active_windows")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeWeeklyPersonalV3DataPersonalDayDayContextActiveWindow> ActiveWindows { get; set; } = new();
+
+        /// <summary>
+        /// The <c>exact_hits</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("exact_hits")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeWeeklyPersonalV3DataPersonalDayDayContextExactHit> ExactHits { get; set; } = new();
+
+        /// <summary>
+        /// The <c>next_shift</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("next_shift")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalV3DataPersonalDayContextNextShift NextShift { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>dominant_topics</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dominant_topics")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeDailyPersonalV3DataPersonalDayContextDominantTopic> DominantTopics { get; set; } = new();
+
+        /// <summary>
+        /// The <c>supportive_vs_challenging</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("supportive_vs_challenging")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalV3DataPersonalDayContextSupportiveVsChallenging SupportiveVsChallenging { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>insights_meta</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("insights_meta")]
+        public global::FreeAstroApi.Models.HoroscopeWeeklyPersonalV3DataPersonalInsightsMeta InsightsMeta { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeWeeklyPersonalV3DataPersonalDay</c> schema.
+    /// </summary>
+    public partial class HoroscopeWeeklyPersonalV3DataPersonalDay
+    {
+        /// <summary>
+        /// The <c>date</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("date")]
+        public string Date { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>weekday</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("weekday")]
+        public string Weekday { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>scores</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scores")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryScores Scores { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>focus_areas</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("focus_areas")]
+        public global::System.Collections.Generic.List<string> FocusAreas { get; set; } = new();
+
+        /// <summary>
+        /// The <c>transits_top</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transits_top")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeWeeklyPersonalV3DataPersonalTransitsTopItem> TransitsTop { get; set; } = new();
+
+        /// <summary>
+        /// The <c>day_context</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("day_context")]
+        public global::FreeAstroApi.Models.HoroscopeWeeklyPersonalV3DataPersonalDayDayContext DayContext { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeWeeklyPersonalV3DataPersonalDayDayContext</c> schema.
+    /// </summary>
+    public partial class HoroscopeWeeklyPersonalV3DataPersonalDayDayContext
+    {
+        /// <summary>
+        /// The <c>range_start</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("range_start")]
+        public string RangeStart { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>range_end</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("range_end")]
+        public string RangeEnd { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>active_windows</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("active_windows")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeWeeklyPersonalV3DataPersonalDayDayContextActiveWindow> ActiveWindows { get; set; } = new();
+
+        /// <summary>
+        /// The <c>exact_hits</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("exact_hits")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeWeeklyPersonalV3DataPersonalDayDayContextExactHit> ExactHits { get; set; } = new();
+
+        /// <summary>
+        /// The <c>next_shift</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("next_shift")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalV3DataPersonalDayContextNextShift NextShift { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>dominant_topics</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dominant_topics")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.HoroscopeDailyPersonalV3DataPersonalDayContextDominantTopic> DominantTopics { get; set; } = new();
+
+        /// <summary>
+        /// The <c>supportive_vs_challenging</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("supportive_vs_challenging")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalV3DataPersonalDayContextSupportiveVsChallenging SupportiveVsChallenging { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeWeeklyPersonalV3DataPersonalDayDayContextActiveWindow</c> schema.
+    /// </summary>
+    public partial class HoroscopeWeeklyPersonalV3DataPersonalDayDayContextActiveWindow
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>label</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("label")]
+        public string Label { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>category</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("category")]
+        public string Category { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>transit_planet</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transit_planet")]
+        public string TransitPlanet { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>natal_point</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("natal_point")]
+        public string NatalPoint { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>aspect_type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("aspect_type")]
+        public string AspectType { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pass_type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pass_type")]
+        public string PassType { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>start</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("start")]
+        public string Start { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>end</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("end")]
+        public string End { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>exact_hits</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("exact_hits")]
+        public global::System.Collections.Generic.List<string> ExactHits { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeWeeklyPersonalV3DataPersonalDayDayContextExactHit</c> schema.
+    /// </summary>
+    public partial class HoroscopeWeeklyPersonalV3DataPersonalDayDayContextExactHit
+    {
+        /// <summary>
+        /// The <c>timestamp</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timestamp")]
+        public string Timestamp { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>label</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("label")]
+        public string Label { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>category</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("category")]
+        public string Category { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>aspect_type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("aspect_type")]
+        public string AspectType { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>transit_planet</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transit_planet")]
+        public string TransitPlanet { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>natal_point</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("natal_point")]
+        public string NatalPoint { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeWeeklyPersonalV3DataPersonalInsightsMeta</c> schema.
+    /// </summary>
+    public partial class HoroscopeWeeklyPersonalV3DataPersonalInsightsMeta
+    {
+        /// <summary>
+        /// The <c>source</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("source")]
+        public string Source { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>timeline_enabled</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timeline_enabled")]
+        public bool TimelineEnabled { get; set; }
+
+        /// <summary>
+        /// The <c>insights_enabled</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("insights_enabled")]
+        public bool InsightsEnabled { get; set; }
+
+        /// <summary>
+        /// The <c>interpretation_blocks_enabled</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("interpretation_blocks_enabled")]
+        public bool InterpretationBlocksEnabled { get; set; }
+
+        /// <summary>
+        /// The <c>period</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("period")]
+        public string Period { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>timeline_segment_count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timeline_segment_count")]
+        public int TimelineSegmentCount { get; set; }
+
+        /// <summary>
+        /// The <c>timeline_pass_count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timeline_pass_count")]
+        public int TimelinePassCount { get; set; }
+
+        /// <summary>
+        /// The <c>generated_fact_count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("generated_fact_count")]
+        public int GeneratedFactCount { get; set; }
+
+        /// <summary>
+        /// The <c>range_start</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("range_start")]
+        public string RangeStart { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>range_end</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("range_end")]
+        public string RangeEnd { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeWeeklyPersonalV3DataPersonalTransitsTopItem</c> schema.
+    /// </summary>
+    public partial class HoroscopeWeeklyPersonalV3DataPersonalTransitsTopItem
+    {
+        /// <summary>
+        /// The <c>transit_planet</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transit_planet")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryLuckyColor TransitPlanet { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>natal_planet</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("natal_planet")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryLuckyColor NatalPlanet { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>aspect</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("aspect")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkDataEntryLuckyColor Aspect { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>label</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("label")]
+        public string Label { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("score")]
+        public double Score { get; set; }
+
+        /// <summary>
+        /// The <c>event_date</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("event_date")]
+        public string EventDate { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>active_start</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("active_start")]
+        public string ActiveStart { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>active_end</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("active_end")]
+        public string ActiveEnd { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>exact_hits</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("exact_hits")]
+        public global::System.Collections.Generic.List<string> ExactHits { get; set; } = new();
+
+        /// <summary>
+        /// The <c>exact_at</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("exact_at")]
+        public string? ExactAt { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeWeeklyPersonalV3DataScoresMeta</c> schema.
+    /// </summary>
+    public partial class HoroscopeWeeklyPersonalV3DataScoresMeta
+    {
+        /// <summary>
+        /// The <c>overall_method</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("overall_method")]
+        public string OverallMethod { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>weights</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("weights")]
+        public global::FreeAstroApi.Models.HoroscopeDailyPersonalV2DataScoresMetaWeights Weights { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>daily_sample_count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("daily_sample_count")]
+        public int DailySampleCount { get; set; }
+
+        /// <summary>
+        /// The <c>rounding</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("rounding")]
+        public string Rounding { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeWeeklyPersonalV3Meta</c> schema.
+    /// </summary>
+    public partial class HoroscopeWeeklyPersonalV3Meta
+    {
+        /// <summary>
+        /// The <c>request_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("request_id")]
+        public string RequestId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>generated_at</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("generated_at")]
+        public string GeneratedAt { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>settings</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("settings")]
+        public global::FreeAstroApi.Models.HoroscopeWeeklyPersonalV3MetaSettings Settings { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>engine</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("engine")]
+        public global::FreeAstroApi.Models.HoroscopeDailyBulkMetaEngine Engine { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeWeeklyPersonalV3MetaSettings</c> schema.
+    /// </summary>
+    public partial class HoroscopeWeeklyPersonalV3MetaSettings
+    {
+        /// <summary>
+        /// The <c>week_start</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("week_start")]
+        public string WeekStart { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>week_end</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("week_end")]
+        public string WeekEnd { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>date_anchor</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("date_anchor")]
+        public string? DateAnchor { get; set; }
+
+        /// <summary>
+        /// The <c>start_week_on</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("start_week_on")]
+        public string StartWeekOn { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>version</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("version")]
+        public string Version { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>include_interpretation_blocks</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("include_interpretation_blocks")]
+        public bool IncludeInterpretationBlocks { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>HoroscopeWeeklyPersonalV3Response</c> schema.
+    /// </summary>
+    public partial class HoroscopeWeeklyPersonalV3Response
+    {
+        /// <summary>
+        /// The <c>meta</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("meta")]
+        public global::FreeAstroApi.Models.HoroscopeWeeklyPersonalV3Meta Meta { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>data</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("data")]
+        public global::FreeAstroApi.Models.HoroscopeWeeklyPersonalV3Data Data { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
     /// The <c>HouseOverlayItem</c> schema.
     /// </summary>
     public partial class HouseOverlayItem
@@ -12836,6 +23828,30 @@ namespace FreeAstroApi.Models
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("style")]
         public string? Style { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// Returned in place of the interpretation when the library could not be read.
+    /// </summary>
+    public partial class InterpretationUnavailable
+    {
+        /// <summary>
+        /// The <c>error</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("error")]
+        public string Error { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>details</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("details")]
+        public string? Details { get; set; }
 
         /// <summary>
         /// Fields returned by the API that this SDK version does not model yet.
@@ -17934,10 +28950,10 @@ namespace FreeAstroApi.Models
         public global::FreeAstroApi.Models.TraditionalMoonData? TraditionalMoon { get; set; }
 
         /// <summary>
-        /// The <c>next_phases</c> field.
+        /// UTC instants (ISO 8601) of the next new moon, first quarter, full moon and last quarter.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("next_phases")]
-        public global::System.Collections.Generic.Dictionary<string, string> NextPhases { get; set; } = new();
+        public global::FreeAstroApi.Models.MoonMonthDayResponseNextPhases NextPhases { get; set; } = default!;
 
         /// <summary>
         /// The <c>calendar_date</c> field.
@@ -18024,7 +29040,7 @@ namespace FreeAstroApi.Models
     public partial class MoonPhaseData
     {
         /// <summary>
-        /// The <c>name</c> field.
+        /// Allowed values: <c>New Moon</c>, <c>Waxing Crescent</c>, <c>First Quarter</c>, <c>Waxing Gibbous</c>, <c>Full Moon</c>, <c>Waning Gibbous</c>, <c>Last Quarter</c>, <c>Waning Crescent</c>.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         public string Name { get; set; } = default!;
@@ -18132,10 +29148,10 @@ namespace FreeAstroApi.Models
         public global::FreeAstroApi.Models.TraditionalMoonData? TraditionalMoon { get; set; }
 
         /// <summary>
-        /// The <c>next_phases</c> field.
+        /// UTC instants (ISO 8601) of the next new moon, first quarter, full moon and last quarter.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("next_phases")]
-        public global::System.Collections.Generic.Dictionary<string, string> NextPhases { get; set; } = new();
+        public global::FreeAstroApi.Models.MoonPhaseResponseNextPhases NextPhases { get; set; } = default!;
 
         /// <summary>
         /// Fields returned by the API that this SDK version does not model yet.
@@ -19054,6 +30070,2580 @@ namespace FreeAstroApi.Models
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("balance")]
         public global::FreeAstroApi.Models.NumberResult Balance { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateAngles</c> schema.
+    /// </summary>
+    public partial class NatalCalculateAngles
+    {
+        /// <summary>
+        /// The <c>asc</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("asc")]
+        public double Asc { get; set; }
+
+        /// <summary>
+        /// The <c>mc</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mc")]
+        public double Mc { get; set; }
+
+        /// <summary>
+        /// The <c>ic</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ic")]
+        public double Ic { get; set; }
+
+        /// <summary>
+        /// The <c>dc</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dc")]
+        public double Dc { get; set; }
+
+        /// <summary>
+        /// The <c>vertex</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("vertex")]
+        public double Vertex { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateAnglesDetailsEntry</c> schema.
+    /// </summary>
+    public partial class NatalCalculateAnglesDetailsEntry
+    {
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public string SignId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pos")]
+        public double Pos { get; set; }
+
+        /// <summary>
+        /// The <c>abs_pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("abs_pos")]
+        public double AbsPos { get; set; }
+
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int House { get; set; }
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string? Name { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateAspect</c> schema.
+    /// </summary>
+    public partial class NatalCalculateAspect
+    {
+        /// <summary>
+        /// The <c>p1</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("p1")]
+        public string P1 { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>p2</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("p2")]
+        public string P2 { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>orb</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("orb")]
+        public double Orb { get; set; }
+
+        /// <summary>
+        /// The <c>deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("deg")]
+        public double Deg { get; set; }
+
+        /// <summary>
+        /// The <c>is_major</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_major")]
+        public bool IsMajor { get; set; }
+
+        /// <summary>
+        /// The <c>is_applying</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_applying")]
+        public bool IsApplying { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateAspectsSummary</c> schema.
+    /// </summary>
+    public partial class NatalCalculateAspectsSummary
+    {
+        /// <summary>
+        /// The <c>total</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total")]
+        public int Total { get; set; }
+
+        /// <summary>
+        /// The <c>major</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("major")]
+        public int Major { get; set; }
+
+        /// <summary>
+        /// The <c>minor</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("minor")]
+        public int Minor { get; set; }
+
+        /// <summary>
+        /// The <c>by_type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("by_type")]
+        public global::System.Collections.Generic.Dictionary<string, int> ByType { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateConfidence</c> schema.
+    /// </summary>
+    public partial class NatalCalculateConfidence
+    {
+        /// <summary>
+        /// The <c>houses</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("houses")]
+        public string Houses { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>angles</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angles")]
+        public string Angles { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>overall</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("overall")]
+        public string Overall { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateConfigurations</c> schema.
+    /// </summary>
+    public partial class NatalCalculateConfigurations
+    {
+        /// <summary>
+        /// The <c>total</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total")]
+        public int Total { get; set; }
+
+        /// <summary>
+        /// The <c>items</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("items")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.NatalCalculateConfigurationsItem> Items { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateConfigurationsItem</c> schema.
+    /// </summary>
+    public partial class NatalCalculateConfigurationsItem
+    {
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>aliases</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("aliases")]
+        public global::System.Collections.Generic.List<string>? Aliases { get; set; }
+
+        /// <summary>
+        /// The <c>bodies</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("bodies")]
+        public global::System.Collections.Generic.List<string> Bodies { get; set; } = new();
+
+        /// <summary>
+        /// The <c>base</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("base")]
+        public global::System.Collections.Generic.List<string>? Base { get; set; }
+
+        /// <summary>
+        /// The <c>apex</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("apex")]
+        public string Apex { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sextiles</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sextiles")]
+        public global::System.Collections.Generic.List<global::System.Collections.Generic.List<string>>? Sextiles { get; set; }
+
+        /// <summary>
+        /// The <c>trines</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("trines")]
+        public global::System.Collections.Generic.List<global::System.Collections.Generic.List<string>>? Trines { get; set; }
+
+        /// <summary>
+        /// The <c>aspects</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("aspects")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.NatalCalculateConfigurationsItemAspect> Aspects { get; set; } = new();
+
+        /// <summary>
+        /// The <c>derived_from_minor_aspects</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("derived_from_minor_aspects")]
+        public bool DerivedFromMinorAspects { get; set; }
+
+        /// <summary>
+        /// The <c>opposition</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("opposition")]
+        public global::System.Collections.Generic.List<string>? Opposition { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateConfigurationsItemAspect</c> schema.
+    /// </summary>
+    public partial class NatalCalculateConfigurationsItemAspect
+    {
+        /// <summary>
+        /// The <c>p1</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("p1")]
+        public string P1 { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>p2</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("p2")]
+        public string P2 { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>orb</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("orb")]
+        public double Orb { get; set; }
+
+        /// <summary>
+        /// The <c>deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("deg")]
+        public double Deg { get; set; }
+
+        /// <summary>
+        /// The <c>is_major</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_major")]
+        public bool IsMajor { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateDeclinationAspect</c> schema.
+    /// </summary>
+    public partial class NatalCalculateDeclinationAspect
+    {
+        /// <summary>
+        /// The <c>p1</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("p1")]
+        public string P1 { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>p2</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("p2")]
+        public string P2 { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>orb</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("orb")]
+        public double Orb { get; set; }
+
+        /// <summary>
+        /// The <c>orb_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("orb_deg")]
+        public double OrbDeg { get; set; }
+
+        /// <summary>
+        /// The <c>declination_1</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("declination_1")]
+        public double Declination1 { get; set; }
+
+        /// <summary>
+        /// The <c>declination_2</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("declination_2")]
+        public double Declination2 { get; set; }
+
+        /// <summary>
+        /// The <c>is_major</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_major")]
+        public bool IsMajor { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateDeclinationAspectsSummary</c> schema.
+    /// </summary>
+    public partial class NatalCalculateDeclinationAspectsSummary
+    {
+        /// <summary>
+        /// The <c>total</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total")]
+        public int Total { get; set; }
+
+        /// <summary>
+        /// The <c>parallel</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("parallel")]
+        public int Parallel { get; set; }
+
+        /// <summary>
+        /// The <c>contra_parallel</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("contra_parallel")]
+        public int ContraParallel { get; set; }
+
+        /// <summary>
+        /// The <c>orb</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("orb")]
+        public double Orb { get; set; }
+
+        /// <summary>
+        /// The <c>by_type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("by_type")]
+        public global::System.Collections.Generic.Dictionary<string, int> ByType { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateDominants</c> schema.
+    /// </summary>
+    public partial class NatalCalculateDominants
+    {
+        /// <summary>
+        /// The <c>elements</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("elements")]
+        public global::FreeAstroApi.Models.NatalCalculateDominantsElements Elements { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>modalities</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("modalities")]
+        public global::FreeAstroApi.Models.NatalCalculateDominantsModalities Modalities { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>polarities</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("polarities")]
+        public global::FreeAstroApi.Models.NatalCalculateDominantsPolarities Polarities { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>dominant_element</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dominant_element")]
+        public string DominantElement { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>dominant_modality</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dominant_modality")]
+        public string DominantModality { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>dominant_polarity</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dominant_polarity")]
+        public string DominantPolarity { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateDominantsElements</c> schema.
+    /// </summary>
+    public partial class NatalCalculateDominantsElements
+    {
+        /// <summary>
+        /// The <c>fire</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("fire")]
+        public double Fire { get; set; }
+
+        /// <summary>
+        /// The <c>earth</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("earth")]
+        public double Earth { get; set; }
+
+        /// <summary>
+        /// The <c>air</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("air")]
+        public double Air { get; set; }
+
+        /// <summary>
+        /// The <c>water</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("water")]
+        public double Water { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateDominantsModalities</c> schema.
+    /// </summary>
+    public partial class NatalCalculateDominantsModalities
+    {
+        /// <summary>
+        /// The <c>cardinal</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cardinal")]
+        public double Cardinal { get; set; }
+
+        /// <summary>
+        /// The <c>fixed</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("fixed")]
+        public double Fixed { get; set; }
+
+        /// <summary>
+        /// The <c>mutable</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mutable")]
+        public double Mutable { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateDominantsPolarities</c> schema.
+    /// </summary>
+    public partial class NatalCalculateDominantsPolarities
+    {
+        /// <summary>
+        /// The <c>masculine</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("masculine")]
+        public double Masculine { get; set; }
+
+        /// <summary>
+        /// The <c>feminine</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("feminine")]
+        public double Feminine { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateDominantsProfile</c> schema.
+    /// </summary>
+    public partial class NatalCalculateDominantsProfile
+    {
+        /// <summary>
+        /// The <c>method</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("method")]
+        public string Method { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>dominant_planets</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dominant_planets")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.NatalCalculateDominantsProfileDominantPlanet> DominantPlanets { get; set; } = new();
+
+        /// <summary>
+        /// The <c>top_planets</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("top_planets")]
+        public global::System.Collections.Generic.List<string> TopPlanets { get; set; } = new();
+
+        /// <summary>
+        /// The <c>dominant_element</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dominant_element")]
+        public global::FreeAstroApi.Models.NatalCalculateDominantsProfileDominantElement DominantElement { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>signature_sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("signature_sign")]
+        public global::FreeAstroApi.Models.NatalCalculateDominantsProfileSignatureSign SignatureSign { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateDominantsProfileDominantElement</c> schema.
+    /// </summary>
+    public partial class NatalCalculateDominantsProfileDominantElement
+    {
+        /// <summary>
+        /// The <c>table</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("table")]
+        public global::FreeAstroApi.Models.NatalCalculateDominantsProfileDominantElementTable Table { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>element</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("element")]
+        public string Element { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>ties</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ties")]
+        public global::System.Collections.Generic.List<string> Ties { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateDominantsProfileDominantElementTable</c> schema.
+    /// </summary>
+    public partial class NatalCalculateDominantsProfileDominantElementTable
+    {
+        /// <summary>
+        /// The <c>fire</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("fire")]
+        public global::FreeAstroApi.Models.NatalCalculateDominantsProfileDominantElementTableFire Fire { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>earth</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("earth")]
+        public global::FreeAstroApi.Models.NatalCalculateDominantsProfileDominantElementTableFire Earth { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>air</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("air")]
+        public global::FreeAstroApi.Models.NatalCalculateDominantsProfileDominantElementTableFire Air { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>water</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("water")]
+        public global::FreeAstroApi.Models.NatalCalculateDominantsProfileDominantElementTableFire Water { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateDominantsProfileDominantElementTableFire</c> schema.
+    /// </summary>
+    public partial class NatalCalculateDominantsProfileDominantElementTableFire
+    {
+        /// <summary>
+        /// The <c>sun_moon_asc</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sun_moon_asc")]
+        public int SunMoonAsc { get; set; }
+
+        /// <summary>
+        /// The <c>personal</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("personal")]
+        public int Personal { get; set; }
+
+        /// <summary>
+        /// The <c>transpersonal</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transpersonal")]
+        public int Transpersonal { get; set; }
+
+        /// <summary>
+        /// The <c>dominant</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dominant")]
+        public int Dominant { get; set; }
+
+        /// <summary>
+        /// The <c>total</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total")]
+        public int Total { get; set; }
+
+        /// <summary>
+        /// The <c>percent</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("percent")]
+        public double Percent { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateDominantsProfileDominantPlanet</c> schema.
+    /// </summary>
+    public partial class NatalCalculateDominantsProfileDominantPlanet
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public int Sign { get; set; }
+
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int House { get; set; }
+
+        /// <summary>
+        /// The <c>angle</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angle")]
+        public int Angle { get; set; }
+
+        /// <summary>
+        /// The <c>ruler</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ruler")]
+        public int Ruler { get; set; }
+
+        /// <summary>
+        /// The <c>aspects</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("aspects")]
+        public int Aspects { get; set; }
+
+        /// <summary>
+        /// The <c>total</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total")]
+        public int Total { get; set; }
+
+        /// <summary>
+        /// The <c>percent</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("percent")]
+        public double Percent { get; set; }
+
+        /// <summary>
+        /// The <c>rank</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("rank")]
+        public int Rank { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateDominantsProfileSignatureSign</c> schema.
+    /// </summary>
+    public partial class NatalCalculateDominantsProfileSignatureSign
+    {
+        /// <summary>
+        /// The <c>element_counts</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("element_counts")]
+        public global::FreeAstroApi.Models.NatalCalculateDominantsProfileSignatureSignElementCounts ElementCounts { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>modality_counts</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("modality_counts")]
+        public global::FreeAstroApi.Models.NatalCalculateDominantsProfileSignatureSignModalityCounts ModalityCounts { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>element</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("element")]
+        public string Element { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>modality</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("modality")]
+        public string? Modality { get; set; }
+
+        /// <summary>
+        /// The <c>signature</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("signature")]
+        public string? Signature { get; set; }
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string? Sign { get; set; }
+
+        /// <summary>
+        /// The <c>includes_asc</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("includes_asc")]
+        public bool IncludesAsc { get; set; }
+
+        /// <summary>
+        /// The <c>element_ties</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("element_ties")]
+        public global::System.Collections.Generic.List<string> ElementTies { get; set; } = new();
+
+        /// <summary>
+        /// The <c>modality_ties</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("modality_ties")]
+        public global::System.Collections.Generic.List<string> ModalityTies { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateDominantsProfileSignatureSignElementCounts</c> schema.
+    /// </summary>
+    public partial class NatalCalculateDominantsProfileSignatureSignElementCounts
+    {
+        /// <summary>
+        /// The <c>fire</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("fire")]
+        public int Fire { get; set; }
+
+        /// <summary>
+        /// The <c>earth</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("earth")]
+        public int Earth { get; set; }
+
+        /// <summary>
+        /// The <c>air</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("air")]
+        public int Air { get; set; }
+
+        /// <summary>
+        /// The <c>water</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("water")]
+        public int Water { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateDominantsProfileSignatureSignModalityCounts</c> schema.
+    /// </summary>
+    public partial class NatalCalculateDominantsProfileSignatureSignModalityCounts
+    {
+        /// <summary>
+        /// The <c>cardinal</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cardinal")]
+        public int Cardinal { get; set; }
+
+        /// <summary>
+        /// The <c>fixed</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("fixed")]
+        public int Fixed { get; set; }
+
+        /// <summary>
+        /// The <c>mutable</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mutable")]
+        public int Mutable { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateFixedStarError</c> schema.
+    /// </summary>
+    public partial class NatalCalculateFixedStarError
+    {
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string? Name { get; set; }
+
+        /// <summary>
+        /// The <c>error</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("error")]
+        public string? Error { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateFixedStarsEntry</c> schema.
+    /// </summary>
+    public partial class NatalCalculateFixedStarsEntry
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>requested_name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("requested_name")]
+        public string RequestedName { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>swiss_name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("swiss_name")]
+        public string SwissName { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public string SignId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pos")]
+        public double Pos { get; set; }
+
+        /// <summary>
+        /// The <c>abs_pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("abs_pos")]
+        public double AbsPos { get; set; }
+
+        /// <summary>
+        /// The <c>longitude_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("longitude_deg")]
+        public double LongitudeDeg { get; set; }
+
+        /// <summary>
+        /// The <c>latitude_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("latitude_deg")]
+        public double LatitudeDeg { get; set; }
+
+        /// <summary>
+        /// The <c>distance_au</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("distance_au")]
+        public double? DistanceAu { get; set; }
+
+        /// <summary>
+        /// The <c>degree_in_sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("degree_in_sign")]
+        public double DegreeInSign { get; set; }
+
+        /// <summary>
+        /// The <c>right_ascension_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("right_ascension_deg")]
+        public double? RightAscensionDeg { get; set; }
+
+        /// <summary>
+        /// The <c>declination_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("declination_deg")]
+        public double? DeclinationDeg { get; set; }
+
+        /// <summary>
+        /// The <c>speed</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("speed")]
+        public double? Speed { get; set; }
+
+        /// <summary>
+        /// The <c>is_stationary</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_stationary")]
+        public bool? IsStationary { get; set; }
+
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int? House { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateHouse</c> schema.
+    /// </summary>
+    public partial class NatalCalculateHouse
+    {
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int House { get; set; }
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public string SignId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pos")]
+        public double Pos { get; set; }
+
+        /// <summary>
+        /// The <c>abs_pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("abs_pos")]
+        public double AbsPos { get; set; }
+
+        /// <summary>
+        /// The <c>ruler</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ruler")]
+        public global::FreeAstroApi.Models.NatalCalculateHouseRuler? Ruler { get; set; }
+
+        /// <summary>
+        /// The <c>classic_ruler</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("classic_ruler")]
+        public global::FreeAstroApi.Models.NatalCalculateHouseRuler? ClassicRuler { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateHouseRuler</c> schema.
+    /// </summary>
+    public partial class NatalCalculateHouseRuler
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public string SignId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int House { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculatePlanet</c> schema.
+    /// </summary>
+    public partial class NatalCalculatePlanet
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public string SignId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pos")]
+        public double Pos { get; set; }
+
+        /// <summary>
+        /// The <c>abs_pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("abs_pos")]
+        public double AbsPos { get; set; }
+
+        /// <summary>
+        /// The <c>retrograde</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("retrograde")]
+        public bool Retrograde { get; set; }
+
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int? House { get; set; }
+
+        /// <summary>
+        /// The <c>declination_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("declination_deg")]
+        public double? DeclinationDeg { get; set; }
+
+        /// <summary>
+        /// The <c>variant</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("variant")]
+        public string? Variant { get; set; }
+
+        /// <summary>
+        /// The <c>dignity</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dignity")]
+        public string? Dignity { get; set; }
+
+        /// <summary>
+        /// The <c>speed</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("speed")]
+        public double? Speed { get; set; }
+
+        /// <summary>
+        /// The <c>is_stationary</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_stationary")]
+        public bool? IsStationary { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateResponse</c> schema.
+    /// </summary>
+    public partial class NatalCalculateResponse
+    {
+        /// <summary>
+        /// The <c>subject</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("subject")]
+        public global::FreeAstroApi.Models.NatalCalculateSubject? Subject { get; set; }
+
+        /// <summary>
+        /// The <c>planets</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("planets")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.NatalCalculatePlanet>? Planets { get; set; }
+
+        /// <summary>
+        /// The <c>aspects</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("aspects")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.NatalCalculateAspect>? Aspects { get; set; }
+
+        /// <summary>
+        /// The <c>aspects_summary</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("aspects_summary")]
+        public global::FreeAstroApi.Models.NatalCalculateAspectsSummary? AspectsSummary { get; set; }
+
+        /// <summary>
+        /// The <c>confidence</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("confidence")]
+        public global::FreeAstroApi.Models.NatalCalculateConfidence? Confidence { get; set; }
+
+        /// <summary>
+        /// The <c>houses</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("houses")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.NatalCalculateHouse>? Houses { get; set; }
+
+        /// <summary>
+        /// The <c>angles</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angles")]
+        public global::FreeAstroApi.Models.NatalCalculateAngles? Angles { get; set; }
+
+        /// <summary>
+        /// The <c>angles_details</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angles_details")]
+        public global::System.Collections.Generic.Dictionary<string, global::FreeAstroApi.Models.NatalCalculateAnglesDetailsEntry>? AnglesDetails { get; set; }
+
+        /// <summary>
+        /// The <c>declination_aspects</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("declination_aspects")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.NatalCalculateDeclinationAspect>? DeclinationAspects { get; set; }
+
+        /// <summary>
+        /// The <c>declination_aspects_summary</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("declination_aspects_summary")]
+        public global::FreeAstroApi.Models.NatalCalculateDeclinationAspectsSummary? DeclinationAspectsSummary { get; set; }
+
+        /// <summary>
+        /// The <c>fixed_stars</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("fixed_stars")]
+        public global::System.Collections.Generic.Dictionary<string, global::FreeAstroApi.Models.NatalCalculateFixedStarsEntry>? FixedStars { get; set; }
+
+        /// <summary>
+        /// The <c>dominants</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dominants")]
+        public global::FreeAstroApi.Models.NatalCalculateDominants? Dominants { get; set; }
+
+        /// <summary>
+        /// The <c>configurations</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("configurations")]
+        public global::FreeAstroApi.Models.NatalCalculateConfigurations? Configurations { get; set; }
+
+        /// <summary>
+        /// The <c>stelliums</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("stelliums")]
+        public global::FreeAstroApi.Models.NatalCalculateStelliums? Stelliums { get; set; }
+
+        /// <summary>
+        /// The <c>tables</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tables")]
+        public global::FreeAstroApi.Models.NatalCalculateTables? Tables { get; set; }
+
+        /// <summary>
+        /// The <c>resolved_time</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resolved_time")]
+        public global::FreeAstroApi.Models.ResolvedTime? ResolvedTime { get; set; }
+
+        /// <summary>
+        /// The <c>dominants_profile</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dominants_profile")]
+        public global::FreeAstroApi.Models.NatalCalculateDominantsProfile? DominantsProfile { get; set; }
+
+        /// <summary>
+        /// The <c>status</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("status")]
+        public string? Status { get; set; }
+
+        /// <summary>
+        /// The <c>response_format</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("response_format")]
+        public string? ResponseFormat { get; set; }
+
+        /// <summary>
+        /// The <c>text</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("text")]
+        public string? Text { get; set; }
+
+        /// <summary>
+        /// The <c>subject_name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("subject_name")]
+        public string? SubjectName { get; set; }
+
+        /// <summary>
+        /// The <c>datetime</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("datetime")]
+        public string? Datetime { get; set; }
+
+        /// <summary>
+        /// The <c>city</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("city")]
+        public string? City { get; set; }
+
+        /// <summary>
+        /// The <c>timezone</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timezone")]
+        public string? Timezone { get; set; }
+
+        /// <summary>
+        /// The <c>time_known</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("time_known")]
+        public bool? TimeKnown { get; set; }
+
+        /// <summary>
+        /// The <c>zodiac_type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zodiac_type")]
+        public string? ZodiacType { get; set; }
+
+        /// <summary>
+        /// The <c>house_system</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house_system")]
+        public string? HouseSystem { get; set; }
+
+        /// <summary>
+        /// The <c>planet_count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("planet_count")]
+        public int? PlanetCount { get; set; }
+
+        /// <summary>
+        /// The <c>house_count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house_count")]
+        public int? HouseCount { get; set; }
+
+        /// <summary>
+        /// The <c>aspect_count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("aspect_count")]
+        public int? AspectCount { get; set; }
+
+        /// <summary>
+        /// The <c>fixed_star_count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("fixed_star_count")]
+        public int? FixedStarCount { get; set; }
+
+        /// <summary>
+        /// The <c>fixed_star_names</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("fixed_star_names")]
+        public string? FixedStarNames { get; set; }
+
+        /// <summary>
+        /// The <c>fixed_star_errors</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("fixed_star_errors")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.NatalCalculateFixedStarError>? FixedStarErrors { get; set; }
+
+        /// <summary>
+        /// The <c>interpretation</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("interpretation")]
+        public object? Interpretation { get; set; }
+
+        /// <summary>
+        /// The <c>credits_used</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("credits_used")]
+        public int? CreditsUsed { get; set; }
+
+        /// <summary>
+        /// The <c>psychological_report</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("psychological_report")]
+        public global::FreeAstroApi.Models.NatalPsychologicalReportStatus? PsychologicalReport { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateStelliums</c> schema.
+    /// </summary>
+    public partial class NatalCalculateStelliums
+    {
+        /// <summary>
+        /// The <c>threshold</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("threshold")]
+        public int Threshold { get; set; }
+
+        /// <summary>
+        /// The <c>signs</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("signs")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.NatalCalculateStelliumsSign> Signs { get; set; } = new();
+
+        /// <summary>
+        /// The <c>houses</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("houses")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.NatalCalculateStelliumsHouse> Houses { get; set; } = new();
+
+        /// <summary>
+        /// The <c>total</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total")]
+        public int Total { get; set; }
+
+        /// <summary>
+        /// The <c>policy</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("policy")]
+        public string? Policy { get; set; }
+
+        /// <summary>
+        /// The <c>definition</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("definition")]
+        public string? Definition { get; set; }
+
+        /// <summary>
+        /// The <c>eligible_body_ids</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("eligible_body_ids")]
+        public global::System.Collections.Generic.List<string>? EligibleBodyIds { get; set; }
+
+        /// <summary>
+        /// The <c>conjunction_orb_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("conjunction_orb_deg")]
+        public double? ConjunctionOrbDeg { get; set; }
+
+        /// <summary>
+        /// The <c>clusters</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("clusters")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.NatalStelliumCluster>? Clusters { get; set; }
+
+        /// <summary>
+        /// The <c>concentrations</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("concentrations")]
+        public global::FreeAstroApi.Models.NatalCalculateStelliumsConcentrations? Concentrations { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateStelliumsConcentrations</c> schema.
+    /// </summary>
+    public partial class NatalCalculateStelliumsConcentrations
+    {
+        /// <summary>
+        /// The <c>signs</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("signs")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.NatalCalculateStelliumsConcentrationsSign>? Signs { get; set; }
+
+        /// <summary>
+        /// The <c>houses</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("houses")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.NatalCalculateStelliumsConcentrationsHouse>? Houses { get; set; }
+
+        /// <summary>
+        /// The <c>total</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total")]
+        public int? Total { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateStelliumsConcentrationsHouse</c> schema.
+    /// </summary>
+    public partial class NatalCalculateStelliumsConcentrationsHouse
+    {
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int? House { get; set; }
+
+        /// <summary>
+        /// The <c>count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("count")]
+        public int? Count { get; set; }
+
+        /// <summary>
+        /// The <c>bodies</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("bodies")]
+        public global::System.Collections.Generic.List<string>? Bodies { get; set; }
+
+        /// <summary>
+        /// The <c>co_present_points</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("co_present_points")]
+        public global::System.Collections.Generic.List<string>? CoPresentPoints { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateStelliumsConcentrationsSign</c> schema.
+    /// </summary>
+    public partial class NatalCalculateStelliumsConcentrationsSign
+    {
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public string? SignId { get; set; }
+
+        /// <summary>
+        /// The <c>count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("count")]
+        public int? Count { get; set; }
+
+        /// <summary>
+        /// The <c>bodies</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("bodies")]
+        public global::System.Collections.Generic.List<string>? Bodies { get; set; }
+
+        /// <summary>
+        /// The <c>co_present_points</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("co_present_points")]
+        public global::System.Collections.Generic.List<string>? CoPresentPoints { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateStelliumsHouse</c> schema.
+    /// </summary>
+    public partial class NatalCalculateStelliumsHouse
+    {
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int House { get; set; }
+
+        /// <summary>
+        /// The <c>count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("count")]
+        public int Count { get; set; }
+
+        /// <summary>
+        /// The <c>bodies</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("bodies")]
+        public global::System.Collections.Generic.List<string> Bodies { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateStelliumsSign</c> schema.
+    /// </summary>
+    public partial class NatalCalculateStelliumsSign
+    {
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public string SignId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("count")]
+        public int Count { get; set; }
+
+        /// <summary>
+        /// The <c>bodies</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("bodies")]
+        public global::System.Collections.Generic.List<string> Bodies { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateSubject</c> schema.
+    /// </summary>
+    public partial class NatalCalculateSubject
+    {
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>datetime</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("datetime")]
+        public string Datetime { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>location</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("location")]
+        public global::FreeAstroApi.Models.NatalCalculateSubjectLocation Location { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>settings</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("settings")]
+        public global::FreeAstroApi.Models.NatalCalculateSubjectSettings Settings { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateSubjectLocation</c> schema.
+    /// </summary>
+    public partial class NatalCalculateSubjectLocation
+    {
+        /// <summary>
+        /// The <c>city</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("city")]
+        public string City { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>lat</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lat")]
+        public double Lat { get; set; }
+
+        /// <summary>
+        /// The <c>lng</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lng")]
+        public double Lng { get; set; }
+
+        /// <summary>
+        /// The <c>timezone</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timezone")]
+        public string Timezone { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateSubjectSettings</c> schema.
+    /// </summary>
+    public partial class NatalCalculateSubjectSettings
+    {
+        /// <summary>
+        /// The <c>house_system</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house_system")]
+        public string HouseSystem { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>julian_day</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("julian_day")]
+        public double JulianDay { get; set; }
+
+        /// <summary>
+        /// The <c>julian_day_tt</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("julian_day_tt")]
+        public double JulianDayTt { get; set; }
+
+        /// <summary>
+        /// The <c>delta_t_days</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("delta_t_days")]
+        public double DeltaTDays { get; set; }
+
+        /// <summary>
+        /// The <c>delta_t_seconds</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("delta_t_seconds")]
+        public double DeltaTSeconds { get; set; }
+
+        /// <summary>
+        /// The <c>zodiac_type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zodiac_type")]
+        public string ZodiacType { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>time_known</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("time_known")]
+        public bool TimeKnown { get; set; }
+
+        /// <summary>
+        /// The <c>sidereal_ayanamsa</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sidereal_ayanamsa")]
+        public string? SiderealAyanamsa { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateTables</c> schema.
+    /// </summary>
+    public partial class NatalCalculateTables
+    {
+        /// <summary>
+        /// The <c>meta</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("meta")]
+        public global::FreeAstroApi.Models.NatalCalculateTablesMeta Meta { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>positions</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("positions")]
+        public global::FreeAstroApi.Models.NatalCalculateTablesPositions Positions { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>element_modality</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("element_modality")]
+        public global::FreeAstroApi.Models.NatalCalculateTablesElementModality ElementModality { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>aspect_matrix</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("aspect_matrix")]
+        public global::FreeAstroApi.Models.NatalCalculateTablesAspectMatrix AspectMatrix { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateTablesAspectMatrix</c> schema.
+    /// </summary>
+    public partial class NatalCalculateTablesAspectMatrix
+    {
+        /// <summary>
+        /// The <c>points</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("points")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.NatalCalculateTablesAspectMatrixPoint> Points { get; set; } = new();
+
+        /// <summary>
+        /// The <c>rows</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("rows")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.NatalCalculateTablesAspectMatrixRow> Rows { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateTablesAspectMatrixPoint</c> schema.
+    /// </summary>
+    public partial class NatalCalculateTablesAspectMatrixPoint
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>glyph</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("glyph")]
+        public string? Glyph { get; set; }
+
+        /// <summary>
+        /// The <c>table_glyph</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("table_glyph")]
+        public string? TableGlyph { get; set; }
+
+        /// <summary>
+        /// The <c>glyph_source</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("glyph_source")]
+        public string GlyphSource { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateTablesAspectMatrixRow</c> schema.
+    /// </summary>
+    public partial class NatalCalculateTablesAspectMatrixRow
+    {
+        /// <summary>
+        /// The <c>point</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("point")]
+        public global::FreeAstroApi.Models.NatalCalculateTablesAspectMatrixPoint Point { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>cells</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cells")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.NatalCalculateTablesAspectMatrixRowCell> Cells { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateTablesAspectMatrixRowCell</c> schema.
+    /// </summary>
+    public partial class NatalCalculateTablesAspectMatrixRowCell
+    {
+        /// <summary>
+        /// The <c>with_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("with_id")]
+        public string WithId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>with_name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("with_name")]
+        public string WithName { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>with_glyph</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("with_glyph")]
+        public string? WithGlyph { get; set; }
+
+        /// <summary>
+        /// The <c>with_table_glyph</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("with_table_glyph")]
+        public string? WithTableGlyph { get; set; }
+
+        /// <summary>
+        /// The <c>with_glyph_source</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("with_glyph_source")]
+        public string WithGlyphSource { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>has_aspect</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("has_aspect")]
+        public bool HasAspect { get; set; }
+
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string? Type { get; set; }
+
+        /// <summary>
+        /// The <c>type_key</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type_key")]
+        public string? TypeKey { get; set; }
+
+        /// <summary>
+        /// The <c>glyph</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("glyph")]
+        public string? Glyph { get; set; }
+
+        /// <summary>
+        /// The <c>orb</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("orb")]
+        public double? Orb { get; set; }
+
+        /// <summary>
+        /// The <c>deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("deg")]
+        public double? Deg { get; set; }
+
+        /// <summary>
+        /// The <c>is_major</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_major")]
+        public bool? IsMajor { get; set; }
+
+        /// <summary>
+        /// The <c>is_applying</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_applying")]
+        public bool? IsApplying { get; set; }
+
+        /// <summary>
+        /// The <c>derived_from_angles</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("derived_from_angles")]
+        public bool? DerivedFromAngles { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateTablesElementModality</c> schema.
+    /// </summary>
+    public partial class NatalCalculateTablesElementModality
+    {
+        /// <summary>
+        /// The <c>columns</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("columns")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.NatalCalculateTablesElementModalityColumn> Columns { get; set; } = new();
+
+        /// <summary>
+        /// The <c>rows</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("rows")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.NatalCalculateTablesElementModalityRow> Rows { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateTablesElementModalityColumn</c> schema.
+    /// </summary>
+    public partial class NatalCalculateTablesElementModalityColumn
+    {
+        /// <summary>
+        /// The <c>modality</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("modality")]
+        public string Modality { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>label</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("label")]
+        public string Label { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateTablesElementModalityRow</c> schema.
+    /// </summary>
+    public partial class NatalCalculateTablesElementModalityRow
+    {
+        /// <summary>
+        /// The <c>element</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("element")]
+        public string Element { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>element_label</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("element_label")]
+        public string ElementLabel { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>cells</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cells")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.NatalCalculateTablesElementModalityRowCell> Cells { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateTablesElementModalityRowCell</c> schema.
+    /// </summary>
+    public partial class NatalCalculateTablesElementModalityRowCell
+    {
+        /// <summary>
+        /// The <c>modality</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("modality")]
+        public string Modality { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>modality_label</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("modality_label")]
+        public string ModalityLabel { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("count")]
+        public int Count { get; set; }
+
+        /// <summary>
+        /// The <c>items</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("items")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.NatalCalculateTablesElementModalityRowCellItem> Items { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateTablesElementModalityRowCellItem</c> schema.
+    /// </summary>
+    public partial class NatalCalculateTablesElementModalityRowCellItem
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>glyph</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("glyph")]
+        public string? Glyph { get; set; }
+
+        /// <summary>
+        /// The <c>table_glyph</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("table_glyph")]
+        public string? TableGlyph { get; set; }
+
+        /// <summary>
+        /// The <c>glyph_source</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("glyph_source")]
+        public string GlyphSource { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public string SignId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_glyph</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_glyph")]
+        public string SignGlyph { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateTablesMeta</c> schema.
+    /// </summary>
+    public partial class NatalCalculateTablesMeta
+    {
+        /// <summary>
+        /// The <c>font_family</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("font_family")]
+        public string FontFamily { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>mapping_source</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mapping_source")]
+        public string MappingSource { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateTablesPositions</c> schema.
+    /// </summary>
+    public partial class NatalCalculateTablesPositions
+    {
+        /// <summary>
+        /// The <c>point_rows</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("point_rows")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.NatalCalculateTablesPositionsPointRow> PointRows { get; set; } = new();
+
+        /// <summary>
+        /// The <c>angle_rows</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angle_rows")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.NatalCalculateTablesPositionsAngleRow> AngleRows { get; set; } = new();
+
+        /// <summary>
+        /// The <c>house_rows</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house_rows")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.NatalCalculateTablesPositionsHouseRow> HouseRows { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateTablesPositionsAngleRow</c> schema.
+    /// </summary>
+    public partial class NatalCalculateTablesPositionsAngleRow
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>glyph</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("glyph")]
+        public string? Glyph { get; set; }
+
+        /// <summary>
+        /// The <c>table_glyph</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("table_glyph")]
+        public string? TableGlyph { get; set; }
+
+        /// <summary>
+        /// The <c>glyph_source</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("glyph_source")]
+        public string GlyphSource { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public string SignId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_glyph</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_glyph")]
+        public string SignGlyph { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>position_in_sign_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("position_in_sign_deg")]
+        public double PositionInSignDeg { get; set; }
+
+        /// <summary>
+        /// The <c>longitude_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("longitude_deg")]
+        public double LongitudeDeg { get; set; }
+
+        /// <summary>
+        /// The <c>longitude_text</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("longitude_text")]
+        public string LongitudeText { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int House { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateTablesPositionsHouseRow</c> schema.
+    /// </summary>
+    public partial class NatalCalculateTablesPositionsHouseRow
+    {
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int House { get; set; }
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public string SignId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_glyph</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_glyph")]
+        public string SignGlyph { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>position_in_sign_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("position_in_sign_deg")]
+        public double PositionInSignDeg { get; set; }
+
+        /// <summary>
+        /// The <c>longitude_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("longitude_deg")]
+        public double LongitudeDeg { get; set; }
+
+        /// <summary>
+        /// The <c>longitude_text</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("longitude_text")]
+        public string LongitudeText { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalCalculateTablesPositionsPointRow</c> schema.
+    /// </summary>
+    public partial class NatalCalculateTablesPositionsPointRow
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>glyph</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("glyph")]
+        public string? Glyph { get; set; }
+
+        /// <summary>
+        /// The <c>table_glyph</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("table_glyph")]
+        public string? TableGlyph { get; set; }
+
+        /// <summary>
+        /// The <c>glyph_source</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("glyph_source")]
+        public string GlyphSource { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public string SignId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_glyph</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_glyph")]
+        public string SignGlyph { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>position_in_sign_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("position_in_sign_deg")]
+        public double PositionInSignDeg { get; set; }
+
+        /// <summary>
+        /// The <c>longitude_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("longitude_deg")]
+        public double LongitudeDeg { get; set; }
+
+        /// <summary>
+        /// The <c>longitude_text</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("longitude_text")]
+        public string LongitudeText { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int? House { get; set; }
+
+        /// <summary>
+        /// The <c>retrograde</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("retrograde")]
+        public bool Retrograde { get; set; }
+
+        /// <summary>
+        /// The <c>variant</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("variant")]
+        public string? Variant { get; set; }
+
+        /// <summary>
+        /// The <c>dignity</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dignity")]
+        public string? Dignity { get; set; }
 
         /// <summary>
         /// Fields returned by the API that this SDK version does not model yet.
@@ -20729,6 +34319,120 @@ namespace FreeAstroApi.Models
     }
 
     /// <summary>
+    /// The psychological report requested with the chart: a job to poll, or the report itself.
+    /// </summary>
+    public partial class NatalPsychologicalReportStatus
+    {
+        /// <summary>
+        /// The <c>status</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("status")]
+        public string Status { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>mode</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mode")]
+        public string Mode { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>style</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("style")]
+        public string Style { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>output_format</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("output_format")]
+        public string? OutputFormat { get; set; }
+
+        /// <summary>
+        /// The <c>include_chart_in_pdf</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("include_chart_in_pdf")]
+        public bool? IncludeChartInPdf { get; set; }
+
+        /// <summary>
+        /// The <c>job_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("job_id")]
+        public string? JobId { get; set; }
+
+        /// <summary>
+        /// The <c>fetch_url</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("fetch_url")]
+        public string? FetchUrl { get; set; }
+
+        /// <summary>
+        /// The <c>pdf_url</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pdf_url")]
+        public string? PdfUrl { get; set; }
+
+        /// <summary>
+        /// The <c>credits_used</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("credits_used")]
+        public int? CreditsUsed { get; set; }
+
+        /// <summary>
+        /// The <c>include_profile_branding_logo</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("include_profile_branding_logo")]
+        public bool? IncludeProfileBrandingLogo { get; set; }
+
+        /// <summary>
+        /// The <c>subject</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("subject")]
+        public global::FreeAstroApi.Models.NatalCalculateSubject? Subject { get; set; }
+
+        /// <summary>
+        /// The <c>report_metadata</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("report_metadata")]
+        public global::FreeAstroApi.Models.PsychologicalReportMetadata? ReportMetadata { get; set; }
+
+        /// <summary>
+        /// The <c>report_content</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("report_content")]
+        public global::FreeAstroApi.Models.PsychologicalReportContent? ReportContent { get; set; }
+
+        /// <summary>
+        /// The <c>report_markdown</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("report_markdown")]
+        public string? ReportMarkdown { get; set; }
+
+        /// <summary>
+        /// The <c>next_poll_after_seconds</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("next_poll_after_seconds")]
+        public int? NextPollAfterSeconds { get; set; }
+
+        /// <summary>
+        /// The <c>error</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("error")]
+        public string? Error { get; set; }
+
+        /// <summary>
+        /// The <c>details</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("details")]
+        public object? Details { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
     /// The <c>NatalReference</c> schema.
     /// </summary>
     public partial class NatalReference
@@ -20750,6 +34454,108 @@ namespace FreeAstroApi.Models
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("natal_sun_abs_pos")]
         public double NatalSunAbsPos { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// A connected conjunction cluster (``stellium_policy="classified"``).
+    /// </summary>
+    public partial class NatalStelliumCluster
+    {
+        /// <summary>
+        /// The <c>count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("count")]
+        public int Count { get; set; }
+
+        /// <summary>
+        /// The <c>bodies</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("bodies")]
+        public global::System.Collections.Generic.List<string> Bodies { get; set; } = new();
+
+        /// <summary>
+        /// The <c>positions_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("positions_deg")]
+        public global::System.Collections.Generic.Dictionary<string, double> PositionsDeg { get; set; } = new();
+
+        /// <summary>
+        /// The <c>span_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("span_deg")]
+        public double SpanDeg { get; set; }
+
+        /// <summary>
+        /// The <c>conjunction_orb_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("conjunction_orb_deg")]
+        public double ConjunctionOrbDeg { get; set; }
+
+        /// <summary>
+        /// The <c>conjunction_links</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("conjunction_links")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.NatalStelliumLink> ConjunctionLinks { get; set; } = new();
+
+        /// <summary>
+        /// The <c>sign_ids</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_ids")]
+        public global::System.Collections.Generic.List<string> SignIds { get; set; } = new();
+
+        /// <summary>
+        /// The <c>houses</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("houses")]
+        public global::System.Collections.Generic.List<int> Houses { get; set; } = new();
+
+        /// <summary>
+        /// The <c>personal_planet_count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("personal_planet_count")]
+        public int PersonalPlanetCount { get; set; }
+
+        /// <summary>
+        /// The <c>co_present_points</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("co_present_points")]
+        public global::System.Collections.Generic.List<string> CoPresentPoints { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>NatalStelliumLink</c> schema.
+    /// </summary>
+    public partial class NatalStelliumLink
+    {
+        /// <summary>
+        /// The <c>p1</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("p1")]
+        public string P1 { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>p2</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("p2")]
+        public string P2 { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>separation_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("separation_deg")]
+        public double SeparationDeg { get; set; }
 
         /// <summary>
         /// Fields returned by the API that this SDK version does not model yet.
@@ -25337,6 +39143,378 @@ namespace FreeAstroApi.Models
     }
 
     /// <summary>
+    /// The <c>PsychologicalReportChapter</c> schema.
+    /// </summary>
+    public partial class PsychologicalReportChapter
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>title</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("title")]
+        public string Title { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>question</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("question")]
+        public string Question { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sections</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sections")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.PsychologicalReportSection> Sections { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>PsychologicalReportChapterPlan</c> schema.
+    /// </summary>
+    public partial class PsychologicalReportChapterPlan
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string? Id { get; set; }
+
+        /// <summary>
+        /// The <c>title</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("title")]
+        public string? Title { get; set; }
+
+        /// <summary>
+        /// The <c>question</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("question")]
+        public string? Question { get; set; }
+
+        /// <summary>
+        /// The <c>target_words</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("target_words")]
+        public int? TargetWords { get; set; }
+
+        /// <summary>
+        /// The <c>subsections</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("subsections")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.PsychologicalReportSubsectionPlan> Subsections { get; set; } = new();
+
+        /// <summary>
+        /// The <c>evidence</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("evidence")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.PsychologicalReportEvidence> Evidence { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>PsychologicalReportContent</c> schema.
+    /// </summary>
+    public partial class PsychologicalReportContent
+    {
+        /// <summary>
+        /// The <c>title</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("title")]
+        public string Title { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>summary</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("summary")]
+        public string Summary { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>word_count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("word_count")]
+        public int WordCount { get; set; }
+
+        /// <summary>
+        /// The <c>chapters</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("chapters")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.PsychologicalReportChapter> Chapters { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>PsychologicalReportEvidence</c> schema.
+    /// </summary>
+    public partial class PsychologicalReportEvidence
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string? Id { get; set; }
+
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string? Type { get; set; }
+
+        /// <summary>
+        /// The <c>ref</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ref")]
+        public string? Ref { get; set; }
+
+        /// <summary>
+        /// The <c>note</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("note")]
+        public string? Note { get; set; }
+
+        /// <summary>
+        /// The <c>weight</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("weight")]
+        public double? Weight { get; set; }
+
+        /// <summary>
+        /// The <c>source_field</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("source_field")]
+        public string? SourceField { get; set; }
+
+        /// <summary>
+        /// The <c>topics</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("topics")]
+        public global::System.Collections.Generic.List<string>? Topics { get; set; }
+
+        /// <summary>
+        /// The <c>bodies</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("bodies")]
+        public global::System.Collections.Generic.List<string>? Bodies { get; set; }
+
+        /// <summary>
+        /// The <c>houses</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("houses")]
+        public global::System.Collections.Generic.List<int>? Houses { get; set; }
+
+        /// <summary>
+        /// The <c>signs</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("signs")]
+        public global::System.Collections.Generic.List<string>? Signs { get; set; }
+
+        /// <summary>
+        /// The <c>confidence</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("confidence")]
+        public object? Confidence { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// Status of a psychological report job, with the report once it is completed.
+    /// </summary>
+    public partial class PsychologicalReportJobResponse
+    {
+        /// <summary>
+        /// The <c>job_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("job_id")]
+        public string JobId { get; set; } = default!;
+
+        /// <summary>
+        /// pending, processing, completed or failed.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("status")]
+        public string Status { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>credits_used</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("credits_used")]
+        public int? CreditsUsed { get; set; }
+
+        /// <summary>
+        /// The <c>pdf_url</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pdf_url")]
+        public string? PdfUrl { get; set; }
+
+        /// <summary>
+        /// The <c>include_profile_branding_logo</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("include_profile_branding_logo")]
+        public bool? IncludeProfileBrandingLogo { get; set; }
+
+        /// <summary>
+        /// The natal chart subject (see NatalCalculateSubject).
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("subject")]
+        public global::System.Collections.Generic.Dictionary<string, object?>? Subject { get; set; }
+
+        /// <summary>
+        /// The natal chart the report was written from (see NatalCalculateResponse).
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("natal_chart")]
+        public global::System.Collections.Generic.Dictionary<string, object?>? NatalChart { get; set; }
+
+        /// <summary>
+        /// The <c>next_poll_after_seconds</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("next_poll_after_seconds")]
+        public int? NextPollAfterSeconds { get; set; }
+
+        /// <summary>
+        /// The <c>report_metadata</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("report_metadata")]
+        public global::FreeAstroApi.Models.PsychologicalReportMetadata? ReportMetadata { get; set; }
+
+        /// <summary>
+        /// The <c>report_content</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("report_content")]
+        public global::FreeAstroApi.Models.PsychologicalReportContent? ReportContent { get; set; }
+
+        /// <summary>
+        /// The <c>report_markdown</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("report_markdown")]
+        public string? ReportMarkdown { get; set; }
+
+        /// <summary>
+        /// The <c>error</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("error")]
+        public object? Error { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>PsychologicalReportMetadata</c> schema.
+    /// </summary>
+    public partial class PsychologicalReportMetadata
+    {
+        /// <summary>
+        /// The <c>report_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("report_id")]
+        public string? ReportId { get; set; }
+
+        /// <summary>
+        /// The <c>title</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("title")]
+        public string? Title { get; set; }
+
+        /// <summary>
+        /// The <c>generated_at</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("generated_at")]
+        public string? GeneratedAt { get; set; }
+
+        /// <summary>
+        /// The <c>provider</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
+        public string? Provider { get; set; }
+
+        /// <summary>
+        /// The <c>model</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("model")]
+        public string? Model { get; set; }
+
+        /// <summary>
+        /// The <c>summary</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("summary")]
+        public string? Summary { get; set; }
+
+        /// <summary>
+        /// The <c>language</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("language")]
+        public string Language { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>word_count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("word_count")]
+        public int? WordCount { get; set; }
+
+        /// <summary>
+        /// The <c>structure_plan</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("structure_plan")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.PsychologicalReportChapterPlan>? StructurePlan { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>PsychologicalReportSection</c> schema.
+    /// </summary>
+    public partial class PsychologicalReportSection
+    {
+        /// <summary>
+        /// The <c>title</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("title")]
+        public string Title { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>paragraphs</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("paragraphs")]
+        public global::System.Collections.Generic.List<string> Paragraphs { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
     /// The <c>PsychologicalReportSettings</c> schema.
     /// </summary>
     public partial class PsychologicalReportSettings
@@ -25472,6 +39650,30 @@ namespace FreeAstroApi.Models
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("callback_signing_secret")]
         public string? CallbackSigningSecret { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>PsychologicalReportSubsectionPlan</c> schema.
+    /// </summary>
+    public partial class PsychologicalReportSubsectionPlan
+    {
+        /// <summary>
+        /// The <c>heading</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("heading")]
+        public string? Heading { get; set; }
+
+        /// <summary>
+        /// The <c>purpose</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("purpose")]
+        public string? Purpose { get; set; }
 
         /// <summary>
         /// Fields returned by the API that this SDK version does not model yet.
@@ -27353,6 +41555,48 @@ namespace FreeAstroApi.Models
     }
 
     /// <summary>
+    /// The <c>ReportCreditsResponse</c> schema.
+    /// </summary>
+    public partial class ReportCreditsResponse
+    {
+        /// <summary>
+        /// The <c>user_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("user_id")]
+        public string UserId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>key_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("key_id")]
+        public string? KeyId { get; set; }
+
+        /// <summary>
+        /// The <c>report_credits_remaining</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("report_credits_remaining")]
+        public int ReportCreditsRemaining { get; set; }
+
+        /// <summary>
+        /// The <c>auto_recharge_enabled</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("auto_recharge_enabled")]
+        public bool AutoRechargeEnabled { get; set; }
+
+        /// <summary>
+        /// The <c>auto_recharge_threshold</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("auto_recharge_threshold")]
+        public int AutoRechargeThreshold { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
     /// The <c>ResolvedAnkJyotishMethod</c> schema.
     /// </summary>
     public partial class ResolvedAnkJyotishMethod
@@ -27542,6 +41786,54 @@ namespace FreeAstroApi.Models
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("compound_policy")]
         public string CompoundPolicy { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// How a local wall-clock time was resolved (DST gaps and overlaps, tz database version).
+    /// </summary>
+    public partial class ResolvedTime
+    {
+        /// <summary>
+        /// The <c>input_timezone</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("input_timezone")]
+        public string InputTimezone { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>resolved_timezone</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resolved_timezone")]
+        public string ResolvedTimezone { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>utc_offset</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("utc_offset")]
+        public string UtcOffset { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>utc_instant</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("utc_instant")]
+        public string UtcInstant { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>resolution_status</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resolution_status")]
+        public string ResolutionStatus { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>tzdb_version</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tzdb_version")]
+        public string TzdbVersion { get; set; } = default!;
 
         /// <summary>
         /// Fields returned by the API that this SDK version does not model yet.
@@ -28468,7 +42760,7 @@ namespace FreeAstroApi.Models
         public string Sign { get; set; } = default!;
 
         /// <summary>
-        /// The <c>sign_id</c> field.
+        /// Allowed values: <c>aries</c>, <c>taurus</c>, <c>gemini</c>, <c>cancer</c>, <c>leo</c>, <c>virgo</c>, <c>libra</c>, <c>scorpio</c>, <c>sagittarius</c>, <c>capricorn</c>, <c>aquarius</c>, <c>pisces</c>.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
         public string SignId { get; set; } = default!;
@@ -28502,6 +42794,150 @@ namespace FreeAstroApi.Models
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resolved_time")]
         public global::System.Collections.Generic.Dictionary<string, object?>? ResolvedTime { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>SimpleNatalHouse</c> schema.
+    /// </summary>
+    public partial class SimpleNatalHouse
+    {
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int House { get; set; }
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public string SignId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>degree</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("degree")]
+        public double Degree { get; set; }
+
+        /// <summary>
+        /// The <c>absolute_degree</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("absolute_degree")]
+        public double AbsoluteDegree { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>SimpleNatalMeta</c> schema.
+    /// </summary>
+    public partial class SimpleNatalMeta
+    {
+        /// <summary>
+        /// The <c>endpoint</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("endpoint")]
+        public string Endpoint { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>zodiac_type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zodiac_type")]
+        public string ZodiacType { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>house_system</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house_system")]
+        public string HouseSystem { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>planet_count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("planet_count")]
+        public int PlanetCount { get; set; }
+
+        /// <summary>
+        /// The <c>house_count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house_count")]
+        public int HouseCount { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>SimpleNatalPlanet</c> schema.
+    /// </summary>
+    public partial class SimpleNatalPlanet
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public string SignId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>degree</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("degree")]
+        public double Degree { get; set; }
+
+        /// <summary>
+        /// The <c>absolute_degree</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("absolute_degree")]
+        public double AbsoluteDegree { get; set; }
+
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int? House { get; set; }
+
+        /// <summary>
+        /// The <c>retrograde</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("retrograde")]
+        public bool Retrograde { get; set; }
 
         /// <summary>
         /// Fields returned by the API that this SDK version does not model yet.
@@ -28580,6 +43016,132 @@ namespace FreeAstroApi.Models
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tz_str")]
         public string? TzStr { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>SimpleNatalResponse</c> schema.
+    /// </summary>
+    public partial class SimpleNatalResponse
+    {
+        /// <summary>
+        /// The <c>subject</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("subject")]
+        public global::FreeAstroApi.Models.SimpleNatalSubject Subject { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>summary</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("summary")]
+        public global::FreeAstroApi.Models.SimpleNatalSummary Summary { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>planets</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("planets")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.SimpleNatalPlanet> Planets { get; set; } = new();
+
+        /// <summary>
+        /// The <c>planets_by_name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("planets_by_name")]
+        public global::System.Collections.Generic.Dictionary<string, global::FreeAstroApi.Models.SimpleNatalPlanet> PlanetsByName { get; set; } = new();
+
+        /// <summary>
+        /// The <c>houses</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("houses")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.SimpleNatalHouse> Houses { get; set; } = new();
+
+        /// <summary>
+        /// The <c>houses_by_number</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("houses_by_number")]
+        public global::System.Collections.Generic.Dictionary<string, global::FreeAstroApi.Models.SimpleNatalHouse> HousesByNumber { get; set; } = new();
+
+        /// <summary>
+        /// The <c>angles</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("angles")]
+        public global::System.Collections.Generic.Dictionary<string, global::FreeAstroApi.Models.SimpleNatalHouse?> Angles { get; set; } = new();
+
+        /// <summary>
+        /// The <c>meta</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("meta")]
+        public global::FreeAstroApi.Models.SimpleNatalMeta Meta { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>SimpleNatalSubject</c> schema.
+    /// </summary>
+    public partial class SimpleNatalSubject
+    {
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>datetime</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("datetime")]
+        public string Datetime { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>time_known</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("time_known")]
+        public bool TimeKnown { get; set; }
+
+        /// <summary>
+        /// The <c>location</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("location")]
+        public global::FreeAstroApi.Models.NatalCalculateSubjectLocation Location { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>SimpleNatalSummary</c> schema.
+    /// </summary>
+    public partial class SimpleNatalSummary
+    {
+        /// <summary>
+        /// The <c>sun_sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sun_sign")]
+        public string SunSign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>moon_sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("moon_sign")]
+        public string MoonSign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>rising_sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("rising_sign")]
+        public string? RisingSign { get; set; }
 
         /// <summary>
         /// Fields returned by the API that this SDK version does not model yet.
@@ -29267,6 +43829,282 @@ namespace FreeAstroApi.Models
     }
 
     /// <summary>
+    /// The <c>SpaceChartEngine</c> schema.
+    /// </summary>
+    public partial class SpaceChartEngine
+    {
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>extension</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("extension")]
+        public string Extension { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>SpaceChartHouses</c> schema.
+    /// </summary>
+    public partial class SpaceChartHouses
+    {
+        /// <summary>
+        /// The <c>cusps</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cusps")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.SpaceChartHousesCusp> Cusps { get; set; } = new();
+
+        /// <summary>
+        /// The <c>asc</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("asc")]
+        public global::FreeAstroApi.Models.SpaceChartPoint Asc { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>mc</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mc")]
+        public global::FreeAstroApi.Models.SpaceChartPoint Mc { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>obliquity</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("obliquity")]
+        public double Obliquity { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>SpaceChartHousesCusp</c> schema.
+    /// </summary>
+    public partial class SpaceChartHousesCusp
+    {
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int House { get; set; }
+
+        /// <summary>
+        /// The <c>lon</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lon")]
+        public double Lon { get; set; }
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_degree</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_degree")]
+        public double SignDegree { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>SpaceChartInstant</c> schema.
+    /// </summary>
+    public partial class SpaceChartInstant
+    {
+        /// <summary>
+        /// The <c>jd_ut</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("jd_ut")]
+        public double JdUt { get; set; }
+
+        /// <summary>
+        /// The <c>jd_tt</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("jd_tt")]
+        public double JdTt { get; set; }
+
+        /// <summary>
+        /// The <c>utc</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("utc")]
+        public string Utc { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>timezone</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timezone")]
+        public string? Timezone { get; set; }
+
+        /// <summary>
+        /// The <c>time_basis</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("time_basis")]
+        public string TimeBasis { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>light_time_seconds</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("light_time_seconds")]
+        public double? LightTimeSeconds { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>SpaceChartMarsTime</c> schema.
+    /// </summary>
+    public partial class SpaceChartMarsTime
+    {
+        /// <summary>
+        /// The <c>sol</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sol")]
+        public int Sol { get; set; }
+
+        /// <summary>
+        /// The <c>mars_sol_date</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mars_sol_date")]
+        public double MarsSolDate { get; set; }
+
+        /// <summary>
+        /// The <c>local_mean_solar_time</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("local_mean_solar_time")]
+        public double LocalMeanSolarTime { get; set; }
+
+        /// <summary>
+        /// The <c>local_time</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("local_time")]
+        public string LocalTime { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>SpaceChartPlanet</c> schema.
+    /// </summary>
+    public partial class SpaceChartPlanet
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>lon</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lon")]
+        public double Lon { get; set; }
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_degree</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_degree")]
+        public double SignDegree { get; set; }
+
+        /// <summary>
+        /// The <c>lat</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lat")]
+        public double Lat { get; set; }
+
+        /// <summary>
+        /// The <c>distance_au</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("distance_au")]
+        public double DistanceAu { get; set; }
+
+        /// <summary>
+        /// The <c>speed</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("speed")]
+        public double Speed { get; set; }
+
+        /// <summary>
+        /// The <c>retrograde</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("retrograde")]
+        public bool Retrograde { get; set; }
+
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int House { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>SpaceChartPoint</c> schema.
+    /// </summary>
+    public partial class SpaceChartPoint
+    {
+        /// <summary>
+        /// The <c>lon</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lon")]
+        public double Lon { get; set; }
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_degree</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_degree")]
+        public double SignDegree { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
     /// The <c>SpaceChartRequest</c> schema.
     /// </summary>
     public partial class SpaceChartRequest
@@ -29394,6 +44232,126 @@ namespace FreeAstroApi.Models
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("house_system")]
         public string? HouseSystem { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>SpaceChartResponse</c> schema.
+    /// </summary>
+    public partial class SpaceChartResponse
+    {
+        /// <summary>
+        /// The <c>site</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("site")]
+        public global::FreeAstroApi.Models.SpaceChartSite Site { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>instant</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("instant")]
+        public global::FreeAstroApi.Models.SpaceChartInstant Instant { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>zodiac</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zodiac")]
+        public string Zodiac { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>house_system</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house_system")]
+        public string HouseSystem { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>house_note</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house_note")]
+        public string? HouseNote { get; set; }
+
+        /// <summary>
+        /// The <c>planets</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("planets")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.SpaceChartPlanet> Planets { get; set; } = new();
+
+        /// <summary>
+        /// The <c>houses</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("houses")]
+        public global::FreeAstroApi.Models.SpaceChartHouses Houses { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>engine</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("engine")]
+        public global::FreeAstroApi.Models.SpaceChartEngine Engine { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>mars_time</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mars_time")]
+        public global::FreeAstroApi.Models.SpaceChartMarsTime? MarsTime { get; set; }
+
+        /// <summary>
+        /// The <c>earth_comparison</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("earth_comparison")]
+        public global::System.Collections.Generic.Dictionary<string, global::FreeAstroApi.Models.SpaceChartPoint?>? EarthComparison { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>SpaceChartSite</c> schema.
+    /// </summary>
+    public partial class SpaceChartSite
+    {
+        /// <summary>
+        /// The <c>key</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("key")]
+        public string Key { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>description</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("description")]
+        public string? Description { get; set; }
+
+        /// <summary>
+        /// The <c>world</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("world")]
+        public string World { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>lon</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lon")]
+        public double Lon { get; set; }
+
+        /// <summary>
+        /// The <c>lat</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lat")]
+        public double Lat { get; set; }
 
         /// <summary>
         /// Fields returned by the API that this SDK version does not model yet.
@@ -33659,6 +48617,468 @@ namespace FreeAstroApi.Models
     }
 
     /// <summary>
+    /// The <c>TransitsCalculateAspect</c> schema.
+    /// </summary>
+    public partial class TransitsCalculateAspect
+    {
+        /// <summary>
+        /// The <c>p1</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("p1")]
+        public string P1 { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>p2</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("p2")]
+        public string P2 { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>between</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("between")]
+        public global::FreeAstroApi.Models.TransitsCalculateAspectBetween Between { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>orb</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("orb")]
+        public double Orb { get; set; }
+
+        /// <summary>
+        /// The <c>deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("deg")]
+        public double Deg { get; set; }
+
+        /// <summary>
+        /// The <c>is_major</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_major")]
+        public bool IsMajor { get; set; }
+
+        /// <summary>
+        /// The <c>is_applying</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_applying")]
+        public bool IsApplying { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>TransitsCalculateAspectBetween</c> schema.
+    /// </summary>
+    public partial class TransitsCalculateAspectBetween
+    {
+        /// <summary>
+        /// The <c>natal</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("natal")]
+        public string Natal { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>transit</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transit")]
+        public string Transit { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>TransitsCalculateAspectsSummary</c> schema.
+    /// </summary>
+    public partial class TransitsCalculateAspectsSummary
+    {
+        /// <summary>
+        /// The <c>total</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total")]
+        public int Total { get; set; }
+
+        /// <summary>
+        /// The <c>major</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("major")]
+        public int Major { get; set; }
+
+        /// <summary>
+        /// The <c>minor</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("minor")]
+        public int Minor { get; set; }
+
+        /// <summary>
+        /// The <c>by_type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("by_type")]
+        public global::FreeAstroApi.Models.TransitsCalculateAspectsSummaryByType ByType { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>exact</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("exact")]
+        public int Exact { get; set; }
+
+        /// <summary>
+        /// The <c>applying</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("applying")]
+        public int Applying { get; set; }
+
+        /// <summary>
+        /// The <c>separating</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("separating")]
+        public int Separating { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>TransitsCalculateAspectsSummaryByType</c> schema.
+    /// </summary>
+    public partial class TransitsCalculateAspectsSummaryByType
+    {
+        /// <summary>
+        /// The <c>opposition</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("opposition")]
+        public int Opposition { get; set; }
+
+        /// <summary>
+        /// The <c>square</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("square")]
+        public int Square { get; set; }
+
+        /// <summary>
+        /// The <c>conjunction</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("conjunction")]
+        public int Conjunction { get; set; }
+
+        /// <summary>
+        /// The <c>sextile</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sextile")]
+        public int Sextile { get; set; }
+
+        /// <summary>
+        /// The <c>trine</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("trine")]
+        public int Trine { get; set; }
+
+        /// <summary>
+        /// The <c>semi_sextile</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("semi_sextile")]
+        public int? SemiSextile { get; set; }
+
+        /// <summary>
+        /// The <c>semi_square</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("semi_square")]
+        public int? SemiSquare { get; set; }
+
+        /// <summary>
+        /// The <c>quintile</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("quintile")]
+        public int? Quintile { get; set; }
+
+        /// <summary>
+        /// The <c>sesquiquadrate</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sesquiquadrate")]
+        public int? Sesquiquadrate { get; set; }
+
+        /// <summary>
+        /// The <c>quincunx</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("quincunx")]
+        public int? Quincunx { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>TransitsCalculateNatal</c> schema.
+    /// </summary>
+    public partial class TransitsCalculateNatal
+    {
+        /// <summary>
+        /// The <c>julian_day</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("julian_day")]
+        public double JulianDay { get; set; }
+
+        /// <summary>
+        /// The <c>house_system</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house_system")]
+        public string HouseSystem { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>zodiac_type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("zodiac_type")]
+        public string ZodiacType { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>TransitsCalculateNatalPlanet</c> schema.
+    /// </summary>
+    public partial class TransitsCalculateNatalPlanet
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public string SignId { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pos")]
+        public double Pos { get; set; }
+
+        /// <summary>
+        /// The <c>abs_pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("abs_pos")]
+        public double AbsPos { get; set; }
+
+        /// <summary>
+        /// The <c>retrograde</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("retrograde")]
+        public bool Retrograde { get; set; }
+
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int? House { get; set; }
+
+        /// <summary>
+        /// The <c>declination_deg</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("declination_deg")]
+        public double? DeclinationDeg { get; set; }
+
+        /// <summary>
+        /// The <c>variant</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("variant")]
+        public string? Variant { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>TransitsCalculateResolvedTime</c> schema.
+    /// </summary>
+    public partial class TransitsCalculateResolvedTime
+    {
+        /// <summary>
+        /// The <c>transit</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transit")]
+        public global::FreeAstroApi.Models.ResolvedTime Transit { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>TransitsCalculateResponse</c> schema.
+    /// </summary>
+    public partial class TransitsCalculateResponse
+    {
+        /// <summary>
+        /// The <c>mode</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mode")]
+        public string Mode { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>transit_date</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transit_date")]
+        public string TransitDate { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>transit_planets</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("transit_planets")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.TransitsCalculateTransitPlanet> TransitPlanets { get; set; } = new();
+
+        /// <summary>
+        /// The <c>natal_planets</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("natal_planets")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.TransitsCalculateNatalPlanet> NatalPlanets { get; set; } = new();
+
+        /// <summary>
+        /// The <c>natal</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("natal")]
+        public global::FreeAstroApi.Models.TransitsCalculateNatal Natal { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>aspects</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("aspects")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.TransitsCalculateAspect> Aspects { get; set; } = new();
+
+        /// <summary>
+        /// The <c>aspects_summary</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("aspects_summary")]
+        public global::FreeAstroApi.Models.TransitsCalculateAspectsSummary AspectsSummary { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>interpretation</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("interpretation")]
+        public global::FreeAstroApi.Models.AtomicInterpretation Interpretation { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>resolved_time</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resolved_time")]
+        public global::FreeAstroApi.Models.TransitsCalculateResolvedTime? ResolvedTime { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>TransitsCalculateTransitPlanet</c> schema.
+    /// </summary>
+    public partial class TransitsCalculateTransitPlanet
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public string Id { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pos")]
+        public double Pos { get; set; }
+
+        /// <summary>
+        /// The <c>abs_pos</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("abs_pos")]
+        public double AbsPos { get; set; }
+
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int House { get; set; }
+
+        /// <summary>
+        /// The <c>retrograde</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("retrograde")]
+        public bool Retrograde { get; set; }
+
+        /// <summary>
+        /// The <c>speed</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("speed")]
+        public double Speed { get; set; }
+
+        /// <summary>
+        /// The <c>variant</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("variant")]
+        public string? Variant { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
     /// The <c>TransliterationInput</c> schema.
     /// </summary>
     public partial class TransliterationInput
@@ -34275,6 +49695,48 @@ namespace FreeAstroApi.Models
     }
 
     /// <summary>
+    /// The <c>VedicBatchItemResult</c> schema.
+    /// </summary>
+    public partial class VedicBatchItemResult
+    {
+        /// <summary>
+        /// The <c>endpoint</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("endpoint")]
+        public string Endpoint { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>success</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("success")]
+        public bool Success { get; set; }
+
+        /// <summary>
+        /// The <c>status_code</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("status_code")]
+        public int StatusCode { get; set; }
+
+        /// <summary>
+        /// On success, the response of the named endpoint (VedicChartResponse, VedicCalculateResponse, VedicDashaResponse, VedicYogasResponse, VedicStrengthResponse, VedicVargasResponse or VedicPanchangResponse).
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("data")]
+        public global::System.Collections.Generic.Dictionary<string, object?>? Data { get; set; }
+
+        /// <summary>
+        /// On failure: validation errors (422), the error detail, or a message.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("error")]
+        public object? Error { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
     /// The <c>VedicBatchRequest</c> schema.
     /// </summary>
     public partial class VedicBatchRequest
@@ -34284,6 +49746,690 @@ namespace FreeAstroApi.Models
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("items")]
         public global::System.Collections.Generic.List<global::FreeAstroApi.Models.VedicBatchItem> Items { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>VedicBatchResponse</c> schema.
+    /// </summary>
+    public partial class VedicBatchResponse
+    {
+        /// <summary>
+        /// The <c>count</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("count")]
+        public int Count { get; set; }
+
+        /// <summary>
+        /// The <c>items</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("items")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.VedicBatchItemResult> Items { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>VedicCalculateAshtakavarga</c> schema.
+    /// </summary>
+    public partial class VedicCalculateAshtakavarga
+    {
+        /// <summary>
+        /// The <c>sarvashtakavarga</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sarvashtakavarga")]
+        public global::System.Collections.Generic.List<int> Sarvashtakavarga { get; set; } = new();
+
+        /// <summary>
+        /// The <c>bhinnashtakavarga</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("bhinnashtakavarga")]
+        public global::FreeAstroApi.Models.VedicCalculateAshtakavargaBhinnashtakavarga Bhinnashtakavarga { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>total_points</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_points")]
+        public double TotalPoints { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>VedicCalculateAshtakavargaBhinnashtakavarga</c> schema.
+    /// </summary>
+    public partial class VedicCalculateAshtakavargaBhinnashtakavarga
+    {
+        /// <summary>
+        /// The <c>Sun</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Sun")]
+        public global::System.Collections.Generic.List<int> Sun { get; set; } = new();
+
+        /// <summary>
+        /// The <c>Moon</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Moon")]
+        public global::System.Collections.Generic.List<int> Moon { get; set; } = new();
+
+        /// <summary>
+        /// The <c>Mars</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Mars")]
+        public global::System.Collections.Generic.List<int> Mars { get; set; } = new();
+
+        /// <summary>
+        /// The <c>Mercury</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Mercury")]
+        public global::System.Collections.Generic.List<int> Mercury { get; set; } = new();
+
+        /// <summary>
+        /// The <c>Jupiter</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Jupiter")]
+        public global::System.Collections.Generic.List<int> Jupiter { get; set; } = new();
+
+        /// <summary>
+        /// The <c>Venus</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Venus")]
+        public global::System.Collections.Generic.List<int> Venus { get; set; } = new();
+
+        /// <summary>
+        /// The <c>Saturn</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("Saturn")]
+        public global::System.Collections.Generic.List<int> Saturn { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>VedicCalculatePanchang</c> schema.
+    /// </summary>
+    public partial class VedicCalculatePanchang
+    {
+        /// <summary>
+        /// The <c>tithi</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tithi")]
+        public global::FreeAstroApi.Models.VedicCalculatePanchangTithi Tithi { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>nakshatra</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("nakshatra")]
+        public global::FreeAstroApi.Models.VedicChartAscendantNakshatra Nakshatra { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>yoga</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("yoga")]
+        public global::FreeAstroApi.Models.VedicCalculatePanchangYoga Yoga { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>karana</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("karana")]
+        public global::FreeAstroApi.Models.VedicCalculatePanchangYoga Karana { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>weekday</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("weekday")]
+        public string Weekday { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>rahu_kalam</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("rahu_kalam")]
+        public global::FreeAstroApi.Models.VedicCalculatePanchangRahuKalam RahuKalam { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>VedicCalculatePanchangRahuKalam</c> schema.
+    /// </summary>
+    public partial class VedicCalculatePanchangRahuKalam
+    {
+        /// <summary>
+        /// The <c>start</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("start")]
+        public string Start { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>end</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("end")]
+        public string End { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>VedicCalculatePanchangTithi</c> schema.
+    /// </summary>
+    public partial class VedicCalculatePanchangTithi
+    {
+        /// <summary>
+        /// The <c>number</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("number")]
+        public int Number { get; set; }
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>paksha</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("paksha")]
+        public string Paksha { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>VedicCalculatePanchangYoga</c> schema.
+    /// </summary>
+    public partial class VedicCalculatePanchangYoga
+    {
+        /// <summary>
+        /// The <c>number</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("number")]
+        public int Number { get; set; }
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>VedicCalculateResponse</c> schema.
+    /// </summary>
+    public partial class VedicCalculateResponse
+    {
+        /// <summary>
+        /// The <c>ayanamsha</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ayanamsha")]
+        public string Ayanamsha { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>timezone_used</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timezone_used")]
+        public string TimezoneUsed { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>house_system</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house_system")]
+        public string HouseSystem { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>node_type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("node_type")]
+        public string NodeType { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>ascendant</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ascendant")]
+        public global::FreeAstroApi.Models.VedicChartAscendant Ascendant { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>planets</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("planets")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.VedicChartPlanet> Planets { get; set; } = new();
+
+        /// <summary>
+        /// The <c>houses</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("houses")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.VedicChartHouse> Houses { get; set; } = new();
+
+        /// <summary>
+        /// The <c>vimshottari_dasha</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("vimshottari_dasha")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.VedicDashaPeriod> VimshottariDasha { get; set; } = new();
+
+        /// <summary>
+        /// The <c>sade_sati</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sade_sati")]
+        public global::FreeAstroApi.Models.VedicCalculateSadeSati SadeSati { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>yogas</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("yogas")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.VedicCalculateYoga>? Yogas { get; set; }
+
+        /// <summary>
+        /// The <c>panchang</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("panchang")]
+        public global::FreeAstroApi.Models.VedicCalculatePanchang? Panchang { get; set; }
+
+        /// <summary>
+        /// The <c>shadbala</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("shadbala")]
+        public global::System.Collections.Generic.Dictionary<string, global::FreeAstroApi.Models.VedicCalculateShadbalaEntry>? Shadbala { get; set; }
+
+        /// <summary>
+        /// The <c>ashtakavarga</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ashtakavarga")]
+        public global::FreeAstroApi.Models.VedicCalculateAshtakavarga? Ashtakavarga { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>VedicCalculateSadeSati</c> schema.
+    /// </summary>
+    public partial class VedicCalculateSadeSati
+    {
+        /// <summary>
+        /// The <c>active</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("active")]
+        public bool Active { get; set; }
+
+        /// <summary>
+        /// The <c>phase</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("phase")]
+        public string? Phase { get; set; }
+
+        /// <summary>
+        /// The <c>description</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("description")]
+        public string Description { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>reference_date</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("reference_date")]
+        public string ReferenceDate { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>timezone</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timezone")]
+        public string Timezone { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>moon_sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("moon_sign")]
+        public string MoonSign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>moon_sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("moon_sign_id")]
+        public int MoonSignId { get; set; }
+
+        /// <summary>
+        /// The <c>saturn_sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("saturn_sign")]
+        public string SaturnSign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>saturn_sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("saturn_sign_id")]
+        public int SaturnSignId { get; set; }
+
+        /// <summary>
+        /// The <c>saturn_degree_in_sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("saturn_degree_in_sign")]
+        public double SaturnDegreeInSign { get; set; }
+
+        /// <summary>
+        /// The <c>saturn_absolute_degree</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("saturn_absolute_degree")]
+        public double SaturnAbsoluteDegree { get; set; }
+
+        /// <summary>
+        /// The <c>saturn_is_retrograde</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("saturn_is_retrograde")]
+        public bool SaturnIsRetrograde { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>VedicCalculateShadbalaEntry</c> schema.
+    /// </summary>
+    public partial class VedicCalculateShadbalaEntry
+    {
+        /// <summary>
+        /// The <c>sthana_bala</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sthana_bala")]
+        public double SthanaBala { get; set; }
+
+        /// <summary>
+        /// The <c>dig_bala</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dig_bala")]
+        public double DigBala { get; set; }
+
+        /// <summary>
+        /// The <c>kala_bala</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("kala_bala")]
+        public double KalaBala { get; set; }
+
+        /// <summary>
+        /// The <c>cheshta_bala</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cheshta_bala")]
+        public double CheshtaBala { get; set; }
+
+        /// <summary>
+        /// The <c>naisargika_bala</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("naisargika_bala")]
+        public double NaisargikaBala { get; set; }
+
+        /// <summary>
+        /// The <c>drik_bala</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("drik_bala")]
+        public double DrikBala { get; set; }
+
+        /// <summary>
+        /// The <c>total</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total")]
+        public double Total { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>VedicCalculateYoga</c> schema.
+    /// </summary>
+    public partial class VedicCalculateYoga
+    {
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>type</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string Type { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>present</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("present")]
+        public bool Present { get; set; }
+
+        /// <summary>
+        /// The <c>description</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("description")]
+        public string Description { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>VedicChartAscendant</c> schema.
+    /// </summary>
+    public partial class VedicChartAscendant
+    {
+        /// <summary>
+        /// The <c>degree</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("degree")]
+        public double Degree { get; set; }
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>nakshatra</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("nakshatra")]
+        public global::FreeAstroApi.Models.VedicChartAscendantNakshatra Nakshatra { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>VedicChartAscendantNakshatra</c> schema.
+    /// </summary>
+    public partial class VedicChartAscendantNakshatra
+    {
+        /// <summary>
+        /// The <c>id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
+        public int Id { get; set; }
+
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>pada</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pada")]
+        public int Pada { get; set; }
+
+        /// <summary>
+        /// The <c>lord</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lord")]
+        public string Lord { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>VedicChartHouse</c> schema.
+    /// </summary>
+    public partial class VedicChartHouse
+    {
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int House { get; set; }
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public int SignId { get; set; }
+
+        /// <summary>
+        /// The <c>degree_cusp</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("degree_cusp")]
+        public double DegreeCusp { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>VedicChartPlanet</c> schema.
+    /// </summary>
+    public partial class VedicChartPlanet
+    {
+        /// <summary>
+        /// The <c>name</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string Name { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>absolute_degree</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("absolute_degree")]
+        public double AbsoluteDegree { get; set; }
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public int SignId { get; set; }
+
+        /// <summary>
+        /// The <c>degree_in_sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("degree_in_sign")]
+        public double DegreeInSign { get; set; }
+
+        /// <summary>
+        /// The <c>house</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("house")]
+        public int House { get; set; }
+
+        /// <summary>
+        /// The <c>is_retrograde</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_retrograde")]
+        public bool IsRetrograde { get; set; }
+
+        /// <summary>
+        /// The <c>nakshatra</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("nakshatra")]
+        public string Nakshatra { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>nakshatra_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("nakshatra_id")]
+        public int NakshatraId { get; set; }
+
+        /// <summary>
+        /// The <c>pada</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pada")]
+        public int Pada { get; set; }
+
+        /// <summary>
+        /// The <c>nakshatra_lord</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("nakshatra_lord")]
+        public string NakshatraLord { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>vargas</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("vargas")]
+        public global::System.Collections.Generic.Dictionary<string, global::FreeAstroApi.Models.VedicPlanetVargaSign> Vargas { get; set; } = new();
 
         /// <summary>
         /// Fields returned by the API that this SDK version does not model yet.
@@ -34426,6 +50572,48 @@ namespace FreeAstroApi.Models
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dasha_levels")]
         public int? DashaLevels { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>VedicChartResponse</c> schema.
+    /// </summary>
+    public partial class VedicChartResponse
+    {
+        /// <summary>
+        /// The <c>ayanamsha</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ayanamsha")]
+        public string Ayanamsha { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>timezone_used</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timezone_used")]
+        public string TimezoneUsed { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>ascendant</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ascendant")]
+        public global::FreeAstroApi.Models.VedicChartAscendant Ascendant { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>planets</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("planets")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.VedicChartPlanet> Planets { get; set; } = new();
+
+        /// <summary>
+        /// The <c>houses</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("houses")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.VedicChartHouse> Houses { get; set; } = new();
 
         /// <summary>
         /// Fields returned by the API that this SDK version does not model yet.
@@ -34757,6 +50945,72 @@ namespace FreeAstroApi.Models
     }
 
     /// <summary>
+    /// The <c>VedicCompatibilityResponse</c> schema.
+    /// </summary>
+    public partial class VedicCompatibilityResponse
+    {
+        /// <summary>
+        /// The <c>scores</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scores")]
+        public global::System.Collections.Generic.Dictionary<string, global::FreeAstroApi.Models.VedicCompatibilityScoresEntry> Scores { get; set; } = new();
+
+        /// <summary>
+        /// The <c>total_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_score")]
+        public double TotalScore { get; set; }
+
+        /// <summary>
+        /// The <c>max_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("max_score")]
+        public double MaxScore { get; set; }
+
+        /// <summary>
+        /// The <c>percentage</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("percentage")]
+        public double Percentage { get; set; }
+
+        /// <summary>
+        /// The <c>recommendation</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("recommendation")]
+        public string Recommendation { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>VedicCompatibilityScoresEntry</c> schema.
+    /// </summary>
+    public partial class VedicCompatibilityScoresEntry
+    {
+        /// <summary>
+        /// The <c>score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("score")]
+        public double Score { get; set; }
+
+        /// <summary>
+        /// The <c>max</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("max")]
+        public int Max { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
     /// The <c>VedicDashaInsightFact</c> schema.
     /// </summary>
     public partial class VedicDashaInsightFact
@@ -35006,6 +51260,78 @@ namespace FreeAstroApi.Models
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("facts")]
         public global::System.Collections.Generic.List<global::FreeAstroApi.Models.VedicDashaInsightFact> Facts { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// A Vimshottari period; ``sub_periods`` holds the next level down when more levels are requested.
+    /// </summary>
+    public partial class VedicDashaPeriod
+    {
+        /// <summary>
+        /// The <c>level</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("level")]
+        public string Level { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>lord</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lord")]
+        public string Lord { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>start</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("start")]
+        public string Start { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>end</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("end")]
+        public string End { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>duration_years</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("duration_years")]
+        public double DurationYears { get; set; }
+
+        /// <summary>
+        /// The <c>sub_periods</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sub_periods")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.VedicDashaPeriod>? SubPeriods { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>VedicDashaResponse</c> schema.
+    /// </summary>
+    public partial class VedicDashaResponse
+    {
+        /// <summary>
+        /// The <c>moon_nakshatra</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("moon_nakshatra")]
+        public string MoonNakshatra { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>vimshottari_dasha</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("vimshottari_dasha")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.VedicDashaPeriod> VimshottariDasha { get; set; } = new();
 
         /// <summary>
         /// Fields returned by the API that this SDK version does not model yet.
@@ -35883,6 +52209,84 @@ namespace FreeAstroApi.Models
     }
 
     /// <summary>
+    /// The <c>VedicMatchP1Details</c> schema.
+    /// </summary>
+    public partial class VedicMatchP1Details
+    {
+        /// <summary>
+        /// The <c>moon_sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("moon_sign")]
+        public string MoonSign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>moon_nakshatra</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("moon_nakshatra")]
+        public string MoonNakshatra { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>VedicMatchResponse</c> schema.
+    /// </summary>
+    public partial class VedicMatchResponse
+    {
+        /// <summary>
+        /// The <c>scores</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scores")]
+        public global::System.Collections.Generic.Dictionary<string, global::FreeAstroApi.Models.VedicCompatibilityScoresEntry> Scores { get; set; } = new();
+
+        /// <summary>
+        /// The <c>total_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("total_score")]
+        public double TotalScore { get; set; }
+
+        /// <summary>
+        /// The <c>max_score</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("max_score")]
+        public double MaxScore { get; set; }
+
+        /// <summary>
+        /// The <c>percentage</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("percentage")]
+        public double Percentage { get; set; }
+
+        /// <summary>
+        /// The <c>recommendation</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("recommendation")]
+        public string Recommendation { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>p1_details</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("p1_details")]
+        public global::FreeAstroApi.Models.VedicMatchP1Details P1Details { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>p2_details</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("p2_details")]
+        public global::FreeAstroApi.Models.VedicMatchP1Details P2Details { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
     /// The <c>VedicMuhuratPersonalizedSearchRequest</c> schema.
     /// </summary>
     public partial class VedicMuhuratPersonalizedSearchRequest
@@ -36423,6 +52827,78 @@ namespace FreeAstroApi.Models
     }
 
     /// <summary>
+    /// Panchang at sunrise for the given date and place.
+    /// </summary>
+    public partial class VedicPanchangResponse
+    {
+        /// <summary>
+        /// The <c>tithi</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tithi")]
+        public global::FreeAstroApi.Models.VedicCalculatePanchangTithi Tithi { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>nakshatra</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("nakshatra")]
+        public global::FreeAstroApi.Models.VedicChartAscendantNakshatra Nakshatra { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>yoga</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("yoga")]
+        public global::FreeAstroApi.Models.VedicCalculatePanchangYoga Yoga { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>karana</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("karana")]
+        public global::FreeAstroApi.Models.VedicCalculatePanchangYoga Karana { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>weekday</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("weekday")]
+        public string Weekday { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>rahu_kalam</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("rahu_kalam")]
+        public global::FreeAstroApi.Models.VedicCalculatePanchangRahuKalam RahuKalam { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>VedicPlanetVargaSign</c> schema.
+    /// </summary>
+    public partial class VedicPlanetVargaSign
+    {
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public int SignId { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
     /// The <c>VedicQAMetadata</c> schema.
     /// </summary>
     public partial class VedicQAMetadata
@@ -36941,6 +53417,30 @@ namespace FreeAstroApi.Models
     }
 
     /// <summary>
+    /// The <c>VedicStrengthResponse</c> schema.
+    /// </summary>
+    public partial class VedicStrengthResponse
+    {
+        /// <summary>
+        /// The <c>shadbala</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("shadbala")]
+        public global::System.Collections.Generic.Dictionary<string, global::FreeAstroApi.Models.VedicCalculateShadbalaEntry> Shadbala { get; set; } = new();
+
+        /// <summary>
+        /// The <c>ashtakavarga</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ashtakavarga")]
+        public global::FreeAstroApi.Models.VedicCalculateAshtakavarga Ashtakavarga { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
     /// The <c>VedicTransitInsightFact</c> schema.
     /// </summary>
     public partial class VedicTransitInsightFact
@@ -37321,6 +53821,54 @@ namespace FreeAstroApi.Models
     }
 
     /// <summary>
+    /// The <c>VedicVargaPlacement</c> schema.
+    /// </summary>
+    public partial class VedicVargaPlacement
+    {
+        /// <summary>
+        /// The <c>planet</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("planet")]
+        public string Planet { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign")]
+        public string Sign { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>sign_id</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
+        public int SignId { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>VedicVargasResponse</c> schema.
+    /// </summary>
+    public partial class VedicVargasResponse
+    {
+        /// <summary>
+        /// The <c>vargas</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("vargas")]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.List<global::FreeAstroApi.Models.VedicVargaPlacement>> Vargas { get; set; } = new();
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
     /// The <c>VedicVisualChartRequest</c> schema.
     /// </summary>
     public partial class VedicVisualChartRequest
@@ -37518,6 +54066,30 @@ namespace FreeAstroApi.Models
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("custom_css")]
         public string? CustomCss { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// The <c>VedicYogasResponse</c> schema.
+    /// </summary>
+    public partial class VedicYogasResponse
+    {
+        /// <summary>
+        /// The <c>yogas</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("yogas")]
+        public global::System.Collections.Generic.List<global::FreeAstroApi.Models.VedicCalculateYoga> Yogas { get; set; } = new();
+
+        /// <summary>
+        /// The <c>sade_sati</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sade_sati")]
+        public global::FreeAstroApi.Models.VedicCalculateSadeSati SadeSati { get; set; } = default!;
 
         /// <summary>
         /// Fields returned by the API that this SDK version does not model yet.
@@ -38736,7 +55308,7 @@ namespace FreeAstroApi.Models
         public string Sign { get; set; } = default!;
 
         /// <summary>
-        /// The <c>sign_id</c> field.
+        /// Allowed values: <c>aries</c>, <c>taurus</c>, <c>gemini</c>, <c>cancer</c>, <c>leo</c>, <c>virgo</c>, <c>libra</c>, <c>scorpio</c>, <c>sagittarius</c>, <c>capricorn</c>, <c>aquarius</c>, <c>pisces</c>.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sign_id")]
         public string SignId { get; set; } = default!;
@@ -38752,6 +55324,78 @@ namespace FreeAstroApi.Models
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("zodiac_type")]
         public string? ZodiacType { get; set; }
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// UTC instants (ISO 8601) of the next new moon, first quarter, full moon and last quarter.
+    /// </summary>
+    public partial class MoonMonthDayResponseNextPhases
+    {
+        /// <summary>
+        /// The <c>new_moon</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("new_moon")]
+        public string NewMoon { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>first_quarter</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("first_quarter")]
+        public string FirstQuarter { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>full_moon</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("full_moon")]
+        public string FullMoon { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>last_quarter</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("last_quarter")]
+        public string LastQuarter { get; set; } = default!;
+
+        /// <summary>
+        /// Fields returned by the API that this SDK version does not model yet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.Dictionary<string, global::System.Text.Json.JsonElement>? AdditionalProperties { get; set; }
+    }
+
+    /// <summary>
+    /// UTC instants (ISO 8601) of the next new moon, first quarter, full moon and last quarter.
+    /// </summary>
+    public partial class MoonPhaseResponseNextPhases
+    {
+        /// <summary>
+        /// The <c>new_moon</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("new_moon")]
+        public string NewMoon { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>first_quarter</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("first_quarter")]
+        public string FirstQuarter { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>full_moon</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("full_moon")]
+        public string FullMoon { get; set; } = default!;
+
+        /// <summary>
+        /// The <c>last_quarter</c> field.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("last_quarter")]
+        public string LastQuarter { get; set; } = default!;
 
         /// <summary>
         /// Fields returned by the API that this SDK version does not model yet.

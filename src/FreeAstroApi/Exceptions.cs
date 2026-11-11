@@ -147,6 +147,7 @@ public class FreeAstroApiException : FreeAstroException
         RequestId = details.RequestId;
         ErrorCode = details.ErrorCode;
         Error = details.Error;
+        RetryAfter = details.RetryAfter;
     }
 
     /// <summary>The HTTP status code.</summary>
@@ -163,6 +164,12 @@ public class FreeAstroApiException : FreeAstroException
 
     /// <summary>The parsed JSON error body, if the body was JSON.</summary>
     public JsonElement? Error { get; }
+
+    /// <summary>
+    /// How long the API asked to wait before retrying: the <c>Retry-After</c> header (seconds or HTTP date) or
+    /// <c>retry_after_ms</c> in the error body, if it said.
+    /// </summary>
+    public TimeSpan? RetryAfter { get; }
 }
 
 /// <summary>HTTP 400 or 422: the request was rejected as invalid.</summary>
@@ -325,7 +332,10 @@ public class FreeAstroConflictException : FreeAstroApiException
     }
 }
 
-/// <summary>HTTP 429: too many requests. Thrown once retries are exhausted.</summary>
+/// <summary>
+/// HTTP 429: too many requests. Thrown once retries are exhausted, or straight away when the API asks to wait
+/// longer than <see cref="FreeAstroClientOptions.MaxRetryDelay"/> (see <see cref="FreeAstroApiException.RetryAfter"/>).
+/// </summary>
 public class FreeAstroRateLimitException : FreeAstroApiException
 {
     /// <summary>Creates an exception.</summary>
@@ -354,11 +364,7 @@ public class FreeAstroRateLimitException : FreeAstroApiException
     public FreeAstroRateLimitException(string message, FreeAstroErrorDetails details)
         : base(message, details)
     {
-        RetryAfter = details?.RetryAfter;
     }
-
-    /// <summary>How long the API asked to wait (<c>Retry-After</c>), if it said.</summary>
-    public TimeSpan? RetryAfter { get; }
 }
 
 /// <summary>HTTP 5xx: the API failed. Thrown once retries are exhausted.</summary>
@@ -411,6 +417,6 @@ public sealed class FreeAstroErrorDetails
     /// <summary>The parsed JSON error body, if any.</summary>
     public JsonElement? Error { get; set; }
 
-    /// <summary>The <c>Retry-After</c> delay, if any.</summary>
+    /// <summary>The <c>Retry-After</c> header or <c>retry_after_ms</c> body delay, if any.</summary>
     public TimeSpan? RetryAfter { get; set; }
 }

@@ -4,7 +4,7 @@
 
 Official .NET client for [FreeAstroAPI](https://www.freeastroapi.com): Western natal charts, transits, progressions, returns, synastry and astrocartography; Vedic charts, dashas, panchang, compatibility and muhurat; Chinese BaZi; numerology; horoscopes; Moon phases, sky events and ephemerides.
 
-Targets `net8.0` and `netstandard2.0` (.NET Framework 4.6.2+, Unity, Xamarin). Every one of the 142 public operations has a typed async method.
+Targets `net10.0`, `net8.0` and `netstandard2.0` (.NET Framework 4.6.2+, Unity, Xamarin). Every one of the 142 public operations has a typed async method, and every JSON response is a typed model except five progression endpoints whose shape depends on the request.
 
 ## Install
 
@@ -29,7 +29,7 @@ Console.WriteLine(cities.Results[0].Timezone); // Europe/Paris
 
 `new FreeAstroClient()` reads the key from the `FREEASTRO_API_KEY` environment variable. Keep API keys on the server; never ship them in a desktop, mobile or Blazor WebAssembly app.
 
-Options: `ApiKey`, `BaseUrl` (default `https://api.freeastroapi.com`), `Timeout` (per attempt, default 30 s), `MaxRetries` (default 2), `InitialRetryDelay`, `MaxRetryDelay` and `DefaultHeaders`. The client is thread-safe: create one and reuse it.
+Options: `ApiKey`, `BaseUrl` (default `https://api.freeastroapi.com`), `Timeout` (per attempt, default 30 s), `MaxRetries` (default 2), `InitialRetryDelay`, `MaxBackoff`, `MaxRetryDelay` and `DefaultHeaders`. The client is thread-safe: create one and reuse it.
 
 ## Examples
 
@@ -42,8 +42,8 @@ var chart = await client.Natal.CalculateAsync(new NatalChartRequest
     Year = 1990, Month = 6, Day = 15, Hour = 14, Minute = 30,
     City = "Paris",
 });
-// The API does not publish a schema for this response yet, so it is a JsonElement.
-Console.WriteLine(chart.GetRawText());
+// -> typed NatalCalculateResponse
+Console.WriteLine(chart.Planets![0].Name);
 
 // POST /api/v1/western/signs/sun -> typed SignResponse
 var sun = await client.Western.Signs.SunAsync(new NatalChartRequest { Year = 1990, Month = 6, Day = 15, City = "Paris" });
@@ -126,11 +126,13 @@ Resource groups: `Ai`, `Chinese`, `Ephemeris`, `Geo`, `Horoscope`, `Moon`, `Nata
 
 Request and response models in `FreeAstroApi.Models` are generated from the spec's component schemas. Property names are PascalCase and map to the API's snake_case fields; `null` properties are not sent, so the API applies its defaults. Fields the API returns that this SDK version does not know yet land in each model's `AdditionalProperties`.
 
-Where the spec does not describe a response yet, methods return `System.Text.Json.JsonElement`. To read it as a model, use the SDK's serializer settings:
+Response decoding is lenient, so API changes do not break your build or your calls: a missing field keeps its default, `null` in a non-nullable number or boolean reads as `0`/`false`, unknown fields go to `AdditionalProperties`, and enum-like fields are plain strings, so new values come through as-is. Request models are not affected.
+
+The five progression endpoints (`client.Western.Progressions.SecondaryAsync` and friends) return either a chart or a table depending on the request, so they return `System.Text.Json.JsonElement`; the XML docs name both models. Read it with the SDK's serializer settings:
 
 ```csharp
 using FreeAstroApi.Serialization;
-var typed = element.Deserialize<MyChart>(FreeAstroJson.Options);
+var typed = element.Deserialize<SecondaryProgressionsResponse>(FreeAstroJson.Options);
 ```
 
 ### Other endpoints
@@ -144,9 +146,14 @@ var file = await client.SendRawAsync(HttpMethod.Get, "/api/v1/example.pdf", acce
 
 ## Retries, timeouts and idempotency
 
-- HTTP 429 responses are retried for every method (the request was rejected before it ran).
-- HTTP 408/500/502/503/504 responses, timeouts and network failures are retried for GET requests, and for any request with an `IdempotencyKey` or `Retry = true`.
-- Backoff starts at 500 ms and doubles. `Retry-After` (seconds or HTTP date) is honoured; if it asks for longer than `MaxRetryDelay` (30 s) the error is thrown instead of waiting.
+Failed requests are retried up to `MaxRetries` times (default 2):
+
+- **HTTP 429** is retried for every operation (the request was rejected before it ran).
+- **HTTP 408, 500, 502, 503, 504, timeouts and network failures** are retried for every operation except the side-effecting ones in `FreeAstroOperations.SideEffectingOperationIds`: `v1_natal_calculate` (may create a paid report job), `v1_ai_generate`, `v2_vedic_chat`, `v2_western_chat`, `v2_vedic_qa`, `v1_western_transits_timeline` and `v1_western_transits_insights`. Those are retried only when the request carries an `IdempotencyKey` (sent as the `Idempotency-Key` header) or opts in with `Retry = true`.
+- **Other 4xx** are never retried.
+- **Backoff** is exponential with full jitter: retry *n* waits a random time between 0 and `InitialRetryDelay * 2^n` (500 ms, 1 s, 2 s, ...), capped at `MaxBackoff` (8 s).
+- **Server-requested waits** win over the backoff: the `Retry-After` header (seconds or HTTP date) or `retry_after_ms` in the error body. If the wait is longer than `MaxRetryDelay` (30 s) the client does not wait; it throws the error at once with `RetryAfter` set (`FreeAstroRateLimitException` for a 429).
+- `SendAsync` / `SendRawAsync` follow the policy of the operation with that method and path; an unknown non-GET endpoint is treated as side-effecting.
 
 ```csharp
 await client.Vedic.ChatAsync(question, new RequestOptions
@@ -156,7 +163,7 @@ await client.Vedic.ChatAsync(question, new RequestOptions
 });
 ```
 
-Most FreeAstroAPI POST operations are pure calculations; pass `new RequestOptions { Retry = true }` to retry them on 5xx too. Cancelling the `CancellationToken` throws `OperationCanceledException`, not an SDK exception.
+Per request, `RequestOptions` overrides `MaxRetries`, sets the `IdempotencyKey`, opts in (`Retry = true`) or disables retries (`Retry = false`). Cancelling the `CancellationToken` throws `OperationCanceledException`, not an SDK exception.
 
 ## Errors
 
@@ -167,9 +174,9 @@ Most FreeAstroAPI POST operations are pure calculations; pass `new RequestOption
 | `FreeAstroPermissionException` | 403 |
 | `FreeAstroNotFoundException` | 404 |
 | `FreeAstroConflictException` | 409 |
-| `FreeAstroRateLimitException` | 429 (`RetryAfter`) |
+| `FreeAstroRateLimitException` | 429 (`RetryAfter` from `Retry-After` or `retry_after_ms`) |
 | `FreeAstroServerException` | 5xx |
-| `FreeAstroApiException` | any other status; base class of the above, with `StatusCode`, `Body`, `RequestId`, `ErrorCode` and `Error` (parsed JSON) |
+| `FreeAstroApiException` | any other status; base class of the above, with `StatusCode`, `Body`, `RequestId`, `ErrorCode` (`error`/`code`, or `detail.error` for route errors), `RetryAfter` and `Error` (the parsed `ErrorResponse` JSON) |
 | `FreeAstroNetworkException` / `FreeAstroTimeoutException` | the API could not be reached / timed out |
 | `FreeAstroDeserializationException` | a success body did not match the expected model |
 

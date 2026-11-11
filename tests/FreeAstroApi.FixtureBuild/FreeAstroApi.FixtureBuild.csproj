@@ -6,7 +6,7 @@
     vendor +json, SVG/PNG/PDF/Markdown bodies, sanitised schema names). Run scripts/check-fixture.sh.
   -->
   <PropertyGroup>
-    <TargetFrameworks>net8.0;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net10.0;net8.0;netstandard2.0</TargetFrameworks>
     <AssemblyName>FreeAstroApi.Fixture</AssemblyName>
     <RootNamespace>FreeAstroApi</RootNamespace>
     <IsPackable>false</IsPackable>

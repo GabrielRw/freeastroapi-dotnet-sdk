@@ -119,15 +119,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>AtomicReportResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> GenerateAsync(global::FreeAstroApi.Models.AtomicReportRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.AtomicReportResponse> GenerateAsync(global::FreeAstroApi.Models.AtomicReportRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/ai/generate", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/ai/generate", "application/json", "v1_ai_generate");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.AtomicReportResponse>(request, options, cancellationToken);
         }
     }
 
@@ -159,15 +159,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>BaziChartResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> BaziAsync(global::FreeAstroApi.Models.BaziRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.BaziChartResponse> BaziAsync(global::FreeAstroApi.Models.BaziRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/chinese/bazi", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/chinese/bazi", "application/json", "v1_chinese_bazi");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.BaziChartResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -183,14 +183,14 @@ namespace FreeAstroApi.Resources
         /// <param name="parameters">Query parameters.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>Dictionary&lt;string, BaziDictionaryEntry&gt;</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> BaziDictionaryAsync(global::FreeAstroApi.Models.ChineseBaziDictionaryParams? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::System.Collections.Generic.Dictionary<string, global::FreeAstroApi.Models.BaziDictionaryEntry>> BaziDictionaryAsync(global::FreeAstroApi.Models.ChineseBaziDictionaryParams? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/chinese/bazi/dictionary", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/chinese/bazi/dictionary", "application/json", "v1_chinese_bazi_dictionary");
             parameters?.WriteTo(request.Query);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::System.Collections.Generic.Dictionary<string, global::FreeAstroApi.Models.BaziDictionaryEntry>>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -206,15 +206,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>BaziFlowResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> BaziFlowAsync(global::FreeAstroApi.Models.BaziFlowRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.BaziFlowResponse> BaziFlowAsync(global::FreeAstroApi.Models.BaziFlowRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/chinese/bazi/flow", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/chinese/bazi/flow", "application/json", "v1_chinese_bazi_flow");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.BaziFlowResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -229,15 +229,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>BaziHealthResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> BaziHealthAsync(global::FreeAstroApi.Models.BaziHealthRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.BaziHealthResponse> BaziHealthAsync(global::FreeAstroApi.Models.BaziHealthRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/chinese/bazi/health", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/chinese/bazi/health", "application/json", "v1_chinese_bazi_health");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.BaziHealthResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -253,15 +253,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>BaziLifespanResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> BaziLifespanAsync(global::FreeAstroApi.Models.BaziLifespanRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.BaziLifespanResponse> BaziLifespanAsync(global::FreeAstroApi.Models.BaziLifespanRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/chinese/bazi/lifespan", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/chinese/bazi/lifespan", "application/json", "v1_chinese_bazi_lifespan");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.BaziLifespanResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -276,15 +276,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>BaziSynastryResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> BaziSynastryAsync(global::FreeAstroApi.Models.BaziSynastryRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.BaziSynastryResponse> BaziSynastryAsync(global::FreeAstroApi.Models.BaziSynastryRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/chinese/bazi/synastry", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/chinese/bazi/synastry", "application/json", "v1_chinese_bazi_synastry");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.BaziSynastryResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -300,15 +300,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>BaziTimeCorrectionResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> BaziTimeCorrectionAsync(global::FreeAstroApi.Models.BaziTimeCorrectionRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.BaziTimeCorrectionResponse> BaziTimeCorrectionAsync(global::FreeAstroApi.Models.BaziTimeCorrectionRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/chinese/bazi/time-correction", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/chinese/bazi/time-correction", "application/json", "v1_chinese_bazi_time_correction");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.BaziTimeCorrectionResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -332,7 +332,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.ChineseCalendarResponse> CalendarAsync(string date, global::FreeAstroApi.Models.ChineseCalendarParams? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(date, nameof(date));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/chinese/calendar/" + global::FreeAstroApi.Internal.PathEncoder.Encode(date), "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/chinese/calendar/" + global::FreeAstroApi.Internal.PathEncoder.Encode(date), "application/json", "v1_chinese_calendar_date");
             parameters?.WriteTo(request.Query);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.ChineseCalendarResponse>(request, options, cancellationToken);
         }
@@ -350,14 +350,14 @@ namespace FreeAstroApi.Resources
         /// <param name="parameters">Query parameters.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>ChineseTodayResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> TodayAsync(global::FreeAstroApi.Models.ChineseTodayParams? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.ChineseTodayResponse> TodayAsync(global::FreeAstroApi.Models.ChineseTodayParams? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/chinese/today", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/chinese/today", "application/json", "v1_chinese_today");
             parameters?.WriteTo(request.Query);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.ChineseTodayResponse>(request, options, cancellationToken);
         }
     }
 
@@ -382,15 +382,15 @@ namespace FreeAstroApi.Resources
         /// <param name="parameters">Query parameters.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>EphemerisResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> GetAsync(global::FreeAstroApi.Models.EphemerisGetParams parameters, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.EphemerisResponse> GetAsync(global::FreeAstroApi.Models.EphemerisGetParams parameters, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(parameters, nameof(parameters));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/ephemeris", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/ephemeris", "application/json", "v1_ephemeris");
             parameters.WriteTo(request.Query);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.EphemerisResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -402,15 +402,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>EphemerisResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> CalculateAsync(global::FreeAstroApi.Models.EphemerisRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.EphemerisResponse> CalculateAsync(global::FreeAstroApi.Models.EphemerisRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/ephemeris/calculate", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/ephemeris/calculate", "application/json", "v1_ephemeris_calculate");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.EphemerisResponse>(request, options, cancellationToken);
         }
     }
 
@@ -445,7 +445,7 @@ namespace FreeAstroApi.Resources
         [global::System.Obsolete("GET /api/v1/geo/search is deprecated by FreeAstroAPI.")]
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.CitySearchResponse> SearchV1Async(global::FreeAstroApi.Models.GeoSearchV1Params? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/geo/search", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/geo/search", "application/json", "v1_geo_search");
             parameters?.WriteTo(request.Query);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.CitySearchResponse>(request, options, cancellationToken);
         }
@@ -468,7 +468,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.CitySearchResponse> SearchAsync(global::FreeAstroApi.Models.GeoSearchParams parameters, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(parameters, nameof(parameters));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v2/geo/search", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v2/geo/search", "application/json", "v2_geo_search");
             parameters.WriteTo(request.Query);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.CitySearchResponse>(request, options, cancellationToken);
         }
@@ -498,14 +498,14 @@ namespace FreeAstroApi.Resources
         /// <param name="parameters">Query parameters.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>HoroscopeDailyBulkResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> BulkAsync(global::FreeAstroApi.Models.HoroscopeDailyBulkParams? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.HoroscopeDailyBulkResponse> BulkAsync(global::FreeAstroApi.Models.HoroscopeDailyBulkParams? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/horoscope/daily/bulk", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/horoscope/daily/bulk", "application/json", "v1_horoscope_daily_bulk");
             parameters?.WriteTo(request.Query);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.HoroscopeDailyBulkResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -520,15 +520,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>HoroscopeDailyPersonalResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> PersonalV1Async(global::FreeAstroApi.Models.PersonalHoroscopeRequestV1 body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.HoroscopeDailyPersonalResponse> PersonalV1Async(global::FreeAstroApi.Models.PersonalHoroscopeRequestV1 body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/horoscope/daily/personal", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/horoscope/daily/personal", "application/json", "v1_horoscope_daily_personal");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.HoroscopeDailyPersonalResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -543,15 +543,15 @@ namespace FreeAstroApi.Resources
         /// <param name="parameters">Query parameters.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>HoroscopeDailySignResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> SignV1Async(global::FreeAstroApi.Models.HoroscopeDailySignV1Params parameters, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.HoroscopeDailySignResponse> SignV1Async(global::FreeAstroApi.Models.HoroscopeDailySignV1Params parameters, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(parameters, nameof(parameters));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/horoscope/daily/sign", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/horoscope/daily/sign", "application/json", "v1_horoscope_daily_sign");
             parameters.WriteTo(request.Query);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.HoroscopeDailySignResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -563,15 +563,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>HoroscopeDailyPersonalV2Response</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> PersonalV2Async(global::FreeAstroApi.Models.PersonalHoroscopeRequestV2 body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.HoroscopeDailyPersonalV2Response> PersonalV2Async(global::FreeAstroApi.Models.PersonalHoroscopeRequestV2 body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/horoscope/daily/personal", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/horoscope/daily/personal", "application/json", "v2_horoscope_daily_personal");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.HoroscopeDailyPersonalV2Response>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -583,15 +583,15 @@ namespace FreeAstroApi.Resources
         /// <param name="parameters">Query parameters.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>HoroscopeDailySignV2Response</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> SignV2Async(global::FreeAstroApi.Models.HoroscopeDailySignV2Params parameters, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.HoroscopeDailySignV2Response> SignV2Async(global::FreeAstroApi.Models.HoroscopeDailySignV2Params parameters, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(parameters, nameof(parameters));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v2/horoscope/daily/sign", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v2/horoscope/daily/sign", "application/json", "v2_horoscope_daily_sign");
             parameters.WriteTo(request.Query);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.HoroscopeDailySignV2Response>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -603,15 +603,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>HoroscopeDailyPersonalV3Response</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> PersonalAsync(global::FreeAstroApi.Models.PersonalHoroscopeRequestV3 body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.HoroscopeDailyPersonalV3Response> PersonalAsync(global::FreeAstroApi.Models.PersonalHoroscopeRequestV3 body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v3/horoscope/daily/personal", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v3/horoscope/daily/personal", "application/json", "v3_horoscope_daily_personal");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.HoroscopeDailyPersonalV3Response>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -628,15 +628,15 @@ namespace FreeAstroApi.Resources
         /// <param name="parameters">Query parameters.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>HoroscopeDailySignV3Response</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> SignAsync(global::FreeAstroApi.Models.HoroscopeDailySignParams parameters, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.HoroscopeDailySignV3Response> SignAsync(global::FreeAstroApi.Models.HoroscopeDailySignParams parameters, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(parameters, nameof(parameters));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v3/horoscope/daily/sign", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v3/horoscope/daily/sign", "application/json", "v3_horoscope_daily_sign");
             parameters.WriteTo(request.Query);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.HoroscopeDailySignV3Response>(request, options, cancellationToken);
         }
     }
 
@@ -661,15 +661,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>HoroscopeWeeklyPersonalV3Response</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> PersonalAsync(global::FreeAstroApi.Models.WeeklyPersonalHoroscopeRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.HoroscopeWeeklyPersonalV3Response> PersonalAsync(global::FreeAstroApi.Models.WeeklyPersonalHoroscopeRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v3/horoscope/weekly/personal", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v3/horoscope/weekly/personal", "application/json", "v3_horoscope_weekly_personal");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.HoroscopeWeeklyPersonalV3Response>(request, options, cancellationToken);
         }
     }
 
@@ -725,7 +725,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.MoonMonthResponse> MonthAsync(global::FreeAstroApi.Models.MoonMonthParams parameters, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(parameters, nameof(parameters));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/moon/month", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/moon/month", "application/json", "v1_moon_month");
             parameters.WriteTo(request.Query);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.MoonMonthResponse>(request, options, cancellationToken);
         }
@@ -747,7 +747,7 @@ namespace FreeAstroApi.Resources
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.MoonPhaseResponse> PhaseAsync(global::FreeAstroApi.Models.MoonPhaseParams? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/moon/phase", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/moon/phase", "application/json", "v1_moon_phase");
             parameters?.WriteTo(request.Query);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.MoonPhaseResponse>(request, options, cancellationToken);
         }
@@ -778,16 +778,16 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The raw response body and its content type (image/png, image/svg+xml).</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
         [global::System.Obsolete("POST /api/v1/natal/experimental/solar-return is deprecated by FreeAstroAPI.")]
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> SolarReturnAsync(global::FreeAstroApi.Models.ExperimentalSolarReturnChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.FreeAstroContent> SolarReturnAsync(global::FreeAstroApi.Models.ExperimentalSolarReturnChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/natal/experimental/solar-return", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/natal/experimental/solar-return", "image/png, image/svg+xml, application/json;q=0.5", "v1_natal_experimental_solar_return");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendContentAsync(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -803,16 +803,16 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The raw response body and its content type (image/png, image/svg+xml).</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
         [global::System.Obsolete("POST /api/v1/natal/experimental/transits is deprecated by FreeAstroAPI.")]
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> TransitsAsync(global::FreeAstroApi.Models.ExperimentalTransitChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.FreeAstroContent> TransitsAsync(global::FreeAstroApi.Models.ExperimentalTransitChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/natal/experimental/transits", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/natal/experimental/transits", "image/png, image/svg+xml, application/json;q=0.5", "v1_natal_experimental_transits");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendContentAsync(request, options, cancellationToken);
         }
     }
 
@@ -847,16 +847,16 @@ namespace FreeAstroApi.Resources
         /// <param name="parameters">Query parameters.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>NatalCalculateResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> CalculateAsync(global::FreeAstroApi.Models.NatalChartRequest body, global::FreeAstroApi.Models.NatalCalculateParams? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.NatalCalculateResponse> CalculateAsync(global::FreeAstroApi.Models.NatalChartRequest body, global::FreeAstroApi.Models.NatalCalculateParams? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/natal/calculate", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/natal/calculate", "application/json", "v1_natal_calculate");
             request.SetJsonBody(body);
             parameters?.WriteTo(request.Query);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.NatalCalculateResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -871,15 +871,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The raw response body and its content type (image/png, image/svg+xml).</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> ChartAsync(global::FreeAstroApi.Models.ExperimentalNatalChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.FreeAstroContent> ChartAsync(global::FreeAstroApi.Models.ExperimentalNatalChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/natal/chart/", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/natal/chart/", "image/png, image/svg+xml, application/json;q=0.5", "v1_natal_chart");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendContentAsync(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -895,15 +895,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The raw response body and its content type (image/png, image/svg+xml).</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> ChartCompositeAsync(global::FreeAstroApi.Models.ExperimentalCompositeChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.FreeAstroContent> ChartCompositeAsync(global::FreeAstroApi.Models.ExperimentalCompositeChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/natal/chart/composite", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/natal/chart/composite", "image/png, image/svg+xml, application/json;q=0.5", "v1_natal_chart_composite");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendContentAsync(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -918,15 +918,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The raw response body and its content type (image/png, image/svg+xml).</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> ChartProgressionsAsync(global::FreeAstroApi.Models.ExperimentalSecondaryProgressionsChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.FreeAstroContent> ChartProgressionsAsync(global::FreeAstroApi.Models.ExperimentalSecondaryProgressionsChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/natal/chart/progressions", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/natal/chart/progressions", "image/png, image/svg+xml, application/json;q=0.5", "v1_natal_chart_progressions");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendContentAsync(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -941,15 +941,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The raw response body and its content type (image/png, image/svg+xml).</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> ChartSecondaryProgressionsAsync(global::FreeAstroApi.Models.ExperimentalSecondaryProgressionsChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.FreeAstroContent> ChartSecondaryProgressionsAsync(global::FreeAstroApi.Models.ExperimentalSecondaryProgressionsChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/natal/chart/secondary-progressions", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/natal/chart/secondary-progressions", "image/png, image/svg+xml, application/json;q=0.5", "v1_natal_chart_secondary_progressions");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendContentAsync(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -964,15 +964,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The raw response body and its content type (image/png, image/svg+xml).</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> ChartSolarReturnAsync(global::FreeAstroApi.Models.ExperimentalSolarReturnChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.FreeAstroContent> ChartSolarReturnAsync(global::FreeAstroApi.Models.ExperimentalSolarReturnChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/natal/chart/solar-return", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/natal/chart/solar-return", "image/png, image/svg+xml, application/json;q=0.5", "v1_natal_chart_solar_return");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendContentAsync(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -988,15 +988,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The raw response body and its content type (image/png, image/svg+xml).</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> ChartSynastryAsync(global::FreeAstroApi.Models.ExperimentalSynastryChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.FreeAstroContent> ChartSynastryAsync(global::FreeAstroApi.Models.ExperimentalSynastryChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/natal/chart/synastry", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/natal/chart/synastry", "image/png, image/svg+xml, application/json;q=0.5", "v1_natal_chart_synastry");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendContentAsync(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -1011,15 +1011,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The raw response body and its content type (image/png, image/svg+xml).</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> ChartTransitsAsync(global::FreeAstroApi.Models.ExperimentalTransitChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.FreeAstroContent> ChartTransitsAsync(global::FreeAstroApi.Models.ExperimentalTransitChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/natal/chart/transits", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/natal/chart/transits", "image/png, image/svg+xml, application/json;q=0.5", "v1_natal_chart_transits");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendContentAsync(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -1030,13 +1030,13 @@ namespace FreeAstroApi.Resources
         /// </remarks>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>ReportCreditsResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> ReportCreditsAsync(global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.ReportCreditsResponse> ReportCreditsAsync(global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/natal/report-credits", "application/json");
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/natal/report-credits", "application/json", "v1_natal_report_credits");
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.ReportCreditsResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -1049,15 +1049,15 @@ namespace FreeAstroApi.Resources
         /// <param name="parameters">Query parameters.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The raw response body and its content type (application/json, application/pdf).</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> ReportAsync(string jobId, global::FreeAstroApi.Models.NatalReportParams? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.FreeAstroContent> ReportAsync(string jobId, global::FreeAstroApi.Models.NatalReportParams? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(jobId, nameof(jobId));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/natal/report/" + global::FreeAstroApi.Internal.PathEncoder.Encode(jobId), "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/natal/report/" + global::FreeAstroApi.Internal.PathEncoder.Encode(jobId), "application/json, application/pdf", "v1_natal_report_job_id");
             parameters?.WriteTo(request.Query);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendContentAsync(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -1073,15 +1073,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>SimpleNatalResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> SimpleAsync(global::FreeAstroApi.Models.SimpleNatalRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.SimpleNatalResponse> SimpleAsync(global::FreeAstroApi.Models.SimpleNatalRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/natal", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/natal", "application/json", "simple_natal");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.SimpleNatalResponse>(request, options, cancellationToken);
         }
     }
 
@@ -1110,7 +1110,7 @@ namespace FreeAstroApi.Resources
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.NumerologyAlphabetsResponse> AlphabetsAsync(global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/numerology/alphabets", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/numerology/alphabets", "application/json", "v1_numerology_alphabets");
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.NumerologyAlphabetsResponse>(request, options, cancellationToken);
         }
 
@@ -1127,7 +1127,7 @@ namespace FreeAstroApi.Resources
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.NumerologyMethodsResponse> MethodsAsync(global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/numerology/methods", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/numerology/methods", "application/json", "v1_numerology_methods");
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.NumerologyMethodsResponse>(request, options, cancellationToken);
         }
 
@@ -1149,7 +1149,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.NumerologyProfileResponse> ProfileAsync(global::FreeAstroApi.Models.NumerologyProfileRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/numerology/profile", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/numerology/profile", "application/json", "v1_numerology_profile");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.NumerologyProfileResponse>(request, options, cancellationToken);
         }
@@ -1182,7 +1182,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.SkyEventsResponse> ListAsync(global::FreeAstroApi.Models.SkyEventsListParams parameters, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(parameters, nameof(parameters));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/sky-events", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v1/sky-events", "application/json", "v1_sky_events");
             parameters.WriteTo(request.Query);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.SkyEventsResponse>(request, options, cancellationToken);
         }
@@ -1209,15 +1209,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>SpaceChartResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> ChartAsync(global::FreeAstroApi.Models.SpaceChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.SpaceChartResponse> ChartAsync(global::FreeAstroApi.Models.SpaceChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/space/chart", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/space/chart", "application/json", "v1_space_chart");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.SpaceChartResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -1232,15 +1232,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The response body as text (image/svg+xml).</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> ChartSvgAsync(global::FreeAstroApi.Models.SpaceChartSvgRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<string> ChartSvgAsync(global::FreeAstroApi.Models.SpaceChartSvgRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/space/chart/svg", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/space/chart/svg", "image/svg+xml, application/json;q=0.5", "v1_space_chart_svg");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendTextAsync(request, options, cancellationToken);
         }
     }
 
@@ -1269,16 +1269,16 @@ namespace FreeAstroApi.Resources
         /// <param name="parameters">Query parameters.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>TransitsCalculateResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> CalculateAsync(global::FreeAstroApi.Models.TransitRequest body, global::FreeAstroApi.Models.TransitsCalculateParams? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.TransitsCalculateResponse> CalculateAsync(global::FreeAstroApi.Models.TransitRequest body, global::FreeAstroApi.Models.TransitsCalculateParams? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/transits/calculate", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/transits/calculate", "application/json", "v1_transits_calculate");
             request.SetJsonBody(body);
             parameters?.WriteTo(request.Query);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.TransitsCalculateResponse>(request, options, cancellationToken);
         }
     }
 
@@ -1312,7 +1312,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.VedicGocharTimelineResponse> TimelineV1Async(global::FreeAstroApi.Models.VedicGocharTimelineRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/gochar/timeline", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/gochar/timeline", "application/json", "v1_vedic_gochar_timeline");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.VedicGocharTimelineResponse>(request, options, cancellationToken);
         }
@@ -1335,7 +1335,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.VedicGocharTimelineInsightsResponse> TimelineInsightsV1Async(global::FreeAstroApi.Models.VedicGocharTimelineRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/gochar/timeline/insights", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/gochar/timeline/insights", "application/json", "v1_vedic_gochar_timeline_insights");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.VedicGocharTimelineInsightsResponse>(request, options, cancellationToken);
         }
@@ -1358,7 +1358,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.GocharTimelineV2Response> TimelineAsync(global::FreeAstroApi.Models.GocharTimelineRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/gochar/timeline", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/gochar/timeline", "application/json", "v2_vedic_gochar_timeline");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.GocharTimelineV2Response>(request, options, cancellationToken);
         }
@@ -1381,7 +1381,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.VedicGocharTimelineInsightsV2Response> TimelineInsightsAsync(global::FreeAstroApi.Models.GocharTimelineRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/gochar/timeline/insights", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/gochar/timeline/insights", "application/json", "v2_vedic_gochar_timeline_insights");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.VedicGocharTimelineInsightsV2Response>(request, options, cancellationToken);
         }
@@ -1416,7 +1416,7 @@ namespace FreeAstroApi.Resources
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.DailyRashifalBulkResponse> DailyBulkAsync(global::FreeAstroApi.Models.VedicHoroscopeDailyBulkParams? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v2/vedic/horoscope/daily/bulk", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v2/vedic/horoscope/daily/bulk", "application/json", "v2_vedic_horoscope_daily_bulk");
             parameters?.WriteTo(request.Query);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.DailyRashifalBulkResponse>(request, options, cancellationToken);
         }
@@ -1440,7 +1440,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.DailyVedicHoroscopeV2Response> DailyPersonalAsync(global::FreeAstroApi.Models.DailyVedicHoroscopeRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/horoscope/daily/personal", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/horoscope/daily/personal", "application/json", "v2_vedic_horoscope_daily_personal");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.DailyVedicHoroscopeV2Response>(request, options, cancellationToken);
         }
@@ -1463,7 +1463,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.DailyRashifalSignResponse> DailySignAsync(global::FreeAstroApi.Models.VedicHoroscopeDailySignParams parameters, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(parameters, nameof(parameters));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v2/vedic/horoscope/daily/sign", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("GET", "/api/v2/vedic/horoscope/daily/sign", "application/json", "v2_vedic_horoscope_daily_sign");
             parameters.WriteTo(request.Query);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.DailyRashifalSignResponse>(request, options, cancellationToken);
         }
@@ -1499,7 +1499,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.VedicMuhuratSearchResponse> PersonalizedSearchAsync(global::FreeAstroApi.Models.VedicMuhuratPersonalizedSearchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/muhurat/personalized-search", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/muhurat/personalized-search", "application/json", "v2_vedic_muhurat_personalized_search");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.VedicMuhuratSearchResponse>(request, options, cancellationToken);
         }
@@ -1522,7 +1522,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.VedicMuhuratSearchResponse> SearchAsync(global::FreeAstroApi.Models.VedicMuhuratSearchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/muhurat/search", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/muhurat/search", "application/json", "v2_vedic_muhurat_search");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.VedicMuhuratSearchResponse>(request, options, cancellationToken);
         }
@@ -1558,7 +1558,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.VedicTransitInsightsResponse> InsightsAsync(global::FreeAstroApi.Models.VedicTransitInsightsRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/transits/insights", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/transits/insights", "application/json", "v1_vedic_transits_insights");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.VedicTransitInsightsResponse>(request, options, cancellationToken);
         }
@@ -1594,7 +1594,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.FreeAstroContent> ChartAsync(global::FreeAstroApi.Models.VedicVisualChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/visual/chart", "image/png, image/svg+xml, application/json;q=0.5");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/visual/chart", "image/png, image/svg+xml, application/json;q=0.5", "v2_vedic_visual_chart");
             request.SetJsonBody(body);
             return _transport.SendContentAsync(request, options, cancellationToken);
         }
@@ -1655,15 +1655,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>VedicBatchResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> BatchAsync(global::FreeAstroApi.Models.VedicBatchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.VedicBatchResponse> BatchAsync(global::FreeAstroApi.Models.VedicBatchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/batch", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/batch", "application/json", "v1_vedic_batch");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.VedicBatchResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -1679,15 +1679,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>VedicCalculateResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> CalculateV1Async(global::FreeAstroApi.Models.VedicChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.VedicCalculateResponse> CalculateV1Async(global::FreeAstroApi.Models.VedicChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/calculate", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/calculate", "application/json", "v1_vedic_calculate");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.VedicCalculateResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -1703,15 +1703,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>VedicChartResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> ChartV1Async(global::FreeAstroApi.Models.BaseChartRequestV1 body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.VedicChartResponse> ChartV1Async(global::FreeAstroApi.Models.BaseChartRequestV1 body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/chart", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/chart", "application/json", "v1_vedic_chart");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.VedicChartResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -1727,15 +1727,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>VedicCompatibilityResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> CompatibilityV1Async(global::FreeAstroApi.Models.CompatibilityRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.VedicCompatibilityResponse> CompatibilityV1Async(global::FreeAstroApi.Models.CompatibilityRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/compatibility", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/compatibility", "application/json", "v1_vedic_compatibility");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.VedicCompatibilityResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -1750,15 +1750,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>VedicDashaResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> DashaV1Async(global::FreeAstroApi.Models.DashaRequestV1 body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.VedicDashaResponse> DashaV1Async(global::FreeAstroApi.Models.DashaRequestV1 body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/dasha", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/dasha", "application/json", "v1_vedic_dasha");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.VedicDashaResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -1779,7 +1779,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.VedicDashaInsightsResponse> DashaInsightsV1Async(global::FreeAstroApi.Models.DashaRequestV1 body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/dasha/insights", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/dasha/insights", "application/json", "v1_vedic_dasha_insights");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.VedicDashaInsightsResponse>(request, options, cancellationToken);
         }
@@ -1797,15 +1797,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>VedicMatchResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> MatchV1Async(global::FreeAstroApi.Models.MatchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.VedicMatchResponse> MatchV1Async(global::FreeAstroApi.Models.MatchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/match", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/match", "application/json", "v1_vedic_match");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.VedicMatchResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -1820,15 +1820,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>VedicPanchangResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> PanchangV1Async(global::FreeAstroApi.Models.PanchangRequestV1 body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.VedicPanchangResponse> PanchangV1Async(global::FreeAstroApi.Models.PanchangRequestV1 body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/panchang", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/panchang", "application/json", "v1_vedic_panchang");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.VedicPanchangResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -1843,15 +1843,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>VedicStrengthResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> StrengthV1Async(global::FreeAstroApi.Models.BaseChartRequestV1 body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.VedicStrengthResponse> StrengthV1Async(global::FreeAstroApi.Models.BaseChartRequestV1 body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/strength", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/strength", "application/json", "v1_vedic_strength");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.VedicStrengthResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -1866,15 +1866,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>VedicVargasResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> VargasV1Async(global::FreeAstroApi.Models.VargaRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.VedicVargasResponse> VargasV1Async(global::FreeAstroApi.Models.VargaRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/vargas", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/vargas", "application/json", "v1_vedic_vargas");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.VedicVargasResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -1889,15 +1889,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>VedicYogasResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> YogasV1Async(global::FreeAstroApi.Models.BaseChartRequestV1 body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.VedicYogasResponse> YogasV1Async(global::FreeAstroApi.Models.BaseChartRequestV1 body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/yogas", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/vedic/yogas", "application/json", "v1_vedic_yogas");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.VedicYogasResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -1918,7 +1918,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.CalculateV2Response> CalculateAsync(global::FreeAstroApi.Models.CalculateRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/calculate", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/calculate", "application/json", "v2_vedic_calculate");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.CalculateV2Response>(request, options, cancellationToken);
         }
@@ -1941,7 +1941,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.ChartV2Response> ChartAsync(global::FreeAstroApi.Models.ChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/chart", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/chart", "application/json", "v2_vedic_chart");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.ChartV2Response>(request, options, cancellationToken);
         }
@@ -1964,7 +1964,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.VedicChatResponse> ChatAsync(global::FreeAstroApi.Models.VedicChatRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/chat", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/chat", "application/json", "v2_vedic_chat");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.VedicChatResponse>(request, options, cancellationToken);
         }
@@ -1987,7 +1987,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.CompatibilityV2Response> CompatibilityAsync(global::FreeAstroApi.Models.CompatibilityV2Request body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/compatibility", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/compatibility", "application/json", "v2_vedic_compatibility");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.CompatibilityV2Response>(request, options, cancellationToken);
         }
@@ -2010,7 +2010,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.DashaV2Response> DashaAsync(global::FreeAstroApi.Models.DashaRequestV2 body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/dasha", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/dasha", "application/json", "v2_vedic_dasha");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.DashaV2Response>(request, options, cancellationToken);
         }
@@ -2033,7 +2033,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.VedicDashaInsightsResponse> DashaInsightsAsync(global::FreeAstroApi.Models.DashaRequestV2 body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/dasha/insights", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/dasha/insights", "application/json", "v2_vedic_dasha_insights");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.VedicDashaInsightsResponse>(request, options, cancellationToken);
         }
@@ -2056,7 +2056,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.KPChartResponse> KpAsync(global::FreeAstroApi.Models.KPChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/kp", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/kp", "application/json", "v2_vedic_kp");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.KPChartResponse>(request, options, cancellationToken);
         }
@@ -2079,7 +2079,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.FreeAstroContent> KpRenderAsync(global::FreeAstroApi.Models.KPChartRenderRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/kp/render", "image/png, image/svg+xml, application/json;q=0.5");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/kp/render", "image/png, image/svg+xml, application/json;q=0.5", "v2_vedic_kp_render");
             request.SetJsonBody(body);
             return _transport.SendContentAsync(request, options, cancellationToken);
         }
@@ -2102,7 +2102,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.CompatibilityV2Response> MatchAsync(global::FreeAstroApi.Models.MatchV2Request body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/match", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/match", "application/json", "v2_vedic_match");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.CompatibilityV2Response>(request, options, cancellationToken);
         }
@@ -2126,7 +2126,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.PanchangV2Response> PanchangAsync(global::FreeAstroApi.Models.PanchangRequestV2 body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/panchang", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/panchang", "application/json", "v2_vedic_panchang");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.PanchangV2Response>(request, options, cancellationToken);
         }
@@ -2149,7 +2149,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.VedicQAResponse> QaAsync(global::FreeAstroApi.Models.VedicQARequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/qa", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/qa", "application/json", "v2_vedic_qa");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.VedicQAResponse>(request, options, cancellationToken);
         }
@@ -2172,7 +2172,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.StrengthV2Response> StrengthAsync(global::FreeAstroApi.Models.BaseChartRequestV2 body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/strength", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/strength", "application/json", "v2_vedic_strength");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.StrengthV2Response>(request, options, cancellationToken);
         }
@@ -2195,7 +2195,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.VargasV2Response> VargasAsync(global::FreeAstroApi.Models.VargasRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/vargas", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/vargas", "application/json", "v2_vedic_vargas");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.VargasV2Response>(request, options, cancellationToken);
         }
@@ -2218,7 +2218,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.YogasV2Response> YogasAsync(global::FreeAstroApi.Models.BaseChartRequestV2 body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/yogas", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/vedic/yogas", "application/json", "v2_vedic_yogas");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.YogasV2Response>(request, options, cancellationToken);
         }
@@ -2248,15 +2248,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>AstrocartographyCityCheckResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> CityCheckAsync(global::FreeAstroApi.Models.AstrocartographyCityCheckRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.AstrocartographyCityCheckResponse> CityCheckAsync(global::FreeAstroApi.Models.AstrocartographyCityCheckRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/astrocartography/city-check", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/astrocartography/city-check", "application/json", "v1_western_astrocartography_city_check");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.AstrocartographyCityCheckResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -2271,15 +2271,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>AstrocartographyLinesResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> LinesAsync(global::FreeAstroApi.Models.AstrocartographyLinesRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.AstrocartographyLinesResponse> LinesAsync(global::FreeAstroApi.Models.AstrocartographyLinesRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/astrocartography/lines", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/astrocartography/lines", "application/json", "v1_western_astrocartography_lines");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.AstrocartographyLinesResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -2294,15 +2294,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>AstrocartographyParansResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> ParansAsync(global::FreeAstroApi.Models.AstrocartographyParansRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.AstrocartographyParansResponse> ParansAsync(global::FreeAstroApi.Models.AstrocartographyParansRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/astrocartography/parans", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/astrocartography/parans", "application/json", "v1_western_astrocartography_parans");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.AstrocartographyParansResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -2317,15 +2317,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>AstrocartographyRecommendationsResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> RecommendationsAsync(global::FreeAstroApi.Models.AstrocartographyRecommendationsRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.AstrocartographyRecommendationsResponse> RecommendationsAsync(global::FreeAstroApi.Models.AstrocartographyRecommendationsRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/astrocartography/recommendations", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/astrocartography/recommendations", "application/json", "v1_western_astrocartography_recommendations");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.AstrocartographyRecommendationsResponse>(request, options, cancellationToken);
         }
 
         /// <summary>
@@ -2340,15 +2340,15 @@ namespace FreeAstroApi.Resources
         /// <param name="body">The request body.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The deserialized <c>AstrocartographyRelocationResponse</c> response.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
-        public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> RelocationAsync(global::FreeAstroApi.Models.AstrocartographyRelocationRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
+        public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.AstrocartographyRelocationResponse> RelocationAsync(global::FreeAstroApi.Models.AstrocartographyRelocationRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/astrocartography/relocation", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/astrocartography/relocation", "application/json", "v1_western_astrocartography_relocation");
             request.SetJsonBody(body);
-            return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
+            return _transport.SendJsonAsync<global::FreeAstroApi.Models.AstrocartographyRelocationResponse>(request, options, cancellationToken);
         }
     }
 
@@ -2379,7 +2379,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.ChartSimilarityResponse> FamousPeopleAsync(global::FreeAstroApi.Models.FamousPeopleChartSimilarityRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/chart-similarity/famous-people", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/chart-similarity/famous-people", "application/json", "v2_western_chart_similarity_famous_people");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.ChartSimilarityResponse>(request, options, cancellationToken);
         }
@@ -2415,7 +2415,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.PrimaryDirectionsResponse> PrimaryAsync(global::FreeAstroApi.Models.PrimaryDirectionsRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/directions/primary", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/directions/primary", "application/json", "v1_western_directions_primary");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.PrimaryDirectionsResponse>(request, options, cancellationToken);
         }
@@ -2435,7 +2435,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.PrimaryDirectionsCalendarResponse> PrimaryCalendarAsync(global::FreeAstroApi.Models.PrimaryDirectionsRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/directions/primary/calendar", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/directions/primary/calendar", "application/json", "v1_western_directions_primary_calendar");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.PrimaryDirectionsCalendarResponse>(request, options, cancellationToken);
         }
@@ -2455,7 +2455,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.PrimaryDirectionsResponse> PrimaryExactAspectsAsync(global::FreeAstroApi.Models.PrimaryDirectionsRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/directions/primary/exact-aspects", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/directions/primary/exact-aspects", "application/json", "v1_western_directions_primary_exact_aspects");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.PrimaryDirectionsResponse>(request, options, cancellationToken);
         }
@@ -2475,7 +2475,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.PrimaryDirectionsResponse> PrimarySearchAsync(global::FreeAstroApi.Models.PrimaryDirectionsRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/directions/primary/search", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/directions/primary/search", "application/json", "v1_western_directions_primary_search");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.PrimaryDirectionsResponse>(request, options, cancellationToken);
         }
@@ -2508,7 +2508,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.InvestMoneyElectionSearchResponse> InvestMoneySearchAsync(global::FreeAstroApi.Models.InvestMoneyElectionSearchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/electional/invest-money/search", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/electional/invest-money/search", "application/json", "v2_western_electional_invest_money_search");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.InvestMoneyElectionSearchResponse>(request, options, cancellationToken);
         }
@@ -2528,7 +2528,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.JobAuditionElectionSearchResponse> JobAuditionSearchAsync(global::FreeAstroApi.Models.JobAuditionElectionSearchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/electional/job-audition/search", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/electional/job-audition/search", "application/json", "v2_western_electional_job_audition_search");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.JobAuditionElectionSearchResponse>(request, options, cancellationToken);
         }
@@ -2548,7 +2548,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.LegalProceedingsElectionSearchResponse> LegalProceedingsSearchAsync(global::FreeAstroApi.Models.LegalProceedingsElectionSearchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/electional/legal-proceedings/search", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/electional/legal-proceedings/search", "application/json", "v2_western_electional_legal_proceedings_search");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.LegalProceedingsElectionSearchResponse>(request, options, cancellationToken);
         }
@@ -2568,7 +2568,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.MakingContractsElectionSearchResponse> MakingContractsSearchAsync(global::FreeAstroApi.Models.MakingContractsElectionSearchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/electional/making-contracts/search", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/electional/making-contracts/search", "application/json", "v2_western_electional_making_contracts_search");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.MakingContractsElectionSearchResponse>(request, options, cancellationToken);
         }
@@ -2588,7 +2588,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.MoveIntoNewHomeElectionSearchResponse> MoveIntoNewHomeSearchAsync(global::FreeAstroApi.Models.MoveIntoNewHomeElectionSearchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/electional/move-into-new-home/search", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/electional/move-into-new-home/search", "application/json", "v2_western_electional_move_into_new_home_search");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.MoveIntoNewHomeElectionSearchResponse>(request, options, cancellationToken);
         }
@@ -2608,7 +2608,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.PhysicalExaminationElectionSearchResponse> PhysicalExaminationSearchAsync(global::FreeAstroApi.Models.PhysicalExaminationElectionSearchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/electional/physical-examination/search", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/electional/physical-examination/search", "application/json", "v2_western_electional_physical_examination_search");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.PhysicalExaminationElectionSearchResponse>(request, options, cancellationToken);
         }
@@ -2628,7 +2628,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.PurchaseCarElectionSearchResponse> PurchaseCarSearchAsync(global::FreeAstroApi.Models.PurchaseCarElectionSearchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/electional/purchase-car/search", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/electional/purchase-car/search", "application/json", "v2_western_electional_purchase_car_search");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.PurchaseCarElectionSearchResponse>(request, options, cancellationToken);
         }
@@ -2648,7 +2648,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.PurchasePropertyElectionSearchResponse> PurchasePropertySearchAsync(global::FreeAstroApi.Models.PurchasePropertyElectionSearchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/electional/purchase-property/search", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/electional/purchase-property/search", "application/json", "v2_western_electional_purchase_property_search");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.PurchasePropertyElectionSearchResponse>(request, options, cancellationToken);
         }
@@ -2668,7 +2668,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.StartingJourneyElectionSearchResponse> StartingJourneySearchAsync(global::FreeAstroApi.Models.StartingJourneyElectionSearchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/electional/starting-journey/search", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/electional/starting-journey/search", "application/json", "v2_western_electional_starting_journey_search");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.StartingJourneyElectionSearchResponse>(request, options, cancellationToken);
         }
@@ -2688,7 +2688,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.WeddingElectionSearchResponse> WeddingSearchAsync(global::FreeAstroApi.Models.WeddingElectionSearchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/electional/wedding/search", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/electional/wedding/search", "application/json", "v2_western_electional_wedding_search");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.WeddingElectionSearchResponse>(request, options, cancellationToken);
         }
@@ -2724,7 +2724,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.NatalInsightsResponse> InsightsAsync(global::FreeAstroApi.Models.NatalInsightsRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/natal/insights", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/natal/insights", "application/json", "v1_western_natal_insights");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.NatalInsightsResponse>(request, options, cancellationToken);
         }
@@ -2747,7 +2747,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.NatalInsightsIndexDocumentsResponse> InsightsIndexDocumentsAsync(global::FreeAstroApi.Models.NatalInsightsRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/natal/insights/index-documents", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/natal/insights/index-documents", "application/json", "v1_western_natal_insights_index_documents");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.NatalInsightsIndexDocumentsResponse>(request, options, cancellationToken);
         }
@@ -2784,7 +2784,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.AnnualProfectionResponse> AnnualAsync(global::FreeAstroApi.Models.AnnualProfectionRequest body, global::FreeAstroApi.Models.WesternProfectionsAnnualParams? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/profections/annual", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/profections/annual", "application/json", "v1_western_profections_annual");
             request.SetJsonBody(body);
             parameters?.WriteTo(request.Query);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.AnnualProfectionResponse>(request, options, cancellationToken);
@@ -2813,13 +2813,13 @@ namespace FreeAstroApi.Resources
         /// <param name="parameters">Query parameters.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The JSON response, which is one of <see cref="global::FreeAstroApi.Models.ProgressionChartResponse"/> or <see cref="global::FreeAstroApi.Models.ProgressionTableResponse"/> depending on the request. Convert it with <c>response.Deserialize&lt;T&gt;(FreeAstroJson.Options)</c>.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
         public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> ConverseSecondaryAsync(global::FreeAstroApi.Models.ConverseSecondaryProgressionsRequest body, global::FreeAstroApi.Models.WesternProgressionsConverseSecondaryParams? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/converse-secondary", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/converse-secondary", "application/json", "v1_western_progressions_converse_secondary");
             request.SetJsonBody(body);
             parameters?.WriteTo(request.Query);
             return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
@@ -2840,7 +2840,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.ProgressionCalendarResponse> ConverseSecondaryCalendarAsync(global::FreeAstroApi.Models.ProgressionCalendarRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/converse-secondary/calendar", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/converse-secondary/calendar", "application/json", "v1_western_progressions_converse_secondary_calendar");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.ProgressionCalendarResponse>(request, options, cancellationToken);
         }
@@ -2860,7 +2860,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.ExactAspectSearchResponse> ConverseSecondaryExactAspectsAsync(global::FreeAstroApi.Models.ExactAspectSearchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/converse-secondary/exact-aspects", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/converse-secondary/exact-aspects", "application/json", "v1_western_progressions_converse_secondary_exact_aspects");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.ExactAspectSearchResponse>(request, options, cancellationToken);
         }
@@ -2880,7 +2880,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.ExactIngressSearchResponse> ConverseSecondaryExactIngressesAsync(global::FreeAstroApi.Models.ExactIngressSearchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/converse-secondary/exact-ingresses", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/converse-secondary/exact-ingresses", "application/json", "v1_western_progressions_converse_secondary_exact_ingresses");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.ExactIngressSearchResponse>(request, options, cancellationToken);
         }
@@ -2895,13 +2895,13 @@ namespace FreeAstroApi.Resources
         /// <param name="parameters">Query parameters.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The JSON response, which is one of <see cref="global::FreeAstroApi.Models.ProgressionChartResponse"/> or <see cref="global::FreeAstroApi.Models.ProgressionTableResponse"/> depending on the request. Convert it with <c>response.Deserialize&lt;T&gt;(FreeAstroJson.Options)</c>.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
         public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> QuaternaryAsync(global::FreeAstroApi.Models.QuaternaryProgressionsRequest body, global::FreeAstroApi.Models.WesternProgressionsQuaternaryParams? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/quaternary", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/quaternary", "application/json", "v1_western_progressions_quaternary");
             request.SetJsonBody(body);
             parameters?.WriteTo(request.Query);
             return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
@@ -2922,7 +2922,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.ProgressionCalendarResponse> QuaternaryCalendarAsync(global::FreeAstroApi.Models.ProgressionCalendarRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/quaternary/calendar", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/quaternary/calendar", "application/json", "v1_western_progressions_quaternary_calendar");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.ProgressionCalendarResponse>(request, options, cancellationToken);
         }
@@ -2942,7 +2942,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.ExactAspectSearchResponse> QuaternaryExactAspectsAsync(global::FreeAstroApi.Models.ExactAspectSearchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/quaternary/exact-aspects", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/quaternary/exact-aspects", "application/json", "v1_western_progressions_quaternary_exact_aspects");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.ExactAspectSearchResponse>(request, options, cancellationToken);
         }
@@ -2962,7 +2962,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.ExactIngressSearchResponse> QuaternaryExactIngressesAsync(global::FreeAstroApi.Models.ExactIngressSearchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/quaternary/exact-ingresses", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/quaternary/exact-ingresses", "application/json", "v1_western_progressions_quaternary_exact_ingresses");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.ExactIngressSearchResponse>(request, options, cancellationToken);
         }
@@ -2977,13 +2977,13 @@ namespace FreeAstroApi.Resources
         /// <param name="parameters">Query parameters.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The JSON response, which is one of <see cref="global::FreeAstroApi.Models.ProgressionChartResponse"/> or <see cref="global::FreeAstroApi.Models.ProgressionTableResponse"/> depending on the request. Convert it with <c>response.Deserialize&lt;T&gt;(FreeAstroJson.Options)</c>.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
         public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> QuotidianAsync(global::FreeAstroApi.Models.QuotidianProgressionsRequest body, global::FreeAstroApi.Models.WesternProgressionsQuotidianParams? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/quotidian", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/quotidian", "application/json", "v1_western_progressions_quotidian");
             request.SetJsonBody(body);
             parameters?.WriteTo(request.Query);
             return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
@@ -3004,7 +3004,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.ProgressionCalendarResponse> QuotidianCalendarAsync(global::FreeAstroApi.Models.ProgressionCalendarRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/quotidian/calendar", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/quotidian/calendar", "application/json", "v1_western_progressions_quotidian_calendar");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.ProgressionCalendarResponse>(request, options, cancellationToken);
         }
@@ -3024,7 +3024,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.ExactAspectSearchResponse> QuotidianExactAspectsAsync(global::FreeAstroApi.Models.ExactAspectSearchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/quotidian/exact-aspects", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/quotidian/exact-aspects", "application/json", "v1_western_progressions_quotidian_exact_aspects");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.ExactAspectSearchResponse>(request, options, cancellationToken);
         }
@@ -3044,7 +3044,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.ExactIngressSearchResponse> QuotidianExactIngressesAsync(global::FreeAstroApi.Models.ExactIngressSearchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/quotidian/exact-ingresses", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/quotidian/exact-ingresses", "application/json", "v1_western_progressions_quotidian_exact_ingresses");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.ExactIngressSearchResponse>(request, options, cancellationToken);
         }
@@ -3063,13 +3063,13 @@ namespace FreeAstroApi.Resources
         /// <param name="parameters">Query parameters.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The JSON response, which is one of <see cref="global::FreeAstroApi.Models.SecondaryProgressionsResponse"/> or <see cref="global::FreeAstroApi.Models.ProgressionTableResponse"/> depending on the request. Convert it with <c>response.Deserialize&lt;T&gt;(FreeAstroJson.Options)</c>.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
         public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> SecondaryAsync(global::FreeAstroApi.Models.SecondaryProgressionsRequest body, global::FreeAstroApi.Models.WesternProgressionsSecondaryParams? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/secondary", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/secondary", "application/json", "v1_western_progressions_secondary");
             request.SetJsonBody(body);
             parameters?.WriteTo(request.Query);
             return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
@@ -3090,7 +3090,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.ProgressionCalendarResponse> SecondaryCalendarAsync(global::FreeAstroApi.Models.ProgressionCalendarRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/secondary/calendar", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/secondary/calendar", "application/json", "v1_western_progressions_secondary_calendar");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.ProgressionCalendarResponse>(request, options, cancellationToken);
         }
@@ -3110,7 +3110,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.ExactAspectSearchResponse> SecondaryExactAspectsAsync(global::FreeAstroApi.Models.ExactAspectSearchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/secondary/exact-aspects", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/secondary/exact-aspects", "application/json", "v1_western_progressions_secondary_exact_aspects");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.ExactAspectSearchResponse>(request, options, cancellationToken);
         }
@@ -3130,7 +3130,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.ExactIngressSearchResponse> SecondaryExactIngressesAsync(global::FreeAstroApi.Models.ExactIngressSearchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/secondary/exact-ingresses", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/secondary/exact-ingresses", "application/json", "v1_western_progressions_secondary_exact_ingresses");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.ExactIngressSearchResponse>(request, options, cancellationToken);
         }
@@ -3145,13 +3145,13 @@ namespace FreeAstroApi.Resources
         /// <param name="parameters">Query parameters.</param>
         /// <param name="options">Per-request options: headers, idempotency key, timeout and retries.</param>
         /// <param name="cancellationToken">A token that cancels the request.</param>
-        /// <returns>The JSON response. The API does not publish a schema for it yet.</returns>
+        /// <returns>The JSON response, which is one of <see cref="global::FreeAstroApi.Models.ProgressionChartResponse"/> or <see cref="global::FreeAstroApi.Models.ProgressionTableResponse"/> depending on the request. Convert it with <c>response.Deserialize&lt;T&gt;(FreeAstroJson.Options)</c>.</returns>
         /// <exception cref="global::FreeAstroApi.FreeAstroApiException">The API returned an error status code.</exception>
         /// <exception cref="global::FreeAstroApi.FreeAstroNetworkException">The API could not be reached or timed out.</exception>
         public global::System.Threading.Tasks.Task<global::System.Text.Json.JsonElement> TertiaryAsync(global::FreeAstroApi.Models.TertiaryProgressionsRequest body, global::FreeAstroApi.Models.WesternProgressionsTertiaryParams? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/tertiary", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/tertiary", "application/json", "v1_western_progressions_tertiary");
             request.SetJsonBody(body);
             parameters?.WriteTo(request.Query);
             return _transport.SendJsonAsync<global::System.Text.Json.JsonElement>(request, options, cancellationToken);
@@ -3172,7 +3172,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.ProgressionCalendarResponse> TertiaryCalendarAsync(global::FreeAstroApi.Models.ProgressionCalendarRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/tertiary/calendar", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/tertiary/calendar", "application/json", "v1_western_progressions_tertiary_calendar");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.ProgressionCalendarResponse>(request, options, cancellationToken);
         }
@@ -3192,7 +3192,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.ExactAspectSearchResponse> TertiaryExactAspectsAsync(global::FreeAstroApi.Models.ExactAspectSearchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/tertiary/exact-aspects", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/tertiary/exact-aspects", "application/json", "v1_western_progressions_tertiary_exact_aspects");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.ExactAspectSearchResponse>(request, options, cancellationToken);
         }
@@ -3212,7 +3212,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.ExactIngressSearchResponse> TertiaryExactIngressesAsync(global::FreeAstroApi.Models.ExactIngressSearchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/tertiary/exact-ingresses", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/progressions/tertiary/exact-ingresses", "application/json", "v1_western_progressions_tertiary_exact_ingresses");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.ExactIngressSearchResponse>(request, options, cancellationToken);
         }
@@ -3249,7 +3249,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.PlanetReturnResponse> CalculateAsync(global::FreeAstroApi.Models.PlanetReturnRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/returns/calculate", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/returns/calculate", "application/json", "v1_western_returns_calculate");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.PlanetReturnResponse>(request, options, cancellationToken);
         }
@@ -3285,7 +3285,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.SignResponse> MidheavenAsync(global::FreeAstroApi.Models.NatalChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/signs/midheaven", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/signs/midheaven", "application/json", "v1_western_signs_midheaven");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.SignResponse>(request, options, cancellationToken);
         }
@@ -3308,7 +3308,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.SignResponse> MoonAsync(global::FreeAstroApi.Models.NatalChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/signs/moon", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/signs/moon", "application/json", "v1_western_signs_moon");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.SignResponse>(request, options, cancellationToken);
         }
@@ -3331,7 +3331,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.SignResponse> RisingAsync(global::FreeAstroApi.Models.NatalChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/signs/rising", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/signs/rising", "application/json", "v1_western_signs_rising");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.SignResponse>(request, options, cancellationToken);
         }
@@ -3354,7 +3354,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.SignResponse> SunAsync(global::FreeAstroApi.Models.NatalChartRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/signs/sun", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/signs/sun", "application/json", "v1_western_signs_sun");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.SignResponse>(request, options, cancellationToken);
         }
@@ -3392,7 +3392,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.SolarReturnResponse> CalculateAsync(global::FreeAstroApi.Models.SolarReturnRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/solar/calculate", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/solar/calculate", "application/json", "v1_western_solar_calculate");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.SolarReturnResponse>(request, options, cancellationToken);
         }
@@ -3428,7 +3428,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.TransitInsightsResponse> InsightsAsync(global::FreeAstroApi.Models.TransitTimelineRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/transits/insights", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/transits/insights", "application/json", "v1_western_transits_insights");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.TransitInsightsResponse>(request, options, cancellationToken);
         }
@@ -3451,7 +3451,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.TransitSearchResponse> SearchAsync(global::FreeAstroApi.Models.TransitSearchRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/transits/search", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/transits/search", "application/json", "v1_western_transits_search");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.TransitSearchResponse>(request, options, cancellationToken);
         }
@@ -3474,7 +3474,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.TransitTimelineResponse> TimelineAsync(global::FreeAstroApi.Models.TransitTimelineRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/transits/timeline", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/transits/timeline", "application/json", "v1_western_transits_timeline");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.TransitTimelineResponse>(request, options, cancellationToken);
         }
@@ -3497,7 +3497,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.TransitTimelineIndexDocumentsResponse> TimelineIndexDocumentsAsync(global::FreeAstroApi.Models.TransitTimelineRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/transits/timeline/index-documents", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/transits/timeline/index-documents", "application/json", "v1_western_transits_timeline_index_documents");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.TransitTimelineIndexDocumentsResponse>(request, options, cancellationToken);
         }
@@ -3602,7 +3602,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.SynastryResponse> SynastryV1Async(global::FreeAstroApi.Models.SynastryRequest body, global::FreeAstroApi.Models.WesternSynastryV1Params? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/synastry", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/synastry", "application/json", "v1_western_synastry");
             request.SetJsonBody(body);
             parameters?.WriteTo(request.Query);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.SynastryResponse>(request, options, cancellationToken);
@@ -3631,7 +3631,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.CouplesHoroscopeResponse> SynastryHoroscopeV1Async(global::FreeAstroApi.Models.CouplesHoroscopeRequest body, global::FreeAstroApi.Models.WesternSynastryHoroscopeV1Params? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/synastry/horoscope", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/synastry/horoscope", "application/json", "v1_western_synastry_horoscope");
             request.SetJsonBody(body);
             parameters?.WriteTo(request.Query);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.CouplesHoroscopeResponse>(request, options, cancellationToken);
@@ -3656,7 +3656,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.SynastrySimplifiedResponse> SynastrySimplifiedAsync(global::FreeAstroApi.Models.SynastryRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/synastry/simplified", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/synastry/simplified", "application/json", "v1_western_synastry_simplified");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.SynastrySimplifiedResponse>(request, options, cancellationToken);
         }
@@ -3679,7 +3679,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.SynastrySummaryResponse> SynastrySummaryAsync(global::FreeAstroApi.Models.SynastryRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/synastry/summary", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/synastry/summary", "application/json", "v1_western_synastry_summary");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.SynastrySummaryResponse>(request, options, cancellationToken);
         }
@@ -3708,7 +3708,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.SynastryCardsResponse> SynastrycardsV1Async(global::FreeAstroApi.Models.SynastryRequest body, global::FreeAstroApi.Models.WesternSynastrycardsV1Params? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/synastrycards", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v1/western/synastrycards", "application/json", "v1_western_synastrycards");
             request.SetJsonBody(body);
             parameters?.WriteTo(request.Query);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.SynastryCardsResponse>(request, options, cancellationToken);
@@ -3732,7 +3732,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.WesternChatResponse> ChatAsync(global::FreeAstroApi.Models.WesternChatRequest body, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/chat", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/chat", "application/json", "v2_western_chat");
             request.SetJsonBody(body);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.WesternChatResponse>(request, options, cancellationToken);
         }
@@ -3753,7 +3753,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.SynastryResponse> SynastryAsync(global::FreeAstroApi.Models.SynastryRequest body, global::FreeAstroApi.Models.WesternSynastryParams? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/synastry", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/synastry", "application/json", "v2_western_synastry");
             request.SetJsonBody(body);
             parameters?.WriteTo(request.Query);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.SynastryResponse>(request, options, cancellationToken);
@@ -3775,7 +3775,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.CouplesHoroscopeV2Response> SynastryHoroscopeAsync(global::FreeAstroApi.Models.CouplesHoroscopeV2Request body, global::FreeAstroApi.Models.WesternSynastryHoroscopeParams? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/synastry/horoscope", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/synastry/horoscope", "application/json", "v2_western_synastry_horoscope");
             request.SetJsonBody(body);
             parameters?.WriteTo(request.Query);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.CouplesHoroscopeV2Response>(request, options, cancellationToken);
@@ -3797,7 +3797,7 @@ namespace FreeAstroApi.Resources
         public global::System.Threading.Tasks.Task<global::FreeAstroApi.Models.SynastryCardsResponse> SynastrycardsAsync(global::FreeAstroApi.Models.SynastryRequest body, global::FreeAstroApi.Models.WesternSynastrycardsParams? parameters = null, global::FreeAstroApi.RequestOptions? options = null, global::System.Threading.CancellationToken cancellationToken = default)
         {
             global::FreeAstroApi.Internal.Guard.NotNull(body, nameof(body));
-            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/synastrycards", "application/json");
+            var request = new global::FreeAstroApi.Internal.FreeAstroRequest("POST", "/api/v2/western/synastrycards", "application/json", "v2_western_synastrycards");
             request.SetJsonBody(body);
             parameters?.WriteTo(request.Query);
             return _transport.SendJsonAsync<global::FreeAstroApi.Models.SynastryCardsResponse>(request, options, cancellationToken);

@@ -32,6 +32,18 @@ internal sealed class FreeAstroTransport
     /// <summary>Waits between retries; replaced in tests.</summary>
     internal Func<TimeSpan, CancellationToken, Task> Delay { get; set; } = (delay, token) => Task.Delay(delay, token);
 
+    /// <summary>Returns the jitter factor in [0, 1]; replaced in tests.</summary>
+    internal Func<double> Jitter { get; set; } = NextJitter;
+
+#if NET
+    private static double NextJitter() => Random.Shared.NextDouble();
+#else
+    [ThreadStatic]
+    private static Random? s_random;
+
+    private static double NextJitter() => (s_random ??= new Random(Guid.NewGuid().GetHashCode())).NextDouble();
+#endif
+
     public async Task<T> SendJsonAsync<T>(FreeAstroRequest request, RequestOptions? options, CancellationToken cancellationToken)
     {
         using var response = await SendAsync(request, options, cancellationToken).ConfigureAwait(false);
@@ -77,7 +89,9 @@ internal sealed class FreeAstroTransport
     private async Task<HttpResponseMessage> SendAsync(FreeAstroRequest request, RequestOptions? options, CancellationToken cancellationToken)
     {
         var maxRetries = options?.Retry == false ? 0 : Math.Max(0, options?.MaxRetries ?? _options.MaxRetries);
-        var replaySafe = request.Method is "GET" or "HEAD" or "OPTIONS"
+        // 408/5xx, timeouts and network failures: retried unless the operation has side effects and the
+        // caller supplied neither an idempotency key nor an explicit opt-in.
+        var replaySafe = !IsSideEffecting(request)
             || !string.IsNullOrEmpty(options?.IdempotencyKey)
             || options?.Retry == true;
         var timeout = options?.Timeout ?? _options.Timeout;
@@ -118,23 +132,37 @@ internal sealed class FreeAstroTransport
             if (response.IsSuccessStatusCode) return response;
 
             var status = (int)response.StatusCode;
-            // A 429 means the request was rejected before it ran, so it is safe to replay for any method.
+            FreeAstroApiException error;
+            using (response)
+            {
+                error = await ErrorMapper.CreateAsync(response, cancellationToken).ConfigureAwait(false);
+            }
+
+            // A 429 means the request was rejected before it ran, so it is safe to replay for any operation.
             if (canRetry && (status == 429 || (replaySafe && RetryStatuses.Contains(status))))
             {
-                var delay = RetryAfter(response) ?? Backoff(attempt);
+                var delay = error.RetryAfter ?? Backoff(attempt);
+                // A server-requested wait longer than MaxRetryDelay is surfaced (with RetryAfter) instead of waited out.
                 if (delay <= _options.MaxRetryDelay)
                 {
-                    response.Dispose();
                     await Delay(delay, cancellationToken).ConfigureAwait(false);
                     continue;
                 }
             }
 
-            using (response)
-            {
-                throw await ErrorMapper.CreateAsync(response, cancellationToken).ConfigureAwait(false);
-            }
+            throw error;
         }
+    }
+
+    /// <summary>
+    /// Generated methods carry their operationId. For <c>SendAsync</c>/<c>SendRawAsync</c> the operation is looked
+    /// up by method and path; an unknown endpoint is treated as side-effecting unless it is a GET, HEAD or OPTIONS.
+    /// </summary>
+    internal static bool IsSideEffecting(FreeAstroRequest request)
+    {
+        var operationId = request.OperationId ?? FreeAstroOperations.FindByRoute(request.Method, request.Path)?.OperationId;
+        if (operationId is not null) return FreeAstroOperations.IsSideEffecting(operationId);
+        return request.Method is not ("GET" or "HEAD" or "OPTIONS");
     }
 
     private HttpRequestMessage CreateMessage(FreeAstroRequest request, Uri uri, RequestOptions? options)
@@ -173,10 +201,12 @@ internal sealed class FreeAstroTransport
         return merged;
     }
 
-    private TimeSpan Backoff(int attempt)
+    /// <summary>Exponential backoff with full jitter: a random delay in [0, min(MaxBackoff, InitialRetryDelay * 2^attempt)].</summary>
+    internal TimeSpan Backoff(int attempt)
     {
-        var ticks = _options.InitialRetryDelay.Ticks * Math.Pow(2, Math.Min(attempt, 30));
-        return ticks >= _options.MaxRetryDelay.Ticks ? _options.MaxRetryDelay : TimeSpan.FromTicks((long)ticks);
+        var ceiling = Math.Min(_options.InitialRetryDelay.Ticks * Math.Pow(2, Math.Min(attempt, 30)), _options.MaxBackoff.Ticks);
+        var jitter = Math.Min(Math.Max(Jitter(), 0), 1);
+        return TimeSpan.FromTicks((long)(Math.Max(ceiling, 0) * jitter));
     }
 
     internal static TimeSpan? RetryAfter(HttpResponseMessage response)

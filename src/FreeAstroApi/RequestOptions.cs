@@ -10,8 +10,9 @@ public sealed class RequestOptions
     public IDictionary<string, string> Headers { get; } = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
 
     /// <summary>
-    /// Sent as the <c>Idempotency-Key</c> header. A request with a key is safe to replay, so it is retried
-    /// like a GET request.
+    /// Sent as the <c>Idempotency-Key</c> header. A request with a key is safe to replay, so side-effecting
+    /// operations (<see cref="FreeAstroOperations.SideEffectingOperationIds"/>) are retried on 408/5xx,
+    /// timeouts and network failures too.
     /// </summary>
     public string? IdempotencyKey { get; set; }
 
@@ -22,9 +23,9 @@ public sealed class RequestOptions
     public int? MaxRetries { get; set; }
 
     /// <summary>
-    /// <see langword="true"/> retries this request even if it is not a GET and has no idempotency key (use it
-    /// for calculations that are safe to replay); <see langword="false"/> disables retries; <see langword="null"/>
-    /// (the default) applies the standard policy.
+    /// <see langword="true"/> retries this request on 408/5xx, timeouts and network failures even if it is a
+    /// side-effecting operation without an idempotency key; <see langword="false"/> disables all retries;
+    /// <see langword="null"/> (the default) applies the standard policy.
     /// </summary>
     public bool? Retry { get; set; }
 }

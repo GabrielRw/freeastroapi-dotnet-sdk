@@ -27,7 +27,7 @@ public class RequestTests
         Assert.Equal("Europe/Paris", body.RootElement.GetProperty("tz_str").GetString());
         Assert.False(body.RootElement.TryGetProperty("lat", out _));
         Assert.False(body.RootElement.TryGetProperty("name", out _));
-        Assert.Equal("sun", chart.GetProperty("planets")[0].GetProperty("id").GetString());
+        Assert.Equal("sun", chart.Planets![0].Id);
     }
 
     [Fact]
